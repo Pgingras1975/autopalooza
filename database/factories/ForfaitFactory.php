@@ -14,7 +14,10 @@ class ForfaitFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "nom" => $this->faker->sentence(),
+            "description" => $this->faker->paragraphs(3, true),
+            "prix" => "299.99$",
+            "image" => "https://i.pravatar.cc/100?img=" . rand(1, 50),
         ];
     }
 }

@@ -14,7 +14,7 @@ class UserTypeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "type" => $this->faker->text(8),
         ];
     }
 }
