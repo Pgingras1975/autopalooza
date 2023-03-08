@@ -53,6 +53,6 @@ class User extends Authenticatable
      * Relation avec le modèle Usertype (un-à-plusieurs)
      */
     public function userType(){
-        return $this->hasMany(User_type::class);
+        return $this->hasMany(Utype::class);
     }
 }

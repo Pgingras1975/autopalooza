@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\User_type;
+use App\Models\Utype;
 use Illuminate\Database\Seeder;
 
-class UserTypeSeeder extends Seeder
+class UtypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class UserTypeSeeder extends Seeder
      */
     public function run()
     {
-        User_type::factory(3)->create();
+        Utype::factory(3)->create();
     }
 }

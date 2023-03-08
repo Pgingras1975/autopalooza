@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Forfait;
 use Illuminate\Database\Seeder;
 
 class ForfaitSeeder extends Seeder
@@ -13,6 +14,6 @@ class ForfaitSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Forfait::factory(4)->create();
     }
 }
