@@ -1,11 +1,10 @@
 <x-layout>
 
-<body id="bg-autopalooza">
-    <main class="w-50 m-auto mt-5 container-min-w">
+    <main class="w-25 m-auto mt-5 border rounded">
 
         <div class="container py-5">
-            <h1 class="text-center text-white m-0 fs-1">Créez un compte</h1>
-            <h4 class="text-center text-white fs-5">ou <a href="{{ url('/connexion') }}">connectez-vous</a></h4>
+            <h1 class="text-center m-0 fs-1">Créez un compte</h1>
+            <h4 class="text-center fs-5">ou <a href="{{ url('/connexion') }}">connectez-vous</a></h4>
             <form action="{{ url('/enregistrement') }}" method="post" enctype="multipart/form-data" class="mt-4">
                 @csrf
 
@@ -44,12 +43,11 @@
                     </div>
 
                     <p class="d-flex justify-content-center my-5">
-                        <input type="submit" class="btn btn-primary me-2" value="S'enregistrer">
+                        <input type="submit" class="btn btn-dark me-2" value="S'enregistrer">
                     </p>
                 </div>
             </form>
         </div>
     </main>
-</body>
 
 </x-layout>

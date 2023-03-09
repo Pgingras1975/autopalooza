@@ -42,6 +42,15 @@ Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
 
 Route::get('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy']);
 
+Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite');
+Route::post('/activite/sauvegarder', [ActiviteController::class, 'store']);
+
+Route::get('/activite/modifier/{id}', [ActiviteController::class, 'edit'])->name('modifier-activite');
+Route::post('/activite/modifier/{id}', [ActiviteController::class, 'update']);
+
+Route::get('/activite/supprimer/{id}', [ActiviteController::class, 'destroy']);
+
+
 Route::get('/', [AccueilController::class, 'index'])
     ->name('accueil');
 

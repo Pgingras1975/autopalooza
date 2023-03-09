@@ -1,8 +1,6 @@
 <x-layout>
 
-<body id="bg-autopalooza">
-
-    <main class="w-25 m-auto mt-5 bg-white container-min-w border rounded">
+    <main class="w-25 m-auto mt-5 container-min-w border rounded">
 
         <x-connexion-message />
 
@@ -35,6 +33,5 @@
             </form>
         </div>
     </main>
-</body>
 
 </x-layout>

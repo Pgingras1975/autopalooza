@@ -1,5 +1,7 @@
 <x-layout>
 
+    <body id="bg-autopalooza">
+
     <x-connexion-message />
 
         <h1>Dashboard</h1> Bonjour {{ $us }}
@@ -7,6 +9,7 @@
          <div class="p-3 d-flex">
             <a href="{{ url('/deconnexion') }}" class="btn btn-primary">Déconnexion</a>
             <a href="{{ route('creer-actualite') }}" class="btn btn-primary">Ajouter Actualité</a>
+            <a href="{{ route('creer-activite') }}" class="btn btn-primary">Ajouter Activité</a>
         </div>
      <div class="d-flex">
         <div class="w-50 border">
@@ -58,4 +61,5 @@
             <x-liste-forfaits :forfaits="$forfaits"/>
         </div>
     </div>
+    </body>
 </x-layout>

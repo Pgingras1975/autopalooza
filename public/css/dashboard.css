@@ -1,7 +1,15 @@
-#bg-autopalooza {
-    background-color: #2ec4b6;
-}
-
 .w-33 {
     width: 33.3%;
+}
+
+a {
+    color: aliceblue;
+}
+
+.container-min-w {
+    min-width: 420px;
+}
+
+label {
+    color: black;
 }
