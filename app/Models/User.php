@@ -55,4 +55,11 @@ class User extends Authenticatable
     public function userType(){
         return $this->hasMany(Utype::class);
     }
+
+        /**
+     * Accesseur pour récupérer le nom complet de l'utilisateur
+     */
+    public function getNomCompletAttribute(){
+        return $this->prenom . " " . $this->nom;
+    }
 }

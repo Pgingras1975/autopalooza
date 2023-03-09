@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Forfait extends Model
 {
@@ -14,5 +15,14 @@ class Forfait extends Model
      */
     public function reservation(){
         return $this->hasMany(Reservation::class);
+    }
+
+        /**
+     * accesseur
+     *
+     * retourne un string de 60 caractères
+     */
+    public function getDescriptionLimiterAttribute(){
+        return Str::limit($this->texte, 60);
     }
 }

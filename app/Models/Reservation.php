@@ -23,4 +23,10 @@ class Reservation extends Model
         return $this->belongsTo(Forfait::class);
     }
 
+            /**
+     * Accesseur pour récupérer le nom complet de l'utilisateur
+     */
+    public function getNomCompletAttribute(){
+        return $this->prenom . " " . $this->nom;
+    }
 }

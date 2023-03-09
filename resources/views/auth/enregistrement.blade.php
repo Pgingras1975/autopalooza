@@ -1,5 +1,6 @@
 <x-layout>
 
+<body id="bg-autopalooza">
     <main class="w-50 m-auto mt-5 container-min-w">
 
         <div class="container py-5">
@@ -49,5 +50,6 @@
             </form>
         </div>
     </main>
+</body>
 
 </x-layout>
