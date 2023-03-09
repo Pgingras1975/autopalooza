@@ -17,6 +17,7 @@ class CreateReservationsTable extends Migration
             $table->id();
             $table->date('date_arrivee');
             $table->date('date_depart');
+            $table->integer('qty');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('forfait_id')->constrained();
             $table->timestamps();

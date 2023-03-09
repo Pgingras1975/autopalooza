@@ -14,7 +14,7 @@
                 @enderror
 
                 <div class="form-floating mb-2">
-                    <input type="text" class="form-control" id="nom" name="titre" value="{{ old('titre') }}">
+                    <input type="text" class="form-control" id="titre" name="titre" value="{{ old('titre') }}">
                     <label class="form" for="titre">Nom</label>
                     <x-form-message champ="titre" />
                 </div>

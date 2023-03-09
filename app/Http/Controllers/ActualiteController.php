@@ -28,12 +28,10 @@ class ActualiteController extends Controller
             "titre" => 'required|max:255',
             "description" => 'required',
             "image" => "mimes:png,jpg,jpeg,webp",
-            // "image" => "required|mimes:png,jpg,jpeg,webp",
         ],[
             'titre.required' => 'Le champs Titre est requis',
             'titre.max' => 'Le Titre doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
-            // "image.required" => "L'image est requise",
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 
@@ -43,12 +41,12 @@ class ActualiteController extends Controller
 
 
         // traitement de l'image
-        if ($request->image != null) {
+        if ($request->image) {
             Storage::putFile('public/img', $request->image);
 
             $actualite->image = '/storage/img/' . $request->image->hashName();
         } else {
-            $actualite->image = '/storage/img/logo.jpg';
+            $actualite->image = '/storage/img/logo.png';
         }
 
         $actualite->save();
@@ -62,8 +60,8 @@ class ActualiteController extends Controller
      * @param int $id id du Actualite
      */
     public function edit($id) {
-        return view('modifier', [
-            "Actualite" => Actualite::findOrFail($id)
+        return view('actualite.modifier', [
+            "actualite" => Actualite::findOrFail($id)
         ]);
     }
 
@@ -76,21 +74,32 @@ class ActualiteController extends Controller
     public function update(Request $request, $id) {
 
         $request->validate([
-            "texte" => 'required|max:255'
+            "titre" => 'required|max:255',
+            "description" => 'required',
+            "image" => "mimes:png,jpg,jpeg,webp|nullable",
         ],[
-            'texte.required' => 'Le champs Actualite est requis',
-            'texte.max' => 'Le Actualite doit avoir 255 caractères ou moins'
+            'titre.required' => 'Le champs Actualite est requis',
+            'titre.max' => 'Le Actualite doit avoir 255 caractères ou moins',
+            'description.required' => 'Le champs Description est requis',
+            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 
-        $Actualite = Actualite::findOrFail($id);
 
-        $Actualite->id = $request->id;
-        $Actualite->texte = $request->texte;
+        $actualite = Actualite::findOrFail($id);
 
+        $actualite->id = $request->id;
+        $actualite->titre = $request->titre;
+        $actualite->description = $request->description;
 
-        $Actualite->save();
+        // traitement de l'image
+        if ($request->image) {
+            Storage::putFile('public/img', $request->image);
+            $actualite->image = '/storage/img/' . $request->image->hashName();
+        }
 
-        return redirect()->route('Actualites')->with('modification-Actualite', 'Modification effectuée!');
+        $actualite->save();
+
+        return redirect()->route('admin')->with('modification-Actualite', 'Modification effectuée!');
     }
 
     /**
@@ -105,7 +114,7 @@ class ActualiteController extends Controller
         $Actualite->delete();
 
         return redirect()
-                ->route('accueil')
+                ->route('admin')
                 ->with('suppression-Actualite', 'Le Actualite a été supprimée!');
     }
 }

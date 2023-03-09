@@ -1,5 +1,7 @@
 <x-layout>
 
+    <x-connexion-message />
+
         <h1>Dashboard</h1> Bonjour {{ $us }}
 
          <div class="p-3 d-flex">
@@ -20,6 +22,7 @@
             <h2>Réservations</h2>
             <div class="d-flex">
                 <h5 class="w-25">Nom</h5>
+                <h5 class="w-25">Qty</h5>
                 <h5 class="w-25">Date Arrivée</h5>
                 <h5 class="w-25">Date Départ</h5>
             </div>
