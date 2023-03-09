@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AccueilController;
+use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ForfaitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Accueil
+Route::get('/', [AccueilController::class, 'index'])
+    ->name('accueil');
+
+// Forfaits
+Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])
+    ->name('forfaits');
+
+// Activités
+Route::get('/activites', [ActiviteController::class, 'afficherActivite'])
+->name('contacts');
+
+// Contact
+Route::get('/contact', [ContactController::class, 'afficherContact'])
+->name('contacts');
