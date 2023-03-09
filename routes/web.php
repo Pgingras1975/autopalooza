@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EnregistrementController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\ContactController;
@@ -17,18 +22,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Accueil
-Route::get('/', [AccueilController::class, 'index'])
-    ->name('accueil');
+Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->middleware('auth');
 
-// Forfaits
-Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])
-    ->name('forfaits');
+Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
+Route::post('/enregistrement', [EnregistrementController::class, 'store']);
 
-// Activités
-Route::get('/activites', [ActiviteController::class, 'afficherActivite'])
-->name('contacts');
+Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
+Route::post('/connexion', [ConnexionController::class, 'authentifier']);
 
-// Contact
-Route::get('/contact', [ContactController::class, 'afficherContact'])
-->name('contacts');
+Route::get('/deconnexion', [ConnexionController::class, 'deconnecter']);
+
+Route::get('/reservation/supprimer/{id}', [ReservationController::class, 'destroy']);
+
+Route::get('/actualite/creer', [ActualiteController::class, 'create'])->name('creer-actualite');
+Route::post('/actualite/sauvegarder', [ActualiteController::class, 'store']);
+
+Route::get('/actualite/modifier/{id}', [ActualiteController::class, 'edit'])->name('modifier-actualite');
+Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
+
+Route::get('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy']);
