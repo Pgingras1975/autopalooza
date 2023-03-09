@@ -41,3 +41,18 @@ Route::get('/actualite/modifier/{id}', [ActualiteController::class, 'edit'])->na
 Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
 
 Route::get('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy']);
+
+Route::get('/', [AccueilController::class, 'index'])
+    ->name('accueil');
+
+// Forfaits
+Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])
+    ->name('forfaits');
+
+// Activités
+Route::get('/activites', [ActiviteController::class, 'afficherActivite'])
+->name('contacts');
+
+// Contact
+Route::get('/contact', [ContactController::class, 'afficherContact'])
+->name('contacts');
