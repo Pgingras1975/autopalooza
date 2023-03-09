@@ -3,3 +3,22 @@ body {
     min-height: 100vh;
     color: white
 }
+
+
+/*************************************** ACCUEIL - ALESSIA ***************************************/
+body {
+    .menu {
+        background-color: #011627!important;
+        height: 110px;
+
+        .navbar-nav {
+            flex-direction: row;
+        }
+
+        a {
+            color: #fff;
+            font-size: 29px;
+            margin-right: 55px;
+        }
+    }
+}
