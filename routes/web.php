@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EnregistrementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->middleware('auth');
+
+Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
+Route::post('/enregistrement', [EnregistrementController::class, 'store']);
+
+Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
+Route::post('/connexion', [ConnexionController::class, 'authentifier']);
+
+Route::get('/deconnexion', [ConnexionController::class, 'deconnecter']);
