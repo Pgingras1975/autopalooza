@@ -1,11 +1,11 @@
 @foreach ($usagers as $usager)
 
-<div class="d-flex justify-content-between p-2">
-    <div class="">
+<div class="d-flex p-2">
+    <div class="w-25">
          {{ $usager->nom_complet }}
     </div>
 
-    <div class="">
+    <div class="w-50">
         {{ $usager->email }}
     </div>
 

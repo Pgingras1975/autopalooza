@@ -1,9 +1,10 @@
 <x-layout>
 
-        <h1>Dashboard</h1>
+        <h1>Dashboard</h1> Bonjour {{ $us }}
 
-         <div class="p-3">
+         <div class="p-3 d-flex">
             <a href="{{ url('/deconnexion') }}" class="btn btn-primary">Déconnexion</a>
+            <a href="{{ route('creer-actualite') }}" class="btn btn-primary">Ajouter Actualité</a>
         </div>
      <div class="d-flex">
         <div class="w-50 border">
@@ -30,6 +31,7 @@
         <div class="w-33 border">
             <h2>Actualités</h2>
             <div class="d-flex">
+                <h5 class="w-25">Titre</h5>
                 <h5 class="w-25">Description</h5>
             </div>
             <x-liste-actualites :actualites="$actualites"/>
@@ -38,6 +40,7 @@
         <div class="w-33 border">
             <h2>Activités</h2>
             <div class="d-flex">
+                <h5 class="w-25">Nom</h5>
                 <h5 class="w-25">Description</h5>
             </div>
             <x-liste-activites :activites="$activites"/>

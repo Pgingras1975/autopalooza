@@ -1,11 +1,11 @@
 @foreach ($activites as $activite)
 
 <div class="d-flex justify-content-between p-2">
-    <div class="">
+    <div class="w-25">
          {{ $activite->nom }}
     </div>
 
-    <div class="">
+    <div class="w-50">
         {{ $activite->description_limiter }}
     </div>
 

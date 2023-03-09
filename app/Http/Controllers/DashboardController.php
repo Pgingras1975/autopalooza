@@ -22,6 +22,7 @@ class DashboardController extends Controller
              "actualites" => Actualite::all(),
              "activites" => Activite::all(),
              "forfaits" => Forfait::all(),
+             "us" => auth()->user()->nom_complet
         ]);
     }
 }

@@ -16,6 +16,6 @@ class Actualite extends Model
      * retourne un string de 60 caractères
      */
     public function getDescriptionLimiterAttribute(){
-        return Str::limit($this->texte, 60);
+        return Str::limit($this->description, 60);
     }
 }

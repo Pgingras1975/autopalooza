@@ -14,14 +14,9 @@
 
     <div class="">
 
-        <a href="{{ url('reservations/modifier/' . $reservation->id)}}" class="">Modifier</a>
-
-        <a href="{{ url('reservations/supprimer/' . $reservation->id)}}" class="">Supprimer</a>
+        <a href="{{ url('reservation/supprimer/' . $reservation->id)}}" class="">Supprimer</a>
     </div>
 
 </div>
-
-
-
 
 @endforeach
