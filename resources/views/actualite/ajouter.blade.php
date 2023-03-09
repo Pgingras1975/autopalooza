@@ -15,12 +15,16 @@
 
                 <div class="form-floating mb-2">
                     <input type="text" class="form-control" id="titre" name="titre" value="{{ old('titre') }}">
-                    <label class="form" for="titre">Nom</label>
+                    <label class="form" for="titre">Titre</label>
                     <x-form-message champ="titre" />
                 </div>
 
-                <textarea class="form-control" id="faits" name="description" rows="3">{{ old('description') }}</textarea>
-                <x-form-message champ="description" />
+                <div class="form-floating mb-2">
+                    <textarea class="form-control" id="faits" name="description" rows="3">{{ old('description') }}</textarea>
+                    <label class="form" for="description">Description</label>
+                    <x-form-message champ="description" />
+                </div>
+
 
                 <label class="h4" for="image">Image : </label>
                 <input type="file" name="image" id="">
