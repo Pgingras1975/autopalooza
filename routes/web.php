@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route principale connexion/admin
 Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->middleware('auth');
 
 Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
@@ -34,6 +35,7 @@ Route::get('/deconnexion', [ConnexionController::class, 'deconnecter']);
 
 Route::get('/reservation/supprimer/{id}', [ReservationController::class, 'destroy']);
 
+// Route actualité
 Route::get('/actualite/creer', [ActualiteController::class, 'create'])->name('creer-actualite');
 Route::post('/actualite/sauvegarder', [ActualiteController::class, 'store']);
 
@@ -42,6 +44,7 @@ Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
 
 Route::get('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy']);
 
+// Route activité
 Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite');
 Route::post('/activite/sauvegarder', [ActiviteController::class, 'store']);
 
@@ -49,6 +52,16 @@ Route::get('/activite/modifier/{id}', [ActiviteController::class, 'edit'])->name
 Route::post('/activite/modifier/{id}', [ActiviteController::class, 'update']);
 
 Route::get('/activite/supprimer/{id}', [ActiviteController::class, 'destroy']);
+
+// Route forfait
+Route::get('/forfait/creer', [ForfaitController::class, 'create'])->name('creer-forfait');
+Route::post('/forfait/sauvegarder', [ForfaitController::class, 'store']);
+
+Route::get('/forfait/modifier/{id}', [ForfaitController::class, 'edit'])->name('modifier-forfait');
+Route::post('/forfait/modifier/{id}', [ForfaitController::class, 'update']);
+
+Route::get('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy']);
+
 
 
 Route::get('/', [AccueilController::class, 'index'])
