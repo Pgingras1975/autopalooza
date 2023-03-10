@@ -29,36 +29,34 @@ class ActiviteController extends Controller
      */
     public function store(Request $request){
 
-        dd($request);
+        $request->validate([
+            "nom" => 'required|max:255',
+            "description" => 'required',
+            "image" => "mimes:png,jpg,jpeg,webp",
+        ],[
+            'nom.required' => 'Le champs Titre est requis',
+            'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
+            'description.required' => 'Le champs Description est requis',
+            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
+        ]);
 
-        // $request->validate([
-        //     "nom" => 'required|max:255',
-        //     "description" => 'required',
-        //     "image" => "mimes:png,jpg,jpeg,webp",
-        // ],[
-        //     'nom.required' => 'Le champs Titre est requis',
-        //     'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
-        //     'description.required' => 'Le champs Description est requis',
-        //     "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
-        // ]);
-
-        // $activite = new Activite();
-        // $activite->nom = $request->nom;
-        // $activite->description = $request->description;
+        $activite = new Activite();
+        $activite->nom = $request->nom;
+        $activite->description = $request->description;
 
 
-        // // traitement de l'image
-        // if ($request->image) {
-        //     Storage::putFile('public/img', $request->image);
+        // traitement de l'image
+        if ($request->image) {
+            Storage::putFile('public/img', $request->image);
 
-        //     $activite->image = '/storage/img/' . $request->image->hashName();
-        // } else {
-        //     $activite->image = '/storage/img/logo.png';
-        // }
+            $activite->image = '/storage/img/' . $request->image->hashName();
+        } else {
+            $activite->image = '/storage/img/logo.png';
+        }
 
-        // $activite->save();
+        $activite->save();
 
-        // return redirect()->route('admin')->with('ajout-Activite', 'Nouvelle Activité ajoutée!');
+        return redirect()->route('admin')->with('ajout-Activite', 'Nouvelle Activité ajoutée!');
     }
 
     /**

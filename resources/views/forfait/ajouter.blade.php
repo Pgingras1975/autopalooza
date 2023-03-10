@@ -3,10 +3,10 @@
 
         <div class="mb-3">
             <h1 class="d-flex justify-content-center">
-                Ajouter une nouvelle activite
+                Ajouter nouveau forfait
             </h1>
 
-            <form action="{{ url('/activite/sauvegarder') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ url('/forfait/sauvegarder') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
                 @error('texte')
@@ -15,7 +15,7 @@
 
                 <div class="form-floating mb-2">
                     <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom') }}">
-                    <label class="form" for="nom">Nom</label>
+                    <label class="form" for="nom">nom</label>
                     <x-form-message champ="nom" />
                 </div>
 
@@ -25,6 +25,11 @@
                     <x-form-message champ="description" />
                 </div>
 
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control" id="prix" name="prix" value="{{ old('description') }}">
+                    <label class="form" for="prix">prix</label>
+                    <x-form-message champ="prix" />
+                </div>
 
                 <label class="h4" for="image">Image : </label>
                 <input type="file" name="image" id="">
