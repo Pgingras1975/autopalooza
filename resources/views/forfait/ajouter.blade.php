@@ -25,6 +25,11 @@
                     <x-form-message champ="description" />
                 </div>
 
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control" id="prix" name="prix" value="{{ old('description') }}">
+                    <label class="form" for="prix">prix</label>
+                    <x-form-message champ="prix" />
+                </div>
 
                 <label class="h4" for="image">Image : </label>
                 <input type="file" name="image" id="">
