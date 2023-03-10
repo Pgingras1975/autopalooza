@@ -3,3 +3,61 @@ body {
     min-height: 100vh;
     color: white
 }
+
+//***************** Page FORFAITS - ALEX **************************
+
+.btn-reserver {
+    background-color: #FF9F1C;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    margin-top: 2%;
+    width: 100%;
+    &:hover{
+        background-color: #239A94;
+    }
+}
+
+.card-forfait {
+    border: 5px solid #239A94;
+    border-radius: 14px;
+    color: black;
+    text-align: center;
+}
+
+.name-forfait {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.price-forfait {
+    font-size: 40px;
+}
+
+.inclus {
+    text-decoration: none;
+    color: black;
+
+    img{
+        width: 3.4%;
+    }
+}
+
+.note-forfaits {
+    text-align: center;
+    color: black;
+    margin-top: 20%;
+    background-color: #FF9F1C;
+    padding: 1% 0;
+    font-size: 18px;
+}
+
+.include{
+    background-color: white;
+    border: none;
+}
+
+.include-forfait {
+    list-style-type: none;
+}

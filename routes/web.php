@@ -27,7 +27,7 @@ Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])
 
 // Activités
 Route::get('/activites', [ActiviteController::class, 'afficherActivite'])
-->name('contacts');
+->name('activites');
 
 // Contact
 Route::get('/contact', [ContactController::class, 'afficherContact'])
