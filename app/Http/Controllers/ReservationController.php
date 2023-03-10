@@ -20,6 +20,6 @@ class ReservationController extends Controller
 
         return redirect()
                 ->route('admin')
-                ->with('suppression-reservation', 'La réservation a été supprimée!');
+                ->with('suppression-Reservation', 'La réservation a été supprimée!');
     }
 }
