@@ -25,20 +25,22 @@
         </div>
     </nav>
 
-    <main>
-        <header>
-            <div class="video-container">
-                <h1>Festival AutoPalooza</h1>
-                <h2>Du 4 au 6 août 2023</h2>
-                <video autoplay loop>
-                    <source src="/storage/video_header.mp4" type="video/mp4">
-                </video>
-            </div>
+    <header>
+        <div class="video-container">
+            <h1>Festival AutoPalooza</h1>
+            <h2>Du 4 au 6 août 2023</h2>
+            <video autoplay loop>
+                <source src="/storage/video_header.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            <div class="flesh-defilement">
-                <img src="/storage/flesh.png" alt="" width="50">
-            </div>
-        </header>
+        <div class="flesh-defilement">
+            <img src="/storage/flesh.png" alt="" width="50">
+        </div>
+    </header>
+
+    <main id="accueil">
+        <h2>Actualités</h2>
     </main>
 
-</x-layout>
+</x-layout-accueil>
