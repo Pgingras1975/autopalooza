@@ -59,7 +59,7 @@ class ForfaitController extends Controller
 
         $forfait->save();
 
-        return redirect()->route('admin')->with('ajout-forfait', 'Nouvelle Activité ajoutée!');
+        return redirect()->route('admin')->with('ajout-Forfait', 'Nouvelle Activité ajoutée!');
     }
 
     /**
@@ -110,7 +110,7 @@ class ForfaitController extends Controller
 
         $forfait->save();
 
-        return redirect()->route('admin')->with('modification-forfait', 'Modification effectuée!');
+        return redirect()->route('admin')->with('modification-Forfait', 'Modification effectuée!');
     }
 
     /**
@@ -126,6 +126,6 @@ class ForfaitController extends Controller
 
         return redirect()
                 ->route('admin')
-                ->with('suppression-forfait', "Le forfait a été supprimée!");
+                ->with('suppression-Forfait', "Le forfait a été supprimée!");
     }
 }
