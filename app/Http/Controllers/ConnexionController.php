@@ -29,7 +29,6 @@ class ConnexionController extends Controller
         ]);
 
         if(auth()->attempt($infos_valides)) {
-            // dd(auth()->user()->utype_id);
             if(auth()->user()->utype_id == 1){
                 return redirect()->route('admin')->with('success-connexion', 'Connexion réussie!');
             } else {

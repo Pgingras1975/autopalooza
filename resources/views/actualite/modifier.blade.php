@@ -31,6 +31,7 @@
                 </div>
 
                 <a href="{{ url('actualite/supprimer/' . $actualite->id)}}" class="btn btn-primary">Supprimer</a>
+                <a href="{{ route('admin')}}" class="btn btn-primary">Retour</a>
 
             </form>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EnregistrementController;
@@ -27,6 +28,15 @@ Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->midd
 
 Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
 Route::post('/enregistrement', [EnregistrementController::class, 'store']);
+
+Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe');
+Route::post('/employe/sauvegarder', [EmployeController::class, 'store']);
+
+Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe');
+Route::post('/employe/modifier/{id}', [EmployeController::class, 'update']);
+
+Route::get('/employe/supprimer/{id}', [EmployeController::class, 'destroy']);
+
 
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
 Route::post('/connexion', [ConnexionController::class, 'authentifier']);

@@ -11,6 +11,11 @@
             <a href="{{ route('creer-actualite') }}" class="btn btn-primary">Ajouter Actualité</a>
             <a href="{{ route('creer-activite') }}" class="btn btn-primary">Ajouter Activité</a>
             <a href="{{ route('creer-forfait') }}" class="btn btn-primary">Ajouter Forfait</a>
+
+            @if ($id == 1)
+                <a href="{{ route('creer-employe') }}" class="btn btn-primary">Ajouter Employé</a>
+            @endif
+
         </div>
      <div class="d-flex">
         <div class="w-50 border">
