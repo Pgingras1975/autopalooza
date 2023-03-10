@@ -88,3 +88,7 @@ Route::get('/activites', [ActiviteController::class, 'afficherActivite'])
 // Contact
 Route::get('/contact', [ContactController::class, 'afficherContact'])
 ->name('contacts');
+
+// Réservation
+Route::get('/reservation', [ReservationController::class, 'reserver'])
+->name('reservation');

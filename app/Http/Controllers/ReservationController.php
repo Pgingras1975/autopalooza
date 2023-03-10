@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 class ReservationController extends Controller
 {
     /**
+     * Affiche la vue de réservation
+     *
+     *
+     */
+    public function reserver() {
+        return view('reservation', [
+
+        ]);
+    }
+    /**
      * Supprime un fait selon son id
      *
      * @param int $id id du fait

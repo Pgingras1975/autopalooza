@@ -1,7 +1,7 @@
 <x-layout>
 <h1>Forfaits</h1>
 <div class="d-flex flex-wrap container-fluid row">
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 cards">
         <div class="card card-forfait mx-auto d-flex mt-5 p-0" style="width: 22rem;">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmVzdGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="max-width: 100vw">
             <div class="card-body">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 cards">
         <div class="card card-forfait mx-auto d-flex mt-5 p-0" style="width: 22rem;">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmVzdGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="max-width: 100vw">
             <div class="card-body">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 cards">
         <div class="card card-forfait mx-auto d-flex mt-5 p-0" style="width: 22rem;">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmVzdGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="max-width: 100vw">
             <div class="card-body">
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 cards">
         <div class="card card-forfait mx-auto d-flex mt-5 p-0" style="width: 22rem;">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmVzdGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="max-width: 100vw">
             <div class="card-body">
