@@ -6,7 +6,7 @@
                 Ajouter une nouvelle activite
             </h1>
 
-            <form action="{{ url('/actvite/sauvegarder') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ url('/activite/sauvegarder') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
                 @error('texte')

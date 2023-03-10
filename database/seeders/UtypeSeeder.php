@@ -14,6 +14,6 @@ class UtypeSeeder extends Seeder
      */
     public function run()
     {
-        Utype::factory(3)->create();
+        Utype::factory(2)->create();
     }
 }

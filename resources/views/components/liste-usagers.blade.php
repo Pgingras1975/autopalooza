@@ -4,6 +4,9 @@
     <div class="w-25">
          {{ $usager->nom_complet }}
     </div>
+    <div class="w-25">
+        {{ $usager->id }}
+   </div>
 
     <div class="w-50">
         {{ $usager->email }}
@@ -18,9 +21,12 @@
 
         <a href="{{ url('faits/supprimer/' . $usager->id)}}" class="btn btn-danger">Supprimer</a> --}}
 
-        <a href="{{ url('usagers/modifier/' . $usager->id)}}" class="">Modifier</a>
+        @if ($id == 1)
+            <a href="{{ url('usagers/modifier/' . $usager->id)}}" class="">Modifier</a>
+        @endif
 
-        <a href="{{ url('usagers/supprimer/' . $usager->id)}}" class="">Supprimer</a>
+
+        {{-- <a href="{{ url('usagers/supprimer/' . $usager->id)}}" class="">Supprimer</a> --}}
     </div>
 
 </div>

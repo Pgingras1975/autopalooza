@@ -52,7 +52,7 @@ class User extends Authenticatable
             /**
      * Relation avec le modèle Usertype (un-à-plusieurs)
      */
-    public function userType(){
+    public function uType(){
         return $this->hasMany(Utype::class);
     }
 

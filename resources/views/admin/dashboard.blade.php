@@ -4,7 +4,7 @@
 
     <x-connexion-message />
 
-        <h1>Dashboard</h1> Bonjour {{ $us }}
+        <h1>Dashboard</h1> Bonjour {{ $auth_user }}
 
          <div class="p-3 d-flex">
             <a href="{{ url('/deconnexion') }}" class="btn btn-primary">Déconnexion</a>
@@ -16,9 +16,10 @@
             <h2>Liste des usagers du site</h2>
             <div class="d-flex">
                 <h5 class="w-25">Nom</h5>
+                <h5 class="w-25">id</h5>
                 <h5 class="w-50">E-mail</h5>
             </div>
-            <x-liste-usagers :usagers="$usagers"/>
+            <x-liste-usagers :usagers="$usagers" :id="$id"/>
         </div>
 
         <div class="w-50 border">
@@ -46,7 +47,7 @@
         <div class="w-33 border">
             <h2>Activités</h2>
             <div class="d-flex">
-                <h5 class="w-25">Nom</h5>
+                <h5 class="w-50">Nom</h5>
                 <h5 class="w-25">Description</h5>
             </div>
             <x-liste-activites :activites="$activites"/>

@@ -29,6 +29,9 @@
                 <div class="d-flex justify-content-center p-3">
                     <input class="btn btn-success m-2" type="submit" value="Modiifer">
                 </div>
+
+                <a href="{{ url('actualite/supprimer/' . $actualite->id)}}" class="btn btn-primary">Supprimer</a>
+
             </form>
         </div>
 
