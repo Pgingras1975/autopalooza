@@ -9,6 +9,7 @@ body#accueil {
   background-image: linear-gradient(#011627 75%, #12585D, #239993);
   min-height: 100vh;
   color: #fff;
+  overflow-x: hidden;
 }
 body#accueil nav.menu {
   background-color: #011627 !important;
@@ -41,7 +42,7 @@ body#accueil nav.menu .container ul.navbar-nav li.nav-item a:hover {
 body#accueil nav.menu .container ul.navbar-nav li.nav-item a.connexion {
   background-color: #2EC4B6 !important;
   border: 5px solid #2EC4B6;
-  padding: 6px 20px;
+  padding: 4px 16px;
   border-radius: 30px;
   margin-left: 75px;
 }
@@ -65,7 +66,7 @@ body#accueil header .video-container h1 {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 110px;
+  font-size: 100px;
   color: #fff;
   border-bottom: 6px solid #2EC4B6;
   padding: 0 30px;
@@ -82,6 +83,34 @@ body#accueil header .video-container h2 {
 body#accueil header .video-container video {
   width: inherit;
 }
+body#accueil header .route-vertical {
+  border-right: 15px solid #FF9F1C;
+  border-left: 15px solid #FF9F1C;
+  background-color: #000;
+  height: 2000px;
+  width: 165px;
+  position: absolute;
+  right: 250px;
+}
+body#accueil header .route-vertical-centre {
+  position: absolute;
+  right: 315px;
+  display: grid;
+  grid-gap: 65px;
+  width: 30px;
+  height: 2000px;
+  background-color: #000;
+}
+body#accueil header .route-vertical-centre div {
+  background-color: #E6E5E5;
+  padding: 5px;
+}
+body#accueil header .voiture-rouge img {
+  width: 100px;
+  position: fixed;
+  top: 200px;
+  right: 282px;
+}
 body#accueil header .flesh-defilement img {
   margin-left: 50%;
   margin-top: 60px;
@@ -95,4 +124,54 @@ body#accueil main#accueil h2 {
   text-align: center;
   margin-top: 300px;
   margin-bottom: 115px;
+}
+body#accueil main#accueil .actualites {
+  color: #000;
+  text-align: center;
+  font-family: protipo, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 87%;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+body#accueil main#accueil .actualites .card {
+  max-width: 375px;
+  margin: 0 20px;
+  padding: 0;
+}
+body#accueil main#accueil .actualites .card .card-body p.date-actualite {
+  text-align: start;
+  font-size: 18px;
+}
+body#accueil main#accueil .actualites .card .card-body h3.titre-actualite {
+  font-family: protipo, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+body#accueil footer {
+  background-color: #FF9F1C;
+  height: 180px;
+  border-top: 10px solid #011627;
+  font-family: protipo, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+}
+body#accueil footer img {
+  width: 135px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body#accueil footer p {
+  position: relative;
+  left: 136px;
+  top: -50px;
+}
+body#accueil footer .reseaux-sociaux a img {
+  position: relative;
+  right: 136px;
+  top: -50px;
+  width: 65px;
 }/*# sourceMappingURL=style.css.map */
