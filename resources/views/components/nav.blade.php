@@ -10,13 +10,13 @@
                 <a class="nav-link" href="#">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Activités</a>
+                <a class="nav-link" href="{{ url('activites') }}">Activités</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Forfaits</a>
+                <a class="nav-link" href="{{ url('/forfaits') }}">Forfaits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link connexion" href="#">Connexion</a>
