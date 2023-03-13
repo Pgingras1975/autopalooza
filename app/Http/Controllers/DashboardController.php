@@ -17,13 +17,14 @@ class DashboardController extends Controller
     public function admin() {
         return view('admin.dashboard', [
             //  "conversations" => Conversation::where('user_id' , '=', auth()->user()->id )->orderByDesc('created_at')->get()
-             "usagers" => User::where('id', '>', 1 )->orderByDesc('utype_id')->get(),
+             "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
+             "clients" => User::where('utype_id', '=', 2 )->orderBy('nom')->get(),
              "reservations" => Reservation::all(),
              "actualites" => Actualite::all(),
              "activites" => Activite::all(),
              "forfaits" => Forfait::all(),
              "auth_user" => auth()->user()->nom_complet,
-             "id" => auth()->user()->id
+             "authuserid" => auth()->user()->id
         ]);
     }
 }

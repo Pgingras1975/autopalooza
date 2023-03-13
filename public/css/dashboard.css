@@ -2,12 +2,16 @@
     width: 33.3%;
 }
 
-a {
+/* a {
     color: aliceblue;
-}
+} */
 
 .container-min-w {
     min-width: 420px;
+}
+
+.bg-autopalooza {
+    background-image: linear-gradient(#011627 25%, #12585D, #239993);
 }
 
 label {

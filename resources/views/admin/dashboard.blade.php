@@ -1,4 +1,4 @@
-<x-layout>
+<x-dashboard-layout>
 
     <body id="bg-autopalooza">
 
@@ -12,20 +12,32 @@
             <a href="{{ route('creer-activite') }}" class="btn btn-primary">Ajouter Activité</a>
             <a href="{{ route('creer-forfait') }}" class="btn btn-primary">Ajouter Forfait</a>
 
-            @if ($id == 1)
+            @if ($authuserid == 1)
                 <a href="{{ route('creer-employe') }}" class="btn btn-primary">Ajouter Employé</a>
             @endif
 
         </div>
      <div class="d-flex">
-        <div class="w-50 border">
-            <h2>Liste des usagers du site</h2>
+        <div class="w-100 border">
+            <h2>Liste des employé</h2>
             <div class="d-flex">
                 <h5 class="w-25">Nom</h5>
                 <h5 class="w-25">id</h5>
                 <h5 class="w-50">E-mail</h5>
             </div>
-            <x-liste-usagers :usagers="$usagers" :id="$id"/>
+            <x-liste-employes :employes="$employes" :authuserid="$authuserid"/>
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <div class="w-50 border">
+            <h2>Liste des clients</h2>
+            <div class="d-flex">
+                <h5 class="w-25">Nom</h5>
+                <h5 class="w-25">id</h5>
+                <h5 class="w-50">E-mail</h5>
+            </div>
+            <x-liste-clients :clients="$clients" :authuserid="$authuserid"/>
         </div>
 
         <div class="w-50 border">
@@ -69,4 +81,4 @@
         </div>
     </div>
     </body>
-</x-layout>
+</x-dashboard-layout>

@@ -14,7 +14,7 @@ class UtypeFactory extends Factory
     public function definition()
     {
         return [
-            "type" => $this->faker->text(8),
+            "type" => $this->faker->text(6),
         ];
     }
 }
