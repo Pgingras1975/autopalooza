@@ -19,7 +19,10 @@
                 <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link connexion" href="{{ url('/connexion') }}">Connexion</a>
+                <a class="nav-link connexion" href="{{ route('login')}}">Connexion</a>
+            </li>
+            <li>
+                <a class="nav-link connexion" href="{{ route('deconnexion')}}">Déconnexion</a>
             </li>
         </ul>
     </div>

@@ -1,6 +1,6 @@
 @foreach ($employes as $employe)
 @if ($authuserid == 1)
-<a href="{{ url('client/modifier/' . $employe->id)}}" class="">
+<a href="{{ url('employe/modifier/' . $employe->id)}}" class="">
 @endif
     <div class="d-flex p-2">
         <div class="w-25">

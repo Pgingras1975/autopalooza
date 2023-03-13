@@ -15,14 +15,14 @@
 
                     <div class="form-floating mb-2">
                         <input type="email" class="form-control" id="email" name="email" placeholder="Courriel" autofocus>
-                        <label class="form" for="email">Courriel</label>
+                        <label class="form" for="email" style="color:#011627">Courriel</label>
                         <x-form-message champ="email" />
                     </div>
 
                     <div class="form-floating mb-2">
                         <input type="password" class="form-control" id="password" name="password"
                             placeholder="Mot de passe" autocomplete="off">
-                        <label class="form" for="password">Mot de passe</label>
+                        <label class="form" style="color:#011627"for="password">Mot de passe</label>
                         <x-form-message champ="password" />
                     </div>
 

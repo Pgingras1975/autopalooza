@@ -85,7 +85,8 @@ class EmployeController extends Controller
         $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
-            'email' => 'required|email|unique:users,email',
+            // 'email' => 'required|email|unique:users,email',
+            'email' => 'required|email',
             'password' => 'nullable',
             // 'password-confirm' => 'required|same:password',
 
@@ -94,10 +95,10 @@ class EmployeController extends Controller
             'prenom.required' => 'Le prénom est requis',
             'email.required' => 'Le courriel est requis',
             'email.email' => 'Le courriel doit être valide',
-            'email.unique' => 'Ce courriel existe déjà',
+            // 'email.unique' => 'Ce courriel existe déjà',
             // 'password.required' => 'Le mot de passe est requis',
             // 'password-confirm.required' => 'La confirmation du mot de passe est requise',
-            'password-confirm.same' => 'La confirmation du mot de passe ne correspond pas au mot de passe entré',
+            // 'password-confirm.same' => 'La confirmation du mot de passe ne correspond pas au mot de passe entré',
         ]);
 
         //envoyer les infos au modèle
@@ -107,8 +108,8 @@ class EmployeController extends Controller
         $user->nom = $request->nom;
         $user->prenom = $request->prenom;
         $user->email = $request->email;
-        $user->password = Hash::make($request->password);
-        $user->utype_id = 1;
+        // $user->password = Hash::make($request->password);
+        // $user->utype_id = 1;
 
         $user->save();
 
@@ -116,7 +117,7 @@ class EmployeController extends Controller
         // auth()->login($user);
 
         // Redirection
-        return redirect()->route('admin')->with('success-creation', 'Modification réussi!');
+        return redirect()->route('admin')->with('modification-Employe', 'Modification réussi!');
 
     }
 
@@ -133,6 +134,6 @@ class EmployeController extends Controller
 
         return redirect()
                 ->route('admin')
-                ->with('suppression-forfait', "L\'employé a été supprimée!");
+                ->with('suppression-Employe', "L\'employé a été supprimée!");
     }
 }

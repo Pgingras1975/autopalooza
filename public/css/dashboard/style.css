@@ -1,0 +1,64 @@
+.w-33 {
+    width: 33.3%;
+}
+
+.min-w {
+    min-width: 420px;
+}
+
+/* a {
+    color: aliceblue;
+} */
+
+.h-200 {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.h-300 {
+    height: 300px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.h-300::-webkit-scrollbar {
+    display: none;
+}
+
+.h-400 {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.container-min-w {
+    min-width: 420px;
+}
+
+.bg-autopalooza {
+    background-image: linear-gradient(#011627 25%, #12585D, #239993);
+}
+
+label {
+    color: black !important;
+}
+
+/* .is-disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+    text-decoration: none;
+}
+.is-disabled a {
+    cursor: not-allowed;
+    opacity: 0.3;
+    text-decoration: none;
+} */
+
+.auth-user {
+    font-size: 24px !important;
+    font-weight: bold;
+}
+
+.font-36 {
+    font-size: 54px !important;
+}

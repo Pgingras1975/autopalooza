@@ -1,5 +1,7 @@
 <x-layout-accueil>
 
+    <x-connexion-message/>
+
     <x-nav/>
 
     <header>

@@ -10,7 +10,13 @@ class ConnexionController extends Controller
      * Affiche le formulaire de connexion
      */
     public function connexion() {
-        return view('auth.connexion');
+
+        if (auth()->user()) {
+            return view('accueil');
+        } else {
+
+            return view('auth.connexion');
+        }
     }
 
     /**
@@ -46,6 +52,6 @@ class ConnexionController extends Controller
     public function deconnecter() {
         auth()->logout();
 
-        return redirect()->route('login')->with('success-deconnexion', 'Vous êtes déconnecté');
+        return redirect()->route('accueil')->with('success-deconnexion', 'Vous êtes déconnecté');
     }
 }
