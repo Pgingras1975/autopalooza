@@ -2,9 +2,23 @@
     width: 33.3%;
 }
 
+.min-w {
+    min-width: 420px;
+}
+
 /* a {
     color: aliceblue;
 } */
+
+.h-200 {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.h-400 {
+    height: 400px;
+    overflow-y: scroll;
+}
 
 .container-min-w {
     min-width: 420px;
@@ -17,3 +31,14 @@
 label {
     color: black;
 }
+
+/* .is-disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+    text-decoration: none;
+}
+.is-disabled a {
+    cursor: not-allowed;
+    opacity: 0.3;
+    text-decoration: none;
+} */

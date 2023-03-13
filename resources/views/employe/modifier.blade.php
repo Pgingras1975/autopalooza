@@ -1,6 +1,6 @@
-<x-layout>
+<x-dashboard-layout>
 
-    <main class="w-25 m-auto mt-5 border rounded">
+    <main class="w-25 m-auto mt-5 border rounded min-w">
 
         <div class="container py-5">
             <h1 class="text-center m-0 fs-1">Modifier un employé</h1>
@@ -27,7 +27,7 @@
                         <label class="form" for="email">Courriel</label>
                         <x-form-message champ="email" />
                     </div>
-                    <input type="hidden" name="password" value="{{ $usager->password }}">
+                    {{-- <input type="hidden" name="password" value="{{ $usager->password }}"> --}}
 
                     {{-- <div class="form-floating mb-2">
                         <input type="password" class="form-control" id="password" name="password"
@@ -56,4 +56,4 @@
         </div>
     </main>
 
-</x-layout>
+</x-dashboard-layout>

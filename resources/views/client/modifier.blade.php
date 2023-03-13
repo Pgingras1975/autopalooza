@@ -27,7 +27,9 @@
                         <label class="form" for="email">Courriel</label>
                         <x-form-message champ="email" />
                     </div>
-                    <input type="hidden" name="password" value="{{ $usager->password }}">
+                    {{-- <input type="hidden" name="password" value="{{ $usager->password }}">
+                    <input type="hidden" name="utype_id" value="{{ $usager->utype_id}}"> --}}
+
 
                     {{-- <div class="form-floating mb-2">
                         <input type="password" class="form-control" id="password" name="password"

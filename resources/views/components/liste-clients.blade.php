@@ -1,7 +1,8 @@
 @foreach ($clients as $client)
-@if ($authuserid == 1)
+{{-- @dd($utype)
+@if ($utype == 1) --}}
 <a href="{{ url('client/modifier/' . $client->id)}}" class="">
-@endif
+{{-- @endif --}}
     <div class="d-flex p-2">
         <div class="w-25">
             {{ $client->nom_complet }}
@@ -18,8 +19,8 @@
             {{ $client->type }}
         </div>
     </div>
-@if ($authuserid == 1)
+{{-- @if ($utype == 1) --}}
 </a>
-@endif
+{{-- @endif --}}
 
 @endforeach

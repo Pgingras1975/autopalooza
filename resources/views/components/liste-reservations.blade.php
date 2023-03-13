@@ -2,7 +2,7 @@
 
 <div class="d-flex justify-content-between p-2">
     <div class="w-25">
-         {{ $reservation->user->nom_complet }}
+        {{ $reservation->nom_complet }}
     </div>
     <div class="">
         {{ $reservation->qty }}

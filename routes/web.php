@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\EmployeController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EnregistrementController;
@@ -26,8 +27,8 @@ use Illuminate\Support\Facades\Route;
 // Route principale connexion/admin
 Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->middleware('auth');
 
-Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement')->middleware('auth');
-Route::post('/enregistrement', [EnregistrementController::class, 'store'])->middleware('auth');
+Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
+Route::post('/enregistrement', [EnregistrementController::class, 'store']);
 
 Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe')->middleware('auth');
 Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middleware('auth');
@@ -37,18 +38,21 @@ Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->mid
 
 Route::get('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->middleware('auth');
 
-Route::get('/client/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
-Route::post('/client/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
+Route::get('/client/modifier/{id}', [ClientController::class, 'edit'])->name('modifier-client')->middleware('auth');
+Route::post('/client/modifier/{id}', [ClientController::class, 'update'])->middleware('auth');
 
-Route::get('/client/supprimer/{id}', [EmployeController::class, 'destroy'])->middleware('auth');
+Route::get('/client/rechercher', [ClientController::class, 'rechercherClient'])->middleware('auth');
+
+Route::get('/client/supprimer/{id}', [ClientController::class, 'destroy'])->middleware('auth');
 
 
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
 Route::post('/connexion', [ConnexionController::class, 'authentifier']);
 
-Route::get('/deconnexion', [ConnexionController::class, 'deconnecter']);
+Route::get('/deconnexion', [ConnexionController::class, 'deconnecter'])->name('deconnexion');
 
-Route::get('/reservation/supprimer/{id}', [ReservationController::class, 'destroy']);
+Route::get('/reservation/supprimer/{id}', [ReservationController::class, 'destroy'])->middleware('auth');
+Route::get('/reservation/rechercher', [ReservationController::class, 'rechercherReservation'])->middleware('auth');
 
 // Route actualité
 Route::get('/actualite/creer', [ActualiteController::class, 'create'])->name('creer-actualite');
@@ -97,3 +101,8 @@ Route::get('/contact', [ContactController::class, 'afficherContact'])
 // Réservation
 Route::get('/reservation', [ReservationController::class, 'reserver'])
 ->name('reservation');
+
+
+
+Route::get('users', [ClientController::class, 'index'])->name('users.index');
+Route::delete('users/{id}', [ClientController::class, 'delete'])->name('users.delete');
