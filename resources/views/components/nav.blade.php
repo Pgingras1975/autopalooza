@@ -1,13 +1,13 @@
 @props(["nav"])
 
 <nav class="navbar menu bg-body-tertiary sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="/storage/logo.png" alt="Logo AutoPalooza" width="100">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="/images/logo.png" alt="Logo AutoPalooza" class="img-fluid">
         </a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Accueil</a>
+                <a class="nav-link" href="{{ url('/') }}">Accueil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('activites') }}">Activités</a>
@@ -19,7 +19,7 @@
                 <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link connexion" href="#">Connexion</a>
+                <a class="nav-link connexion" href="{{ url('/connexion') }}">Connexion</a>
             </li>
         </ul>
     </div>
