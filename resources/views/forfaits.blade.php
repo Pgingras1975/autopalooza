@@ -1,5 +1,6 @@
 <x-layout>
-<h1>Forfaits</h1>
+<x-nav/>
+<h2 id="alex">Forfaits</h2>
 <div class="d-flex flex-wrap container-fluid row">
     <div class="col-12 col-md-6 col-lg-4 cards">
         <div class="card card-forfait mx-auto d-flex mt-5 p-0" style="width: 22rem;">
@@ -16,7 +17,7 @@
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sequi expedita vel culpa nesciunt quisquam laborum sint necessitatibus explicabo adipisci cupiditate eveniet natus veniam, minima officiis fugiat laudantium facere voluptates.</p>
                 </ul>
               </li>
-            <a href="#" class="btn btn-primary btn-reserver">Réserver</a>
+            <a href="{{ url('/reservation/') }}" class="btn btn-primary btn-reserver">Réserver</a>
             </div>
         </div>
     </div>
@@ -35,7 +36,7 @@
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sequi expedita vel culpa nesciunt quisquam laborum sint necessitatibus explicabo adipisci cupiditate eveniet natus veniam, minima officiis fugiat laudantium facere voluptates.</p>
                 </ul>
               </li>
-            <a href="#" class="btn btn-primary btn-reserver">Réserver</a>
+            <a href="{{ url('/reservation/') }}" class="btn btn-primary btn-reserver">Réserver</a>
             </div>
         </div>
     </div>
@@ -54,7 +55,7 @@
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sequi expedita vel culpa nesciunt quisquam laborum sint necessitatibus explicabo adipisci cupiditate eveniet natus veniam, minima officiis fugiat laudantium facere voluptates.</p>
                 </ul>
               </li>
-            <a href="#" class="btn btn-primary btn-reserver">Réserver</a>
+            <a href="{{ url('/reservation/') }}" class="btn btn-primary btn-reserver">Réserver</a>
             </div>
         </div>
     </div>
@@ -73,11 +74,10 @@
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sequi expedita vel culpa nesciunt quisquam laborum sint necessitatibus explicabo adipisci cupiditate eveniet natus veniam, minima officiis fugiat laudantium facere voluptates.</p>
                 </ul>
               </li>
-            <a href="#" class="btn btn-primary btn-reserver">Réserver</a>
+            <a href="{{ url('/reservation/') }}" class="btn btn-primary btn-reserver">Réserver</a>
             </div>
         </div>
     </div>
-
 </div>
 <p class="note-forfaits">* Prendre note que chaque forfait donne accès à tous les sites et activités.</p>
 </x-layout>

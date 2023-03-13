@@ -91,4 +91,5 @@ Route::get('/contact', [ContactController::class, 'afficherContact'])
 
 // Réservation
 Route::get('/reservation', [ReservationController::class, 'reserver'])
-->name('reservation');
+->name('reservation')
+->middleware('auth');
