@@ -15,6 +15,17 @@
     overflow-y: scroll;
 }
 
+.h-300 {
+    height: 300px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.h-300::-webkit-scrollbar {
+    display: none;
+}
+
 .h-400 {
     height: 400px;
     overflow-y: scroll;
@@ -29,7 +40,7 @@
 }
 
 label {
-    color: black;
+    color: black !important;
 }
 
 /* .is-disabled {
@@ -42,3 +53,12 @@ label {
     opacity: 0.3;
     text-decoration: none;
 } */
+
+.auth-user {
+    font-size: 24px !important;
+    font-weight: bold;
+}
+
+.font-36 {
+    font-size: 54px !important;
+}
