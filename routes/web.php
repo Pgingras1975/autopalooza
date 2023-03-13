@@ -26,16 +26,21 @@ use Illuminate\Support\Facades\Route;
 // Route principale connexion/admin
 Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->middleware('auth');
 
-Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
-Route::post('/enregistrement', [EnregistrementController::class, 'store']);
+Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement')->middleware('auth');
+Route::post('/enregistrement', [EnregistrementController::class, 'store'])->middleware('auth');
 
-Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe');
-Route::post('/employe/sauvegarder', [EmployeController::class, 'store']);
+Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe')->middleware('auth');
+Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middleware('auth');
 
-Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe');
-Route::post('/employe/modifier/{id}', [EmployeController::class, 'update']);
+Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
+Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
 
-Route::get('/employe/supprimer/{id}', [EmployeController::class, 'destroy']);
+Route::get('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->middleware('auth');
+
+Route::get('/client/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
+Route::post('/client/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
+
+Route::get('/client/supprimer/{id}', [EmployeController::class, 'destroy'])->middleware('auth');
 
 
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
