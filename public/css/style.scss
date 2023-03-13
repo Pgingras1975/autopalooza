@@ -77,8 +77,57 @@ body {
     border: none;
 }
 
-.include-forfait {
-    list-style-type: none;
+/*************************************** NAV - ALESSIA ***************************************/
+nav.menu {
+    background-color: #011627 !important;
+    height: 120px;
+    border-bottom: 10px solid #2EC4B6;
+
+    .container-fluid {
+        align-items: unset;
+        max-width: 1640px;
+
+        a.navbar-brand {
+            img {
+                width: 190px;
+                margin-top: 10px;
+            }
+        }
+
+        ul.navbar-nav {
+            flex-direction: row;
+            margin-top: 20px;
+
+            li.nav-item {
+                a {
+                    color: #fff;
+                    font-size: 29px;
+                    margin-right: 55px;
+                    font-family: protipo, sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: #2EC4B6;
+                    }
+                }
+
+                a.connexion {
+                    background-color: #2EC4B6 !important;
+                    border: 5px solid #2EC4B6;
+                    padding: 4px 16px;
+                    border-radius: 30px;
+                    margin-left: 75px;
+
+                    &:hover {
+                        background-color: #fff !important;
+                        border: 5px solid #2EC4B6;
+                        color: #2EC4B6;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*************************************** PAGE ACCUEIL - ALESSIA ***************************************/
@@ -87,58 +136,6 @@ body#accueil {
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden;
-
-    nav.menu {
-        background-color: #011627 !important;
-        height: 120px;
-        border-bottom: 10px solid #2EC4B6;
-
-        .container {
-            align-items: unset;
-            max-width: 1640px;
-
-            a.navbar-brand {
-                img {
-                    width: 190px;
-                    margin-top: 10px;
-                }
-            }
-
-            ul.navbar-nav {
-                flex-direction: row;
-                margin-top: 20px;
-
-                li.nav-item {
-                    a {
-                        color: #fff;
-                        font-size: 29px;
-                        margin-right: 55px;
-                        font-family: protipo, sans-serif;
-                        font-style: normal;
-                        font-weight: 500;
-
-                        &:hover {
-                            color: #2EC4B6;
-                        }
-                    }
-
-                    a.connexion {
-                        background-color: #2EC4B6 !important;
-                        border: 5px solid #2EC4B6;
-                        padding: 4px 16px;
-                        border-radius: 30px;
-                        margin-left: 75px;
-
-                        &:hover {
-                            background-color: #fff !important;
-                            border: 5px solid #2EC4B6;
-                            color: #2EC4B6;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     header {
         .video-container {
