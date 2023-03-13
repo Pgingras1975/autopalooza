@@ -7,7 +7,7 @@
             <h1>Festival AutoPalooza</h1>
             <h2>Du 4 au 6 août 2023</h2>
             <video autoplay muted loop>
-                <source src="/storage/video_header.mp4" type="video/mp4">
+                <source src="/video/pw2_header_video.mp4" type="video/mp4">
             </video>
         </div>
 
@@ -30,11 +30,11 @@
         </div>
 
         <div class="voiture-rouge">
-            <img src="/storage/voiture_rouge.png" alt="Voiture rouge">
+            <img src="/images/voiture_rouge.png" alt="Voiture rouge">
         </div>
 
         <div class="flesh-defilement">
-            <img src="/storage/flesh.png" alt="" width="50">
+            <img src="/images/flesh.png" alt="" width="50">
         </div>
     </header>
 
@@ -43,7 +43,7 @@
         <h2>Actualités</h2>
         <div class="row actualites mb-5">
             <div class="card">
-                <img class="card-img-top" src="/storage/voitures_actualites.png" alt="Card image cap">
+                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text date-actualite">28 février 2023</p>
                     <h3 class="titre-actualite">Actualité #1</h3>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="/storage/voitures_actualites.png" alt="Card image cap">
+                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text date-actualite">28 février 2023</p>
                     <h3 class="titre-actualite">Actualité #2</h3>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="/storage/voitures_actualites.png" alt="Card image cap">
+                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text date-actualite">28 février 2023</p>
                     <h3 class="titre-actualite">Actualité #3</h3>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="/storage/voitures_actualites.png" alt="Card image cap">
+                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text date-actualite">28 février 2023</p>
                     <h3 class="titre-actualite">Actualité #4</h3>
@@ -80,17 +80,17 @@
     </main>
 
     <footer>
-        <img src="/storage/logo.png" alt="Logo AutoPalooza">
+        <img src="/images/logo.png" alt="Logo AutoPalooza">
         <p>&copy; Copyright 2023 AutoPalooza Festival Automobile 2023. Tous droits réservés.</p>
         <div class="reseaux-sociaux">
             <a href="https://www.facebook.com/">
-                <img src="/storage/facebook.png" alt="Facebook">
+                <img src="/images/facebook.png" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/">
-                <img src="/storage/instagram.png" alt="Instagram">
+                <img src="/images/instagram.png" alt="Instagram">
             </a>
             <a href="https://twitter.com/">
-                <img src="/storage/twitter.png" alt="Twitter">
+                <img src="/images/twitter.png" alt="Twitter">
             </a>
         </div>
     </footer>
