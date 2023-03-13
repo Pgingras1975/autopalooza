@@ -100,7 +100,7 @@ class EnregistrementController extends Controller
         $user->prenom = $request->prenom;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->utype_id = 1;
+        $user->utype_id = 2;
 
         $user->save();
 

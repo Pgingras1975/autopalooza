@@ -1,8 +1,9 @@
 <x-layout>
+    <x-nav/>
     <div id="app" v-cloak>
-       <h1>Réservation</h1>
+       <h2 id="alex">Réservation</h2>
         {{-- Formulaire de réservation --}}
-        <form style="background-color:white; width: 35%;" class="pb-3 ps-4 m-auto">
+        <form style="background-color:white; width: 30vw;" class="pb-3 ps-4 m-auto">
             <div class="row mb-3 pt-5">
               <label for="inputEmail3" class="col-sm-2 col-form-label">Forfait</label>
               <div class="col-sm-10">
@@ -33,16 +34,18 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary" style="background-color: #239A94">Ajouter au panier</button>
-            <button type="submit" class="btn btn-primary ms-4 bg-dark">Voir mon panier</button>
+            {{-- <button class="btn btn-primary ms-4 bg-dark cart-toggle-bt" @click="panier_est_ouvert = true">Voir mon panier</button> --}}
+            <div class="ms-2 btn btn-outline-dark" @click="panier_est_ouvert = true">Voir mon panier 🛒</div>
           </form>
         {{-- PANIER --}}
        <div id="cart-toggle-bt" @click="panier_est_ouvert = true">🛒</div>
        <!-- La classe "open" permet d'ouvrir le panneau -->
        <div id="cart-panel" :class="{open: panier_est_ouvert}">
            <h2>Panier</h2>
-           <div class="empty-bt" @click="viderPanier()">
+           <div class="empty-bt btn" @click="viderPanier()">
                Vider le panier
            </div>
+           <div class="bt-close close-cart btn" @click="panier_est_ouvert = false">Fermer le panier</div>
            <div class="items">
                {{-- <div class="item" @click="enleverProduit(getProduit(id))" v-for="(qty, id) in panier">
                    <div class="remove">x</div>
@@ -65,8 +68,6 @@
            <div class="vide">
                <h3 v-if="message_final == true">Merci d'avoir magasiné chez nous !</h3>
            </div>
-
-           <div class="bt-close" @click="panier_est_ouvert = false">Fermer</div>
        </div>
    </div>
 
