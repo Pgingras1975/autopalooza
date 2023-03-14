@@ -67,9 +67,11 @@ body#accueil {
     header {
         .video-container {
             overflow: hidden;
-            height: 840px;
+            height: 75vh;
             width: 100%;
             background: #000;
+            position: relative;
+            z-index: 50;
 
             h1 {
                 position: absolute;
@@ -172,25 +174,114 @@ body#accueil {
             font-weight: 400;
             max-width: 87%;
             flex-wrap: nowrap;
-            margin: 0 auto;
+
+            .actualite {
+                width: unset;
+
+                .card {
+                    width: 350px;
+                    height: 555px;
+                    margin: 0 10px;
+                    padding: 0;
+                    border-radius: 24px;
+                    z-index: 100;
+                    border: 0px;
+
+                    img {
+                        border-top-left-radius: 24px;
+                        border-top-right-radius: 24px;
+                    }
+
+                    .card-body {
+                        p.date-actualite {
+                            text-align: start;
+                            font-size: 18px;
+                        }
+
+                        h3.titre-actualite {
+                            font-family: protipo, sans-serif;
+                            font-style: normal;
+                            font-weight: 700;
+                        }
+                    }
+
+                }
+
+                .ombre-actualite {
+                    position: relative;
+                    width: 350px;
+                    height: 555px;
+                    background-color: #2EC4B6;
+                    transform: translate(22px, -546px);
+                    border-radius: 24px;
+                }
+            }
+        }
+
+        .actualites:hover {
+            color: #000;
+            text-align: center;
+            font-family: protipo, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            max-width: 87%;
+            flex-wrap: nowrap;
+
+            .actualite {
+                width: unset;
+
+                .card {
+                    width: 350px;
+                    height: 555px;
+                    margin: 0 10px;
+                    padding: 0;
+                    border-radius: 24px;
+                    z-index: 100;
+                    border: 0px;
+
+                    img {
+                        border-top-left-radius: 24px;
+                        border-top-right-radius: 24px;
+                    }
+
+                    .card-body {
+                        p.date-actualite {
+                            text-align: start;
+                            font-size: 18px;
+                        }
+
+                        h3.titre-actualite {
+                            font-family: protipo, sans-serif;
+                            font-style: normal;
+                            font-weight: 700;
+                        }
+                    }
+
+                }
+
+                .ombre-actualite {
+                    position: relative;
+                    width: 350px;
+                    height: 555px;
+                    background-color: #2EC4B6;
+                    transform: translate(30px, -540px);
+                    border-radius: 24px;
+                }
+            }
+        }
+
+        .thematiques {
+            justify-content: space-evenly;
 
             .card {
-                max-width: 375px;
-                margin: 0 20px;
-                padding: 0;
-
-                .card-body {
-                    p.date-actualite {
-                        text-align: start;
-                        font-size: 18px;
-                    }
-
-                    h3.titre-actualite {
-                        font-family: protipo, sans-serif;
-                        font-style: normal;
-                        font-weight: 700;
-                    }
-                }
+                width: 500px;
+                height: 300px;
+                overflow: hidden;
+                padding: 0px;
+                border: none;
+                border-radius: 24px;
+                margin-bottom: 310px;
+                border: 5px solid #FF9F1C;
             }
         }
     }
@@ -204,28 +295,30 @@ body#accueil {
         font-weight: 400;
         font-size: 21px;
 
-        img {
+
+        img.logo-footer {
             width: 135px;
             position: relative;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
-        p {
-            // margin-top: 70px;
-            // margin-left: 10%;
-            position: relative;
-            left: 136px;
-            top: -50px;
-        }
+        .contenu-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: -4% 200px;
 
-        .reseaux-sociaux {
-            a {
-                img {
-                    position: relative;
-                    right: 136px;
-                    top: -50px;
-                    width: 65px;
+            .reseaux-sociaux {
+                a {
+                    text-decoration: none;
+
+                    img {
+                        // position: relative;
+                        // right: 136px;
+                        // top: -50px;
+                        width: 65px;
+                    }
                 }
             }
         }
