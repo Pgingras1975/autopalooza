@@ -102,7 +102,6 @@ Route::get('/contact', [ContactController::class, 'afficherContact'])
 Route::get('/reservation', [ReservationController::class, 'reserver'])
 ->name('reservation')
 ->middleware('auth');
-->name('reservation');
 
 
 
