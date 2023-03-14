@@ -1,7 +1,7 @@
 import { createApp, ref, onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 const produits = ref([])
-const panier_est_ouvert = ref(true)
+const panier_est_ouvert = ref(false)
 const panier = ref({})
 let message_final = ref(false)
 
@@ -41,7 +41,7 @@ recupererProduits()
 
 function getPanierTotal(){
     let somme = 0
-
+    panier_est_ouvert.value = true
     for(let id in panier.value){
         let prix = getProduit(id).price
         let qty = panier.value[id]

@@ -21,6 +21,9 @@
             <li class="nav-item">
                 <a class="nav-link connexion" href="{{ url('/connexion') }}">Connexion</a>
             </li>
+            <li>
+                <a href="/reservation" id="cart-toggle-bt">🛒</a>
+            </li>
         </ul>
     </div>
 </nav>
