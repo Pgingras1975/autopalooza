@@ -24,6 +24,9 @@
             <li>
                 <a class="nav-link connexion" href="{{ route('deconnexion')}}">Déconnexion</a>
             </li>
+            <li>
+                <a href="/reservation" id="cart-toggle-bt">🛒</a>
+            </li>
         </ul>
     </div>
 </nav>
