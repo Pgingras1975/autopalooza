@@ -1,8 +1,8 @@
 <x-layout-accueil>
 
-    <x-connexion-message/>
+    <x-connexion-message />
 
-    <x-connexion-message/>
+    <x-connexion-message />
 
     <x-nav />
 
@@ -38,15 +38,14 @@
         </div>
 
         <div class="flesh-defilement">
-            <a href="#">
+            <a href="#anchor">
                 <img src="/images/flesh.png" alt="" width="50">
             </a>
         </div>
     </header>
 
     <main id="accueil">
-
-        <h2>Actualités</h2>
+        <h2 id="anchor">Actualités</h2>
         <div class="row actualites m-auto">
             <div class="actualite">
                 <div class="card">
@@ -130,15 +129,36 @@
         </div>
 
         <h2>Nos thématiques</h2>
-        <div class="row thematiques">
-            <div class="card">
-                <img src="/images/thematique1.jpg" class="card-img-top" alt="...">
+        <div class="row thematiques mx-auto">
+            <div class="col-md-4 col-lg-4 col-xl-4">
+                <div class="card">
+                    <img src="/images/thematique1.jpg" class="card-img" alt="...">
+                    <div
+                        class="card-img-overlay text-white overlay-dark">
+                        <h3 class="d-flex justify-content-center align-items-center">VÉHICULES EN VEDETTE</h3>
+                        <a href="{{ url('/activites') }}">En savoir plus</a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="/images/thematique2.jpg" class="card-img-top" alt="...">
+            <div class="col-md-4 col-lg-4 col-xl-4">
+                <div class="card">
+                    <img src="/images/thematique2.jpg" class="card-img" alt="...">
+                    <div
+                        class="card-img-overlay text-white overlay-dark">
+                        <h3 class="d-flex justify-content-center align-items-center">ACTIVITÉS FAMILIALES</h3>
+                        <a href="{{ url('/activites') }}">En savoir plus</a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="/images/thematique3.jpg" class="card-img-top" alt="...">
+            <div class="col-md-4 col-lg-4 col-xl-4">
+                <div class="card">
+                    <img src="/images/thematique3.jpg" class="card-img" alt="...">
+                    <div
+                        class="card-img-overlay text-white overlay-dark">
+                        <h3 class="d-flex justify-content-center align-items-center">COUREURS AUTOMOBILES</h3>
+                        <a href="{{ url('/activites') }}">En savoir plus</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

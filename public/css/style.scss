@@ -5,7 +5,7 @@ body {
 }
 
 //***************** Page FORFAITS - ALEX **************************
-h2#alex{
+h2#alex {
     font-family: boucherie-sans-inline, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -13,6 +13,7 @@ h2#alex{
     margin-top: 5%;
     text-align: center;
 }
+
 .btn-reserver {
     background-color: #FF9F1C;
     border: none;
@@ -20,7 +21,8 @@ h2#alex{
     color: black;
     margin-top: 2%;
     width: 100%;
-    &:hover{
+
+    &:hover {
         background-color: #239A94;
     }
 }
@@ -35,23 +37,26 @@ h2#alex{
 
 @keyframes oppacity {
     0% {
-      transform: none;
-      opacity: 0;
+        transform: none;
+        opacity: 0;
     }
+
     50% {
-      transform: translate(3px, 1px);
-      opacity: 0.5;
+        transform: translate(3px, 1px);
+        opacity: 0.5;
     }
+
     100% {
-      transform: none;
-      opacity: 1;
+        transform: none;
+        opacity: 1;
     }
-  }
+}
 
 .cards:hover {
     transform: scale(1.05);
     border: #FF9F1C;
 }
+
 .name-forfait {
     font-size: 30px;
     font-weight: bold;
@@ -66,7 +71,7 @@ h2#alex{
     text-decoration: none;
     color: black;
 
-    img{
+    img {
         width: 3.4%;
     }
 }
@@ -80,7 +85,7 @@ h2#alex{
     font-size: 18px;
 }
 
-.include{
+.include {
     background-color: white;
     border: none;
 }
@@ -109,7 +114,7 @@ nav.menu {
             li.nav-item {
                 a {
                     color: #fff;
-                    font-size: 29px;
+                    font-size: 26px;
                     margin-right: 55px;
                     font-family: protipo, sans-serif;
                     font-style: normal;
@@ -123,7 +128,7 @@ nav.menu {
                 a.connexion {
                     background-color: #2EC4B6 !important;
                     border: 5px solid #2EC4B6;
-                    padding: 4px 16px;
+                    padding: 3px 16px;
                     border-radius: 30px;
                     margin-left: 75px;
 
@@ -140,7 +145,7 @@ nav.menu {
 
 /*************************************** PAGE ACCUEIL - ALESSIA ***************************************/
 body#accueil {
-    background-image: linear-gradient(#011627 75%, #12585D, #239993);
+    background-image: linear-gradient(#011627 50%, #12585D, #239993);
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden;
@@ -148,7 +153,7 @@ body#accueil {
     header {
         .video-container {
             overflow: hidden;
-            height: 75vh;
+            max-height: 75vh;
             width: 100%;
             background: #000;
             position: relative;
@@ -245,6 +250,7 @@ body#accueil {
             text-align: center;
             margin-top: 300px;
             margin-bottom: 115px;
+            padding-top: 200px;
         }
 
         .actualites {
@@ -352,17 +358,51 @@ body#accueil {
         }
 
         .thematiques {
-            justify-content: space-evenly;
+            justify-content: space-between;
+            max-width: 1640px;
 
             .card {
-                width: 500px;
-                height: 300px;
+                max-width: 500px;
+                max-height: 300px;
                 overflow: hidden;
                 padding: 0px;
                 border: none;
                 border-radius: 24px;
                 margin-bottom: 310px;
                 border: 5px solid #FF9F1C;
+
+                .overlay-dark {
+                    background-color: rgba(black, 0.5);
+                    font-family: protipo, sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    padding: 0;
+
+                    h3 {
+                        font-size: 30px;
+                        margin-top: 100px;
+                        padding-top: 25px;
+                    }
+
+                    a {
+                        position: absolute;
+                        bottom: 25px;
+                        right: 25px;
+                        background-color: #FF9F1C;
+                        border: 3px solid #FF9F1C;
+                        text-decoration: none;
+                        padding: 4px 10px;
+                        color: #fff;
+                        border-radius: 24px;
+                        font-size: 19px;
+                    }
+
+                    a:hover {
+                        background-color: #fff;
+                        border: 3px solid #FF9F1C;
+                        color: #FF9F1C;
+                    }
+                }
             }
         }
     }
@@ -410,6 +450,7 @@ body#accueil {
 
 #app {
     transition: opacity 0.3s ease;
+
     &[v-cloak] {
         opacity: 0;
     }
@@ -420,6 +461,7 @@ body#accueil {
         left: 50%;
 
     }
+
     .image-tire2 {
         position: fixed;
         top: 2%;
@@ -429,6 +471,7 @@ body#accueil {
     }
 
 }
+
 form {
     position: relative;
     background-color: #f5f5f5;
@@ -490,7 +533,7 @@ form {
         }
     }
 
-    h2#cart-title{
+    h2#cart-title {
         margin-top: 15px;
         text-align: center;
         font-weight: normal
@@ -545,12 +588,33 @@ form {
             }
         }
     }
- }
+}
 
 
+/*************************************** PAGE ACTIVITÉS - ALESSIA ***************************************/
+main#activites {
+    font-family: protipo, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 
+    h1.activites-h1 {
+        font-family: boucherie-sans-inline, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        text-align: center;
+        margin-top: 138px;
+        margin-bottom: 115px;
+    }
 
+    .row {
+        overflow-y: scroll;
+        height: 500px;
 
-
-
-
+        .col-8 {
+            .scrollspy-example {
+                position: relative;
+            }
+        }
+    }
+}
