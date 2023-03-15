@@ -21,7 +21,9 @@ class ClientController extends Controller
     public function edit($id) {
         return view('client.modifier', [
             "usager" => User::findOrFail($id),
-            "id" => auth()->user()->id
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
         ]);
     }
 
@@ -96,15 +98,15 @@ class ClientController extends Controller
      */
     public function rechercherClient(Request $request) {
 
-        return view('admin.dashboard', [
-            "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
+        return view('client.resultat_recherche', [
+            // "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
             "clients" => User::where('nom', 'LIKE', '%' . $request->search . '%' )
                         // ->orWhere('prenom', 'LIKE', '%' . $request->search . '%' )
                         ->where('utype_id', '>', 1)->orderBy('nom')->get(),
-            "reservations" => Reservation::all(),
-            "actualites" => Actualite::all(),
-            "activites" => Activite::all(),
-            "forfaits" => Forfait::all(),
+            // "reservations" => Reservation::all(),
+            // "actualites" => Actualite::all(),
+            // "activites" => Activite::all(),
+            // "forfaits" => Forfait::all(),
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);
