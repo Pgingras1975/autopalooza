@@ -34,7 +34,12 @@ a:hover {
     display: none;
 }
 
-.form-h {
+.form-h-300 {
+    height: 300px !important;
+    /* overflow-y: scroll; */
+}
+
+.form-actualite-h, .form-activite-h {
     height: 500px !important;
     /* overflow-y: scroll; */
 }
@@ -62,6 +67,10 @@ a:hover {
 }
 .header-fs-24 {
     font-size: 24px;
+}
+
+.p-20 {
+    padding: 20px;
 }
 
 label, input {
@@ -112,6 +121,9 @@ thead {
     background: #eee !important;
 }
 
+td {
+    font-weight: bold;
+}
 td:hover{
     background-color: #c5cbfa !important;
     color: aliceblue !important;

@@ -22,15 +22,15 @@ class ReservationController extends Controller
         ]);
     }
     /**
-     * Supprime un fait selon son id
+     * Supprime un réservation selon son id
      *
-     * @param int $id id du fait
+     * @param int $id id de la réservation
      */
     public function destroy($id){
 
-        $fait = Reservation::findOrFail($id);
+        $reservation = Reservation::findOrFail($id);
 
-        $fait->delete();
+        $reservation->delete();
 
         return redirect()
                 ->route('admin')
@@ -53,7 +53,7 @@ class ReservationController extends Controller
             "actualites" => Actualite::all(),
             "activites" => Activite::all(),
             "forfaits" => Forfait::all(),
-            "auth_user" => auth()->user()->nom_complet,
+            "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);
     }

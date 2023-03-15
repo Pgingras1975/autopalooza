@@ -53,6 +53,8 @@ Route::get('/deconnexion', [ConnexionController::class, 'deconnecter'])->name('d
 
 Route::get('/reservation/supprimer/{id}', [ReservationController::class, 'destroy'])->middleware('auth');
 Route::get('/reservation/rechercher', [ReservationController::class, 'rechercherReservation'])->middleware('auth');
+Route::get('/reservation/modifier/{id}', [ReservationController::class, 'edit'])->name('modifier-reservation')->middleware('auth');
+
 
 // Route actualité
 Route::get('/actualite/creer', [ActualiteController::class, 'create'])->name('creer-actualite');

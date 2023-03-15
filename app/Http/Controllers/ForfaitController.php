@@ -69,7 +69,10 @@ class ForfaitController extends Controller
      */
     public function edit($id) {
         return view('forfait.modifier', [
-            "forfait" => forfait::findOrFail($id)
+            "forfait" => forfait::findOrFail($id),
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
         ]);
     }
 

@@ -66,7 +66,10 @@ class ActiviteController extends Controller
      */
     public function edit($id) {
         return view('activite.modifier', [
-            "activite" => Activite::findOrFail($id)
+            "activite" => Activite::findOrFail($id),
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
         ]);
     }
 
@@ -86,13 +89,13 @@ class ActiviteController extends Controller
             'nom.required' => 'Le champs Activite est requis',
             'nom.max' => 'Le Activite doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
-            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
+            // "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 
 
         $activite = Activite::findOrFail($id);
 
-        $activite->id = $request->id;
+        // $activite->id = $request->id;
         $activite->nom = $request->nom;
         $activite->description = $request->description;
 

@@ -61,7 +61,10 @@ class ActualiteController extends Controller
      */
     public function edit($id) {
         return view('actualite.modifier', [
-            "actualite" => Actualite::findOrFail($id)
+            "actualite" => Actualite::findOrFail($id),
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
         ]);
     }
 

@@ -68,8 +68,10 @@ class EmployeController extends Controller
      */
     public function edit($id) {
         return view('employe.modifier', [
-            "usager" => User::findOrFail($id),
-            "id" => auth()->user()->id
+            "employe" => User::findOrFail($id),
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
         ]);
     }
 

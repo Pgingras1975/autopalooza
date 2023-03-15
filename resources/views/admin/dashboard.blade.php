@@ -1,6 +1,6 @@
 <x-dashboard-layout>
 
-<x-connexion-message />
+
 
 <div id="wrapper">
 
@@ -9,6 +9,8 @@
     <!--  page-wrapper -->
     <div id="page-wrapper">
 
+
+
         <div class="row">
             <!-- Page Header -->
             <div class="col-lg-12">
@@ -16,6 +18,8 @@
             </div>
             <!--End Page Header -->
         </div>
+
+        <x-connexion-message />
 
         <div class="row">
 
@@ -150,7 +154,7 @@
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Nom</th>
+                                                <th>Titre</th>
                                                 <th>Description</th>
                                             </tr>
                                         </thead>
@@ -245,14 +249,14 @@
 
         </div>
 
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-lg-2">
-                {{-- <x-form-dashboard/> --}}
+                <x-form-dashboard/>
             </div>
             <div class="col-lg-8">
                 <x-form-dashboard/>
             </div>
-        <div>
+        <div> --}}
 
     </div>
     <!-- end page-wrapper -->
