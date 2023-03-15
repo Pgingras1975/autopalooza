@@ -29,7 +29,7 @@ class DashboardController extends Controller
                 "actualites" => Actualite::all(),
                 "activites" => Activite::all(),
                 "forfaits" => Forfait::all(),
-                "auth_user" => auth()->user()->nom_complet,
+                "authuser" => auth()->user()->nom_complet,
                 "authuserid" => auth()->user()->id,
                 // "utype" => auth()->user()->utype_id
             ]);

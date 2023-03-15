@@ -2,8 +2,6 @@
 
     <x-connexion-message />
 
-    <x-connexion-message />
-
     <x-nav />
 
     <header>

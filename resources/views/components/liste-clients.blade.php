@@ -1,10 +1,10 @@
-@foreach ($clients as $client)
-
+@forelse ($clients as $client)
     <tr>
-        <td>{{ $client->nom }}</td>
-        <td>{{ $client->prenom }}</td>
-        <td>{{ $client->email }}</td>
-        <td><a href="{{ url('client/modifier/' . $client->id)}}" class="">✎</a></td>
+        <td><a href="{{ url('client/modifier/' . $client->id)}}" class="">{{ $client->nom }}</a></td>
+        <td><a href="{{ url('client/modifier/' . $client->id)}}" class="">{{ $client->prenom }}</a></td>
+        <td><a href="{{ url('client/modifier/' . $client->id)}}" class="">{{ $client->email }}</a></td>
+        {{-- <td><a href="{{ url('client/modifier/' . $client->id)}}" class="">✎</a></td> --}}
     </tr>
-
-@endforeach
+@empty
+    <p>Aucun client à afficher</p>
+@endforelse

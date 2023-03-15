@@ -48,7 +48,7 @@ class ReservationController extends Controller
             "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
             "clients" => User::where('utype_id', '=', 2 )->orderBy('nom')->get(),
             "reservations" => User::join('reservations', 'users.id', '=', 'reservations.user_id')
-                                ->select('users.nom', 'reservations.*')
+                                ->select('users.*', 'reservations.*')
                                 ->where('nom', 'LIKE', '%' . $request->search . '%' )->orderBy('nom')->get(),
             "actualites" => Actualite::all(),
             "activites" => Activite::all(),
