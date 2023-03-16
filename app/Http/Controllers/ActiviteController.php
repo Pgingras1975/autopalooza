@@ -10,7 +10,7 @@ class ActiviteController extends Controller
 {
     public function afficherActivite() {
         return view('activites', [
-
+            "activites" => Activite::all()
         ]);
     }
 

@@ -15,7 +15,7 @@ class ActualiteFactory extends Factory
     {
         return [
             "titre" => $this->faker->text(15),
-            "description" => $this->faker->paragraphs(3, true),
+            "description" => $this->faker->paragraphs(2, true),
             "image" => "https://i.pravatar.cc/100?img=" . rand(1, 50),
         ];
     }
