@@ -1,16 +1,27 @@
+.bg-autopalooza {
+    background-image: linear-gradient(#011627 25%, #12585D, #239993);
+    min-height: 100vh;
+    color: white;
+  }
+
 .w-33 {
     width: 33.3%;
 }
 
 .min-w {
-    min-width: 420px;
+    min-width: 410px;
 }
 
 a {
     color: black;
     font-weight: bold;
     text-decoration: none;
+}
 
+h4 a {
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
@@ -45,12 +56,12 @@ a:hover {
 }
 
 .container-min-w {
-    min-width: 420px;
+    min-width: 410px;
 }
 
-.bg-autopalooza {
+/* .bg-autopalooza {
     background-image: linear-gradient(#011627 25%, #12585D, #239993);
-}
+} */
 
 .entete {
     display: flex;
@@ -209,10 +220,10 @@ input   , select, textarea{
       margin-top: 0;
     }
 
-    input[type=submit] {
+    /* input[type=submit] {
         height:30px;
         width: 30px;
-    }
+    } */
 
     .input-search {
         height:15px;

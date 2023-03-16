@@ -1,10 +1,10 @@
-<x-layout>
+<x-login-layout>
 
     <main class="w-25 m-auto mt-5 container-min-w border rounded">
 
         <x-connexion-message />
 
-        <div class="container py-5">
+        <div class="py-5">
             <h1 class="text-center m-0 fs-1">Connectez-vous</h1>
 
             <h4 class="text-center fs-5">ou <a href="{{ url('/enregistrement') }}">enregistrez-vous</a></h4>
@@ -27,11 +27,11 @@
                     </div>
 
                     <p class="d-flex justify-content-center my-5">
-                        <input type="submit" class="btn btn-dark me-2" value="Se connecter">
+                        <input type="submit" class="btn bg-white me-2" value="Se connecter">
                     </p>
                 </div>
             </form>
         </div>
     </main>
 
-</x-layout>
+</x-login-layout>
