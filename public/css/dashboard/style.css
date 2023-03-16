@@ -50,7 +50,11 @@ a:hover {
     /* overflow-y: scroll; */
 }
 
-.form-actualite-h, .form-activite-h {
+.form-h {
+    height: 600px;
+}
+
+.form-actualite-h, .form-activite-h, .form-reservation-h {
     height: 500px !important;
     /* overflow-y: scroll; */
 }
@@ -75,10 +79,6 @@ a:hover {
 
 .header-fs {
     font-size: 36px;
-}
-
-.header-fs-24 {
-    font-size: 24px;
 }
 
 .p-20 {

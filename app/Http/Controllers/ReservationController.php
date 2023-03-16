@@ -21,6 +21,25 @@ class ReservationController extends Controller
 
         ]);
     }
+
+    /**
+     * Affiche le formulaire d'enregistrement (création de compte)
+     *
+     */
+    public function edit($id) {
+        return view('reservation.supprimer', [
+            // "reservation" => Reservation::findOrFail($id),
+            "reservation" => Reservation::join('users', 'reservations.user_id', '=', 'users.id')
+            ->join('forfaits','reservations.forfait_id', 'forfaits.id')
+            ->select('users.nom AS nom_de_famille', 'reservations.*', 'forfaits.nom AS nom_du_forfait')
+            ->findOrFail($id),
+
+
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
+        ]);
+    }
     /**
      * Supprime un réservation selon son id
      *

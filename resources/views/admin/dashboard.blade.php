@@ -125,6 +125,7 @@
                                                 <th>Qté</th>
                                                 <th>Arrivé</th>
                                                 <th>Départ</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
