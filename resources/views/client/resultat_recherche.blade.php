@@ -23,7 +23,7 @@
 
             <div class="col-lg-8">
                 <div class="panel panel-primary">
-                    <div class="panel-heading entete h-50" style="background-color:#e71d36">
+                    <div class="panel-heading entete header-h" style="background-color:#e71d36">
                         <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Résulat recherche clients</p>
                         {{-- <form action="/client/rechercher" method="get">
                             <input type="text" name="search" size="16">

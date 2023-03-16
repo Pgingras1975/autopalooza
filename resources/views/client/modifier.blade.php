@@ -106,33 +106,14 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading entete header-h" style="background-color:#e71d36">
                             <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Clients</p>
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Menu
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Menu</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        {{-- @if ($id == 1) --}}
-                                        <li><a href="{{ url('client/supprimer/' . $usager->id)}}">Supprimer</a>
-                                        </li>
-                                        {{-- @endif --}}
-                                        <li><a href="{{ route('admin')}}">Retour</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="panel-body form-h">
-                            <div class="row">
+                            {{-- <div class="row">
 
-                                <div class="container py-5 row mb-3 pt-5">
+                                <div class="py-5 row mb-3 pt-5"> --}}
 
-                                    <form action="{{ url('/client/modifier/' . $usager->id ) }}" method="post" class="mt-4">
+                                    {{-- <form action="{{ url('/client/modifier/' . $usager->id ) }}" method="post" class="mt-4">
                                         @csrf
 
                                         <div class="w-75 m-auto">
@@ -161,17 +142,56 @@
                                                 </p>
                                             </div>
                                         </div>
-                                    </form>
+                                    </form> --}}
 
-                                </div>
+                                    <div class="container">
+                                        <form action="action_page.php">
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="fname">First Name</label>
+                                            </div>
+                                            <div class="col-75">
+                                              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="lname">Last Name</label>
+                                            </div>
+                                            <div class="col-75">
+                                              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-25">
+                                              <label for="subject">Subject</label>
+                                            </div>
+                                            <div class="col-75">
+                                              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                            <input type="submit" value="Submit">
+                                            <input type="submit" value="Submit">
+                                          </div>
+                                        </form>
+                                      </div>
 
-                            </div>
+
+                                {{-- </div>
+
+                            </div> --}}
                             <!-- /.row -->
                         </div>
                         <!-- /.panel-body -->
                     <div>
                     <!-- /.panel-primary -->
                 <div>
+
+                <div class="col-lg-3">
+
+                </div>
+
             <div>
         </div>
         <!-- end page-wrapper -->

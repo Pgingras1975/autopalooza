@@ -30,7 +30,7 @@
                     <div class="panel-heading entete header-h" style="background-color:#e71d36">
                         <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Clients</p>
                         <form class="search-field" action="/client/rechercher" method="get">
-                            <input class="input-search" type="text" name="search">
+                            <input class="input-search-client" type="text" name="search">
                             <input class="btn btn-danger" type="submit" value="🔍">
                         </form>
                     </div>
@@ -107,7 +107,7 @@
                     <div class="panel-heading entete header-h" style="background-color:#e71d36">
                         <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Réservations</p>
                         <form class="search-field" action="/reservation/rechercher" method="get">
-                            <input class="input-search"type="text" name="search">
+                            <input class="input-search-reservation"type="text" name="search">
                             <input class="btn btn-danger" type="submit" value="🔍">
                         </form>
                     </div>
@@ -125,7 +125,6 @@
                                                 <th>Qté</th>
                                                 <th>Arrivé</th>
                                                 <th>Départ</th>
-                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
