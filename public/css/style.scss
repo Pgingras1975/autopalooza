@@ -145,7 +145,7 @@ nav.menu {
 
 /*************************************** PAGE ACCUEIL - ALESSIA ***************************************/
 body#accueil {
-    background-image: linear-gradient(#011627 50%, #12585D, #239993);
+    background-image: linear-gradient(#011627 40%, #12585D, #239993);
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden;
@@ -185,15 +185,7 @@ body#accueil {
             }
 
             video {
-                // height: 100%;
-                // width: 177.77777778vh;
-                //    object-fit: cover;
                 width: inherit;
-
-                // opacity: 0.8;
-                // min-width: 100%;
-                // min-height: 56.25vw;
-
             }
         }
 
@@ -201,7 +193,7 @@ body#accueil {
             border-right: 15px solid #FF9F1C;
             border-left: 15px solid #FF9F1C;
             background-color: #000;
-            height: 2000px;
+            height: 2650px;
             width: 165px;
             position: absolute;
             right: 250px;
@@ -213,7 +205,7 @@ body#accueil {
             display: grid;
             grid-gap: 65px;
             width: 30px;
-            height: 2000px;
+            height: 2650px;
             background-color: #000;
 
             div {
@@ -241,15 +233,13 @@ body#accueil {
     }
 
     main#accueil {
-
         h2 {
             font-family: boucherie-sans-inline, sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 60px;
             text-align: center;
-            margin-top: 300px;
-            margin-bottom: 115px;
+            margin-bottom: 85px;
             padding-top: 200px;
         }
 
@@ -260,101 +250,64 @@ body#accueil {
             font-style: normal;
             font-weight: 400;
             max-width: 87%;
-            flex-wrap: nowrap;
+            justify-content: space-between;
 
             .actualite {
                 width: unset;
+                position: relative;
+                margin-bottom: 60px;
 
-                .card {
-                    width: 350px;
-                    height: 555px;
-                    margin: 0 10px;
-                    padding: 0;
-                    border-radius: 24px;
-                    z-index: 100;
-                    border: 0px;
-
-                    img {
-                        border-top-left-radius: 24px;
-                        border-top-right-radius: 24px;
-                    }
-
-                    .card-body {
-                        p.date-actualite {
-                            text-align: start;
-                            font-size: 18px;
-                        }
-
-                        h3.titre-actualite {
-                            font-family: protipo, sans-serif;
-                            font-style: normal;
-                            font-weight: 700;
-                        }
-                    }
-
-                }
-
-                .ombre-actualite {
-                    position: relative;
-                    width: 350px;
-                    height: 555px;
+                .bordure {
                     background-color: #2EC4B6;
-                    transform: translate(22px, -546px);
                     border-radius: 24px;
+
+                    .card {
+                        width: 350px;
+                        height: 555px;
+                        margin: 0 10px;
+                        padding: 0;
+                        border-radius: 24px;
+                        z-index: 100;
+                        border: 0px;
+                        position: relative;
+                        bottom: 12px;
+                        right: 10px;
+
+                        img {
+                            border-top-left-radius: 24px;
+                            border-top-right-radius: 24px;
+                            max-height: 240px;
+                        }
+
+                        .card-body {
+                            padding: 22px;
+
+                            p.date-actualite {
+                                text-align: start;
+                                font-size: 18px;
+                            }
+
+                            h3.titre-actualite {
+                                font-family: protipo, sans-serif;
+                                font-style: normal;
+                                font-weight: 700;
+                            }
+
+                            p.description-actualite {
+                                overflow: hidden;
+                            }
+                        }
+                    }
                 }
             }
         }
 
-        .actualites:hover {
-            color: #000;
-            text-align: center;
-            font-family: protipo, sans-serif;
+        .thematiques-h2 {
+            font-family: boucherie-sans-inline, sans-serif;
             font-style: normal;
             font-weight: 400;
-            max-width: 87%;
-            flex-wrap: nowrap;
-
-            .actualite {
-                width: unset;
-
-                .card {
-                    width: 350px;
-                    height: 555px;
-                    margin: 0 10px;
-                    padding: 0;
-                    border-radius: 24px;
-                    z-index: 100;
-                    border: 0px;
-
-                    img {
-                        border-top-left-radius: 24px;
-                        border-top-right-radius: 24px;
-                    }
-
-                    .card-body {
-                        p.date-actualite {
-                            text-align: start;
-                            font-size: 18px;
-                        }
-
-                        h3.titre-actualite {
-                            font-family: protipo, sans-serif;
-                            font-style: normal;
-                            font-weight: 700;
-                        }
-                    }
-
-                }
-
-                .ombre-actualite {
-                    position: relative;
-                    width: 350px;
-                    height: 555px;
-                    background-color: #2EC4B6;
-                    transform: translate(30px, -540px);
-                    border-radius: 24px;
-                }
-            }
+            font-size: 60px;
+            text-align: center;
         }
 
         .thematiques {
@@ -406,40 +359,41 @@ body#accueil {
             }
         }
     }
+}
 
-    footer {
-        background-color: #FF9F1C;
-        height: 180px;
-        border-top: 10px solid #011627;
-        font-family: protipo, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 21px;
+/********************************************* FOOTER - ALESSIA *********************************************/
+footer {
+    background-color: #FF9F1C;
+    height: 180px;
+    border-top: 10px solid #011627;
+    font-family: protipo, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    position: relative;
+    z-index: 50;
 
 
-        img.logo-footer {
-            width: 135px;
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    img.logo-footer {
+        width: 135px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-        .contenu-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin: -4% 200px;
+    .contenu-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: -3% 200px;
 
-            .reseaux-sociaux {
-                a {
-                    text-decoration: none;
+        .reseaux-sociaux {
+            a {
+                text-decoration: none;
 
-                    img {
-                        // position: relative;
-                        // right: 136px;
-                        // top: -50px;
-                        width: 65px;
-                    }
+                img {
+                    max-width: 55px;
+                    max-height: 55px;
                 }
             }
         }
@@ -608,12 +562,38 @@ main#activites {
     }
 
     .row {
-        overflow-y: scroll;
+        // overflow-y: scroll;
         height: 500px;
 
-        .col-8 {
+        .col-10 {
             .scrollspy-example {
                 position: relative;
+                height: 350px;
+                overflow: auto;
+                scroll-behavior: smooth;
+
+                .activite {
+                    margin-bottom: 165px;
+
+                    img {
+                        height: 280px;
+                        width: 430px;
+                        border: 6px solid #FF9F1C;
+                        border-radius: 24px;
+                        float: left;
+                        margin-right: 40px;
+                    }
+
+                    h4 {
+                        font-size: 28px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        padding: 20px;
+                    }
+
+                }
             }
         }
     }

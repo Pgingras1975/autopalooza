@@ -29,6 +29,9 @@
             <div></div>
             <div></div>
             <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
 
         <div class="voiture-rouge">
@@ -37,7 +40,7 @@
 
         <div class="flesh-defilement">
             <a href="#anchor">
-                <img src="/images/flesh.png" alt="" width="50">
+                <img src="/images/flesh.png" alt="Flèche pour défiler vers la section actualités" width="50">
             </a>
         </div>
     </header>
@@ -45,94 +48,28 @@
     <main id="accueil">
         <h2 id="anchor">Actualités</h2>
         <div class="row actualites m-auto">
-            <div class="actualite">
-                <div class="card">
-                    <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text date-actualite">28 février 2023</p>
-                        <h3 class="titre-actualite">Actualité #1</h3>
-                        <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-                            maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos.
-                            Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
+            @foreach ($actualites as $actualite)
+                <div class="actualite">
+                    <div class="bordure">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ $actualite->image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text date-actualite">{{ $actualite->created_at }}</p>
+                                <h3 class="titre-actualite">{{ $actualite->titre }}</h3>
+                                <p class="description-actualite">{{ $actualite->description }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="ombre-actualite"></div>
-            </div>
-            <div class="actualite">
-                <div class="card">
-                    <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text date-actualite">28 février 2023</p>
-                        <h3 class="titre-actualite">Actualité #1</h3>
-                        <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-                            maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos.
-                            Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
-                    </div>
-                </div>
-                <div class="ombre-actualite"></div>
-            </div>
-            <div class="actualite">
-                <div class="card">
-                    <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text date-actualite">28 février 2023</p>
-                        <h3 class="titre-actualite">Actualité #1</h3>
-                        <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-                            maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos.
-                            Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
-                    </div>
-                </div>
-                <div class="ombre-actualite"></div>
-            </div>
-            <div class="actualite">
-                <div class="card">
-                    <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text date-actualite">28 février 2023</p>
-                        <h3 class="titre-actualite">Actualité #1</h3>
-                        <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-                            maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos.
-                            Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
-                    </div>
-                </div>
-                <div class="ombre-actualite"></div>
-            </div>
-            {{-- <div class="card">
-                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text date-actualite">28 février 2023</p>
-                    <h3 class="titre-actualite">Actualité #2</h3>
-                    <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos. Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
-                </div>
-            </div>
-            <div class="ombre-actualite"></div>
-            <div class="card">
-                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text date-actualite">28 février 2023</p>
-                    <h3 class="titre-actualite">Actualité #3</h3>
-                    <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos. Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
-                </div>
-            </div>
-            <div class="ombre-actualite"></div>
-            <div class="card">
-                <img class="card-img-top" src="/images/voitures_actualites.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text date-actualite">28 février 2023</p>
-                    <h3 class="titre-actualite">Actualité #4</h3>
-                    <p class="description-actualite">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis maxime ab sapiente dicta. Mollitia, eveniet iste saepe repellendus dolorem dignissimos. Quaerat illo voluptatibus nihil laboriosam iste eius sequi, dolorem iure!</p>
-                </div>
-            </div>
-            <div class="ombre-actualite"></div> --}}
+            @endforeach
         </div>
 
-        <h2>Nos thématiques</h2>
+        <h2 class="thematiques-h2">Nos thématiques</h2>
         <div class="row thematiques mx-auto">
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <img src="/images/thematique1.jpg" class="card-img" alt="...">
-                    <div
-                        class="card-img-overlay text-white overlay-dark">
+                    <div class="card-img-overlay text-white overlay-dark">
                         <h3 class="d-flex justify-content-center align-items-center">VÉHICULES EN VEDETTE</h3>
                         <a href="{{ url('/activites') }}">En savoir plus</a>
                     </div>
@@ -141,8 +78,7 @@
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <img src="/images/thematique2.jpg" class="card-img" alt="...">
-                    <div
-                        class="card-img-overlay text-white overlay-dark">
+                    <div class="card-img-overlay text-white overlay-dark">
                         <h3 class="d-flex justify-content-center align-items-center">ACTIVITÉS FAMILIALES</h3>
                         <a href="{{ url('/activites') }}">En savoir plus</a>
                     </div>
@@ -151,8 +87,7 @@
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <img src="/images/thematique3.jpg" class="card-img" alt="...">
-                    <div
-                        class="card-img-overlay text-white overlay-dark">
+                    <div class="card-img-overlay text-white overlay-dark">
                         <h3 class="d-flex justify-content-center align-items-center">COUREURS AUTOMOBILES</h3>
                         <a href="{{ url('/activites') }}">En savoir plus</a>
                     </div>
@@ -161,24 +96,6 @@
         </div>
     </main>
 
-    <footer>
-        <img src="/images/logo.png" alt="Logo AutoPalooza" class="logo-footer">
-        <div class="contenu-footer">
-            <div class="copyright">
-                <p>&copy; Copyright 2023 AutoPalooza Festival Automobile 2023. Tous droits réservés.</p>
-            </div>
-            <div class="reseaux-sociaux">
-                <a href="https://www.facebook.com/">
-                    <img src="/images/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/">
-                    <img src="/images/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://twitter.com/">
-                    <img src="/images/twitter.png" alt="Twitter">
-                </a>
-            </div>
-        </div>
-    </footer>
+    <x-footer />
 
 </x-layout-accueil>
