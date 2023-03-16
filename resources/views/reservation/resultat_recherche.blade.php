@@ -40,6 +40,7 @@
                                             <tr>
                                                 <th>Nom</th>
                                                 <th>Prénom</th>
+                                                <th>Forfait</th>
                                                 <th>Qté</th>
                                                 <th>Arrivé</th>
                                                 <th>Départ</th>

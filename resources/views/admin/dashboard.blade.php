@@ -27,10 +27,10 @@
                 {{-- @if ($authuserid == 1) --}}
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading entete h-50" style="background-color:#e71d36">
-                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Liste des Clients</p>
-                        <form action="/client/rechercher" method="get">
-                            <input type="text" name="search" size="16">
+                    <div class="panel-heading entete header-h" style="background-color:#e71d36">
+                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Clients</p>
+                        <form class="search-field" action="/client/rechercher" method="get">
+                            <input class="input-search" type="text" name="search">
                             <input class="btn btn-danger" type="submit" value="🔍">
                         </form>
                     </div>
@@ -66,8 +66,8 @@
             <div class="col-lg-6">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading h-50 entete" style="background-color:#e71d36">
-                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Liste des Activités</p>
+                    <div class="panel-heading header-h entete" style="background-color:#e71d36">
+                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Activités</p>
                     </div>
 
                     <div class="panel-body">
@@ -104,10 +104,10 @@
             <div class="col-lg-6">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading entete h-50" style="background-color:#e71d36">
-                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Liste des Réservations</p>
-                        <form action="/reservation/rechercher" method="get">
-                            <input type="text" name="search" size="16">
+                    <div class="panel-heading entete header-h" style="background-color:#e71d36">
+                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Réservations</p>
+                        <form class="search-field" action="/reservation/rechercher" method="get">
+                            <input class="input-search"type="text" name="search">
                             <input class="btn btn-danger" type="submit" value="🔍">
                         </form>
                     </div>
@@ -121,6 +121,7 @@
                                             <tr>
                                                 <th>Nom</th>
                                                 <th>Prénom</th>
+                                                <th>Forfait</th>
                                                 <th>Qté</th>
                                                 <th>Arrivé</th>
                                                 <th>Départ</th>
@@ -143,8 +144,8 @@
             <div class="col-lg-6">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading h-50" style="background-color:#e71d36">
-                    <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Liste des Actualités</p>
+                    <div class="panel-heading header-h  entete" style="background-color:#e71d36">
+                    <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Actualités</p>
                     </div>
 
                     <div class="panel-body">
@@ -182,8 +183,8 @@
             <div class="col-lg-6">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading h-50" style="background-color:#e71d36">
-                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Liste des Forfaits</p>
+                    <div class="panel-heading header-h entete" style="background-color:#e71d36">
+                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Forfaits</p>
                     </div>
 
                     <div class="panel-body">
@@ -215,8 +216,8 @@
             <div class="col-lg-6">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
-                    <div class="panel-heading h-50" style="background-color:#e71d36">
-                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Liste des Employés</p>
+                    <div class="panel-heading header-h entete" style="background-color:#e71d36">
+                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Employés</p>
                     </div>
 
                     <div class="panel-body">

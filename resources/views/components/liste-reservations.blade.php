@@ -2,11 +2,12 @@
     <tr>
         <td>{{ $reservation->nom }}</td>
         <td>{{ $reservation->prenom }}</td>
+        <td>{{ $reservation->nom_du_forfait}}</td>
         <td>{{ $reservation->qty }}</td>
         <td>{{ $reservation->date_arrivee }}</td>
         <td>{{ $reservation->date_arrivee }}</td>
         <td><a href="{{ url('reservation/supprimer/' . $reservation->id)}}" class="">🗑</a></td>
     </tr>
 @empty
-    <p>Aucune réservation à afficher</p>
+    <p class="empty">Aucune réservation à afficher</p>
 @endforelse

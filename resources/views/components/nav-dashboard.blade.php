@@ -71,6 +71,9 @@
                 <li class="selected">
                     <a href="{{ route('admin') }}"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                 </li>
+                <li class="selected">
+                    <a href="{{ route('accueil') }}"><i class="fa fa-map-marker fa-fw"></i>Accueil</a>
+                </li>
                 <li style="background-color:#2ec4b6">
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Ajout<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">

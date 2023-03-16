@@ -5,5 +5,5 @@
     <td><a href="{{ url('actualite/modifier/' . $actualite->id)}}" class="">{{ $actualite->description_limiter }}</a></td>
 </tr>
 @empty
-    <p>Aucune actualité à afficher</p>
+    <p class="empty">Aucune actualité à afficher</p>
 @endforelse

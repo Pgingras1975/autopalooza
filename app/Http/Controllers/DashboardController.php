@@ -23,9 +23,13 @@ class DashboardController extends Controller
                 "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
                 "clients" => User::where('utype_id', '=', 2 )->orderBy('nom')->get(),
                 // "reservations" => Reservation::all(),
-                "reservations" => User::join('reservations', 'users.id', '=', 'reservations.user_id')
-                        ->select('users.*', 'reservations.*')
-                        ->orderBy('nom')->get(),
+                // "reservations" => User::join('reservations', 'users.id', '=', 'reservations.user_id')
+                //         ->select('users.*', 'reservations.*')
+                //         ->orderBy('nom')->get(),
+                "reservations" => Reservation::join('users', 'reservations.user_id', '=', 'users.id')
+                ->join('forfaits','reservations.forfait_id', 'forfaits.id')
+                ->select('users.*', 'reservations.*', 'forfaits.nom AS nom_du_forfait')
+                ->orderBy('nom')->get(),
                 "actualites" => Actualite::all(),
                 "activites" => Activite::all(),
                 "forfaits" => Forfait::all(),

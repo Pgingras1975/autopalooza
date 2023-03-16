@@ -6,5 +6,5 @@
     <td><a href="{{ url('forfait/modifier/' . $forfait->id)}}" class="">{{ $forfait->prix }}</a></td>
 </tr>
 @empty
-    <p>Aucun forfait à afficher</p>
+    <p class="empty">Aucun forfait à afficher</p>
 @endforelse

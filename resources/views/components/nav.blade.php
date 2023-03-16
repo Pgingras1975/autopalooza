@@ -18,12 +18,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
             </li>
+            @guest
             <li class="nav-item">
                 <a class="nav-link connexion" href="{{ route('login')}}">Connexion</a>
             </li>
-            <li>
+            @endguest
+            @auth
+            <li class="nav-item">
                 <a class="nav-link connexion" href="{{ route('deconnexion')}}">Déconnexion</a>
             </li>
+            @endauth
+
             <li>
                 <a href="/reservation" id="cart-toggle-bt">🛒</a>
             </li>
