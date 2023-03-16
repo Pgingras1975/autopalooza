@@ -1,16 +1,27 @@
+.bg-autopalooza {
+    background-image: linear-gradient(#011627 25%, #12585D, #239993);
+    min-height: 100vh;
+    color: white;
+  }
+
 .w-33 {
     width: 33.3%;
 }
 
 .min-w {
-    min-width: 420px;
+    min-width: 410px;
 }
 
 a {
     color: black;
     font-weight: bold;
     text-decoration: none;
+}
 
+h4 a {
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 a:hover {
@@ -39,18 +50,22 @@ a:hover {
     /* overflow-y: scroll; */
 }
 
-.form-actualite-h, .form-activite-h {
+.form-h {
+    height: 600px;
+}
+
+.form-actualite-h, .form-activite-h, .form-reservation-h {
     height: 500px !important;
     /* overflow-y: scroll; */
 }
 
 .container-min-w {
-    min-width: 420px;
+    min-width: 410px;
 }
 
-.bg-autopalooza {
+/* .bg-autopalooza {
     background-image: linear-gradient(#011627 25%, #12585D, #239993);
-}
+} */
 
 .entete {
     display: flex;
@@ -59,14 +74,11 @@ a:hover {
 }
 
 .header-h {
-    height: 50px;
+    height: 75px;
 }
 
 .header-fs {
-    font-size: 16px;
-}
-.header-fs-24 {
-    font-size: 24px;
+    font-size: 36px;
 }
 
 .p-20 {
@@ -97,6 +109,21 @@ label, input {
     font-size: 54px !important;
 }
 
+.search-field {
+    display: flex;
+}
+
+.input-search {
+    height:35px;
+    width: 300px;
+}
+
+.empty {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Style des tableaux du dashboard */
 table thead{
     position: sticky !important;
 }
@@ -128,3 +155,87 @@ td:hover{
     background-color: #c5cbfa !important;
     color: aliceblue !important;
 }
+
+/* Formulaire responsive */
+
+/* Style inputs, select elements and textareas */
+input   , select, textarea{
+    /* width: 100%; */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  /* Style the submit button */
+  /* input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  } */
+
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75 {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    /* input[type=submit] {
+        height:30px;
+        width: 30px;
+    } */
+
+    .input-search {
+        height:15px;
+        width: 150px;
+    }
+
+    .header-fs {
+        font-size: 20px;
+    }
+
+    .header-h {
+        height: 50px;
+    }
+
+  }

@@ -21,6 +21,25 @@ class ReservationController extends Controller
 
         ]);
     }
+
+    /**
+     * Affiche le formulaire d'enregistrement (création de compte)
+     *
+     */
+    public function edit($id) {
+        return view('reservation.supprimer', [
+            // "reservation" => Reservation::findOrFail($id),
+            "reservation" => Reservation::join('users', 'reservations.user_id', '=', 'users.id')
+            ->join('forfaits','reservations.forfait_id', 'forfaits.id')
+            ->select('users.nom AS nom_de_famille', 'reservations.*', 'forfaits.nom AS nom_du_forfait')
+            ->findOrFail($id),
+
+
+            "id" => auth()->user()->id,
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
+        ]);
+    }
     /**
      * Supprime un réservation selon son id
      *
@@ -44,15 +63,17 @@ class ReservationController extends Controller
      */
     public function rechercherReservation(Request $request) {
 
-        return view('admin.dashboard', [
-            "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
-            "clients" => User::where('utype_id', '=', 2 )->orderBy('nom')->get(),
-            "reservations" => User::join('reservations', 'users.id', '=', 'reservations.user_id')
-                                ->select('users.*', 'reservations.*')
-                                ->where('nom', 'LIKE', '%' . $request->search . '%' )->orderBy('nom')->get(),
-            "actualites" => Actualite::all(),
-            "activites" => Activite::all(),
-            "forfaits" => Forfait::all(),
+        return view('reservation.resultat_recherche', [
+            // "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
+            // "clients" => User::where('utype_id', '=', 2 )->orderBy('nom')->get(),
+            "reservations" => Reservation::join('users', 'reservations.user_id', '=', 'users.id')
+                ->join('forfaits','reservations.forfait_id', 'forfaits.id')
+                ->select('users.*', 'reservations.*', 'forfaits.nom AS nom_du_forfait')
+                ->where('users.nom', 'LIKE', '%' . $request->search . '%' )
+                ->orderBy('nom')->get(),
+            // "actualites" => Actualite::all(),
+            // "activites" => Activite::all(),
+            // "forfaits" => Forfait::all(),
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);

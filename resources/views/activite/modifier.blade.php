@@ -63,8 +63,8 @@
 
                 <div class="col-lg-6">
                     <div class="panel panel-primary">
-                        <div class="panel-heading entete h-50" style="background-color:#e71d36">
-                            <p class="header-fs-24"><i class="fa fa-bar-chart-o fa-fw"></i>Activités</p>
+                        <div class="panel-heading entete header-h" style="background-color:#e71d36">
+                            <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Activités</p>
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">

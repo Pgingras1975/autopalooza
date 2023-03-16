@@ -4,5 +4,5 @@
     <td><a href="{{ url('activite/modifier/' . $activite->id)}}" class="">{{ $activite->description_limiter}}</td>
 </tr>
 @empty
-    <p>Aucune activité à afficher</p>
+    <p class="empty">Aucune activité à afficher</p>
 @endforelse
