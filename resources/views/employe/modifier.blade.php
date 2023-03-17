@@ -63,10 +63,10 @@
                                     </div>
                                     </div>
                                     <div class="row">
-                                    <div class="btn-position">
-                                        <input class="btn-modifier" type="submit" value="Modifier">
-                                        <a class="btn-annuler" href="{{ route('admin') }}">Annuler</a>
-                                    </div>
+                                        <div class="btn-position">
+                                            <input class="btn-modifier" type="submit" value="Modifier">
+                                            <a class="btn-annuler" href="{{ route('admin') }}">Annuler</a>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
