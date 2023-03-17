@@ -38,9 +38,9 @@
             <img src="/images/voiture_rouge.png" alt="Voiture rouge">
         </div>
 
-        <div class="flesh-defilement">
+        <div class="fleche-defilement">
             <a href="#anchor">
-                <img src="/images/flesh.png" alt="Flèche pour défiler vers la section actualités" width="50">
+                <img src="/images/fleche.png" alt="Flèche pour défiler vers la section actualités" width="50">
             </a>
         </div>
     </header>

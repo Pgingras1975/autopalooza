@@ -14,6 +14,6 @@ class ActualiteSeeder extends Seeder
      */
     public function run()
     {
-        Actualite::factory(5)->create();
+        Actualite::factory(4)->create();
     }
 }
