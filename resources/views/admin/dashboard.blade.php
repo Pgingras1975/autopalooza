@@ -1,6 +1,6 @@
 <x-dashboard-layout>
 
-
+<div id="opacityOpenForm">
 
 <div id="wrapper">
 
@@ -8,8 +8,6 @@
 
     <!--  page-wrapper -->
     <div id="page-wrapper">
-
-
 
         <div class="row">
             <!-- Page Header -->
@@ -38,7 +36,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive h-300">
+                                <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -73,7 +71,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive h-300">
+                                <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -115,7 +113,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive h-300">
+                                <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -151,7 +149,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive h-300">
+                                <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -190,7 +188,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive h-300">
+                                <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -213,6 +211,7 @@
                 <!--End simple table example -->
             </div>
 
+            @if ($authuserid == 1 )
             <div class="col-lg-6">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
@@ -223,7 +222,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive h-300">
+                                <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                             <tr>
@@ -247,6 +246,7 @@
                 </div>
                 <!--End simple table example -->
             </div>
+            @endif
 
         </div>
 
@@ -265,6 +265,22 @@
 </div>
 <!-- end wrapper -->
 
+</div>
+{{-- <div class="form-popup" id="myForm">
+<form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
 
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+</div> --}}
+
+<x-ajout-activite />
 
 </x-dashboard-layout>

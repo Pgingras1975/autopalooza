@@ -31,9 +31,9 @@ limitations under the License.*/
 
  #wrapper {
     width: 100%;
-    margin-top: 55px!important; 
+    margin-top: 55px!important;
     /* background-color:#04B173; */
-    background-color:#2ec4b6; 
+    background-color:#2ec4b6;
 }
 
 #page-wrapper {
@@ -41,10 +41,6 @@ limitations under the License.*/
     min-height: 568px;
      background-color:rgb(209, 212, 216);
 }
-
-
-
-    
 
 .navbar-static-side ul li {
     /* border-bottom:1px solid #84B899 !important; */

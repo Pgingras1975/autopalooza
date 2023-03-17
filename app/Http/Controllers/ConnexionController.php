@@ -52,6 +52,6 @@ class ConnexionController extends Controller
     public function deconnecter() {
         auth()->logout();
 
-        return redirect()->route('accueil')->with('success-deconnexion', 'Vous êtes déconnecté');
+        return redirect()->route('accueil')->with('success-deconnexion', 'Déonnexion réussie!');
     }
 }

@@ -144,7 +144,7 @@ nav.menu .container-fluid ul.navbar-nav li.nav-item a.connexion:hover {
 
 /*************************************** PAGE ACCUEIL - ALESSIA ***************************************/
 body#accueil {
-  background-image: linear-gradient(#011627 50%, #12585D, #239993);
+  background-image: linear-gradient(#011627 40%, #12585D, #239993);
   min-height: 100vh;
   color: #fff;
   overflow-x: hidden;
@@ -187,7 +187,7 @@ body#accueil header .route-vertical {
   border-right: 15px solid #FF9F1C;
   border-left: 15px solid #FF9F1C;
   background-color: #000;
-  height: 2000px;
+  height: 2650px;
   width: 165px;
   position: absolute;
   right: 250px;
@@ -198,7 +198,7 @@ body#accueil header .route-vertical-centre {
   display: grid;
   grid-gap: 65px;
   width: 30px;
-  height: 2000px;
+  height: 2650px;
   background-color: #000;
 }
 body#accueil header .route-vertical-centre div {
@@ -222,8 +222,7 @@ body#accueil main#accueil h2 {
   font-weight: 400;
   font-size: 60px;
   text-align: center;
-  margin-top: 300px;
-  margin-bottom: 115px;
+  margin-bottom: 85px;
   padding-top: 200px;
 }
 body#accueil main#accueil .actualites {
@@ -233,12 +232,18 @@ body#accueil main#accueil .actualites {
   font-style: normal;
   font-weight: 400;
   max-width: 87%;
-  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 body#accueil main#accueil .actualites .actualite {
   width: unset;
+  position: relative;
+  margin-bottom: 60px;
 }
-body#accueil main#accueil .actualites .actualite .card {
+body#accueil main#accueil .actualites .actualite .bordure {
+  background-color: #2EC4B6;
+  border-radius: 24px;
+}
+body#accueil main#accueil .actualites .actualite .bordure .card {
   width: 350px;
   height: 555px;
   margin: 0 10px;
@@ -246,69 +251,36 @@ body#accueil main#accueil .actualites .actualite .card {
   border-radius: 24px;
   z-index: 100;
   border: 0px;
+  position: relative;
+  bottom: 12px;
+  right: 10px;
 }
-body#accueil main#accueil .actualites .actualite .card img {
+body#accueil main#accueil .actualites .actualite .bordure .card img {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  max-height: 240px;
 }
-body#accueil main#accueil .actualites .actualite .card .card-body p.date-actualite {
+body#accueil main#accueil .actualites .actualite .bordure .card .card-body {
+  padding: 22px;
+}
+body#accueil main#accueil .actualites .actualite .bordure .card .card-body p.date-actualite {
   text-align: start;
   font-size: 18px;
 }
-body#accueil main#accueil .actualites .actualite .card .card-body h3.titre-actualite {
+body#accueil main#accueil .actualites .actualite .bordure .card .card-body h3.titre-actualite {
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 700;
 }
-body#accueil main#accueil .actualites .actualite .ombre-actualite {
-  position: relative;
-  width: 350px;
-  height: 555px;
-  background-color: #2EC4B6;
-  transform: translate(22px, -546px);
-  border-radius: 24px;
+body#accueil main#accueil .actualites .actualite .bordure .card .card-body p.description-actualite {
+  overflow: hidden;
 }
-body#accueil main#accueil .actualites:hover {
-  color: #000;
-  text-align: center;
-  font-family: protipo, sans-serif;
+body#accueil main#accueil .thematiques-h2 {
+  font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
-  max-width: 87%;
-  flex-wrap: nowrap;
-}
-body#accueil main#accueil .actualites:hover .actualite {
-  width: unset;
-}
-body#accueil main#accueil .actualites:hover .actualite .card {
-  width: 350px;
-  height: 555px;
-  margin: 0 10px;
-  padding: 0;
-  border-radius: 24px;
-  z-index: 100;
-  border: 0px;
-}
-body#accueil main#accueil .actualites:hover .actualite .card img {
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-}
-body#accueil main#accueil .actualites:hover .actualite .card .card-body p.date-actualite {
-  text-align: start;
-  font-size: 18px;
-}
-body#accueil main#accueil .actualites:hover .actualite .card .card-body h3.titre-actualite {
-  font-family: protipo, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-}
-body#accueil main#accueil .actualites:hover .actualite .ombre-actualite {
-  position: relative;
-  width: 350px;
-  height: 555px;
-  background-color: #2EC4B6;
-  transform: translate(30px, -540px);
-  border-radius: 24px;
+  font-size: 60px;
+  text-align: center;
 }
 body#accueil main#accueil .thematiques {
   justify-content: space-between;
@@ -353,7 +325,9 @@ body#accueil main#accueil .thematiques .card .overlay-dark a:hover {
   border: 3px solid #FF9F1C;
   color: #FF9F1C;
 }
-body#accueil footer {
+
+/********************************************* FOOTER - ALESSIA *********************************************/
+footer {
   background-color: #FF9F1C;
   height: 180px;
   border-top: 10px solid #011627;
@@ -361,24 +335,27 @@ body#accueil footer {
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
+  position: relative;
+  z-index: 50;
 }
-body#accueil footer img.logo-footer {
+footer img.logo-footer {
   width: 135px;
   position: relative;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body#accueil footer .contenu-footer {
+footer .contenu-footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: -4% 200px;
+  margin: -3% 200px;
 }
-body#accueil footer .contenu-footer .reseaux-sociaux a {
+footer .contenu-footer .reseaux-sociaux a {
   text-decoration: none;
 }
-body#accueil footer .contenu-footer .reseaux-sociaux a img {
-  width: 65px;
+footer .contenu-footer .reseaux-sociaux a img {
+  max-width: 55px;
+  max-height: 55px;
 }
 
 #app {
@@ -513,9 +490,29 @@ main#activites h1.activites-h1 {
   margin-bottom: 115px;
 }
 main#activites .row {
-  overflow-y: scroll;
   height: 500px;
 }
-main#activites .row .col-8 .scrollspy-example {
+main#activites .row .col-10 .scrollspy-example {
   position: relative;
+  height: 350px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+main#activites .row .col-10 .scrollspy-example .activite {
+  margin-bottom: 165px;
+}
+main#activites .row .col-10 .scrollspy-example .activite img {
+  height: 280px;
+  width: 430px;
+  border: 6px solid #FF9F1C;
+  border-radius: 24px;
+  float: left;
+  margin-right: 40px;
+}
+main#activites .row .col-10 .scrollspy-example .activite h4 {
+  font-size: 28px;
+}
+main#activites .row .col-10 .scrollspy-example .activite p {
+  font-size: 20px;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
