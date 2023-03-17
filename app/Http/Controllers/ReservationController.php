@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Forfait;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class ReservationController extends Controller
      */
     public function reserver() {
         return view('reservation', [
-
+            "forfaits" => Forfait::all()
         ]);
     }
     /**

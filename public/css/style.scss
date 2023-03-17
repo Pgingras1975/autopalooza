@@ -336,12 +336,30 @@ body#accueil {
     }
 
 }
-form {
+main {
     position: relative;
-    background-color: #f5f5f5;
-    width: 30vw;
+    background-color: #1f1e1e;
+    color: white;
+    width: 50vw;
     max-height: 560px;
+    overflow-y: scroll;
+    text-align: center;
     z-index: 550;
+
+    .list-reservation {
+        // background-color: #555555;
+        border: #000 solid 1px;
+        width: 95%;
+        margin: 1% auto;
+        border-radius: 25px !important;
+        cursor: pointer;
+    }
+    .list-reservation:hover{
+        background-color: #2EC4B6;
+        margin: 1% auto;
+        zoom: 1.5;
+        width: 95%;
+    }
 }
 
 
@@ -365,6 +383,10 @@ form {
     }
 }
 
+#pannel-off {
+    overflow: hidden;
+}
+
 #cart-panel {
     background-color: #f5f5f5;
     border-left: 1px solid #DDD;
@@ -377,14 +399,18 @@ form {
     overflow: auto;
     padding-bottom: 10px;
     right: 0px;
-    transform: translatey(-110%);
+    text-align: center;
+    transform: translateY(-110%);
     transition: transform 0.5s ease;
     top: 0px;
-    width: 30vw;
+    width: 50vw;
 
+    small {
+        color: #1d1c1c;
+    }
 
     &.open {
-        transform: translatey(-4%);
+        transform: translateY(-4%);
     }
 
     .bt-close {
@@ -398,7 +424,7 @@ form {
     }
 
     h2#cart-title{
-        margin-top: 15px;
+        margin-top: 4%;
         text-align: center;
         font-weight: normal
     }
