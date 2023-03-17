@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ActualiteSeeder::class,
             ForfaitSeeder::class,
             ReservationSeeder::class,
+            ThematiqueSeeder::class
         ]);
     }
 }

@@ -54,9 +54,9 @@
                         <div class="card">
                             <img class="card-img-top" src="{{ $actualite->image }}" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text date-actualite">{{ $actualite->created_at }}</p>
+                                <p class="card-text date-actualite">{{ $actualite->date_formatte }}</p>
                                 <h3 class="titre-actualite">{{ $actualite->titre }}</h3>
-                                <p class="description-actualite">{{ $actualite->description }}</p>
+                                <p class="description-actualite">{{ $actualite->description_limiter }}</p>
                             </div>
                         </div>
                     </div>
@@ -66,6 +66,19 @@
 
         <h2 class="thematiques-h2">Nos thématiques</h2>
         <div class="row thematiques mx-auto">
+            @foreach ($thematiques as $thematique)
+                <div class="col-md-4 col-lg-4 col-xl-4">
+                    <div class="card">
+                        <img src="{{ $thematique->image }}" class="card-img" alt="...">
+                        <div class="card-img-overlay text-white overlay-dark">
+                            <h3 class="d-flex justify-content-center align-items-center">{{ $thematique->titre }}</h3>
+                            <a href="{{ url('/activites') }}">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        {{-- <div class="row thematiques mx-auto">
             <div class="col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <img src="/images/thematique1.jpg" class="card-img" alt="...">
@@ -93,7 +106,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </main>
 
     <x-footer />
