@@ -15,7 +15,10 @@ class EmployeController extends Controller
      *
      */
     public function create() {
-        return view('employe.ajouter');
+        return view('employe.ajouter', [
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
+        ]);
     }
 
     /**
@@ -27,15 +30,15 @@ class EmployeController extends Controller
 
         // valider
         $request->validate([
-            'nom' => 'required',
             'prenom' => 'required',
+            'nom' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required',
             'password-confirm' => 'required|same:password',
 
         ], [
-            'nom.required' => 'Le nom est requis',
             'prenom.required' => 'Le prénom est requis',
+            'nom.required' => 'Le nom est requis',
             'email.required' => 'Le courriel est requis',
             'email.email' => 'Le courriel doit être valide',
             'email.unique' => 'Ce courriel existe déjà',
@@ -53,9 +56,6 @@ class EmployeController extends Controller
         $user->utype_id = 1;
 
         $user->save();
-
-        // connexion de l'utilisateur ou Auth::login($user)
-        auth()->login($user);
 
         // Redirection
         return redirect()->route('admin')->with('success-creation', 'Création d\'un nouvel employé réussi!');

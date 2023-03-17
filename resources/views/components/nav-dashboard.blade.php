@@ -78,8 +78,8 @@
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Ajout<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            {{-- <a href="{{ route('creer-activite') }}">Activités</a> --}}
-                            <a class="open-form" onclick="openForm()">Open Form</a>
+                            <a href="{{ route('creer-activite') }}">Activités</a>
+                            {{-- <a class="open-form" onclick="openForm()">Open Form</a> --}}
                         </li>
                         <li>
                             <a href="{{ route('creer-actualite') }}">Actualités</a>

@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->middleware('auth');
 
 Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
-Route::post('/enregistrement', [EnregistrementController::class, 'store'])->middleware('auth');
+Route::post('/enregistrement', [EnregistrementController::class, 'store']);
 
 Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe')->middleware('auth');
 Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middleware('auth');
@@ -36,7 +36,7 @@ Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middle
 Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
 Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
 
-Route::delete('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('employe.delete')->middleware('auth');
+Route::get('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
 
 Route::get('/client/modifier/{id}', [ClientController::class, 'edit'])->name('modifier-client')->middleware('auth');
 Route::post('/client/modifier/{id}', [ClientController::class, 'update'])->middleware('auth');
@@ -47,7 +47,7 @@ Route::get('/client/supprimer/{id}', [ClientController::class, 'destroy'])->midd
 
 
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
-Route::post('/connexion', [ConnexionController::class, 'authentifier'])->middleware('auth');
+Route::post('/connexion', [ConnexionController::class, 'authentifier']);
 
 Route::get('/deconnexion', [ConnexionController::class, 'deconnecter'])->name('deconnexion');
 
@@ -65,7 +65,7 @@ Route::post('/actualite/sauvegarder', [ActualiteController::class, 'store']);
 Route::get('/actualite/modifier/{id}', [ActualiteController::class, 'edit'])->name('modifier-actualite');
 Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
 
-Route::delete('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
+Route::get('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
 
 // Route activité
 Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite');
@@ -83,31 +83,23 @@ Route::post('/forfait/sauvegarder', [ForfaitController::class, 'store']);
 Route::get('/forfait/modifier/{id}', [ForfaitController::class, 'edit'])->name('modifier-forfait');
 Route::post('/forfait/modifier/{id}', [ForfaitController::class, 'update']);
 
-Route::delete('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy'])->name('forfait.delete')->middleware('auth');
+Route::get('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy'])->name('forfait.delete')->middleware('auth');
 
 
-
-Route::get('/', [AccueilController::class, 'index'])
-    ->name('accueil');
+//Accueil
+Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 
 // Forfaits
-Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])
-    ->name('forfaits');
+Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])->name('forfaits');
 
 // Activités
-Route::get('/activites', [ActiviteController::class, 'afficherActivite'])
-->name('activites');
+Route::get('/activites', [ActiviteController::class, 'afficherActivite'])->name('activites');
 
 // Contact
-Route::get('/contact', [ContactController::class, 'afficherContact'])
-->name('contacts');
+Route::get('/contact', [ContactController::class, 'afficherContact'])->name('contacts');
 
 // Réservation
-Route::get('/reservation', [ReservationController::class, 'reserver'])
-->name('reservation')
-->middleware('auth');
-
-
+Route::get('/reservation', [ReservationController::class, 'reserver'])->name('reservation')->middleware('auth');
 
 Route::get('users', [ClientController::class, 'index'])->name('users.index');
 Route::delete('users/{id}', [ClientController::class, 'delete'])->name('users.delete');

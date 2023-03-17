@@ -73,6 +73,26 @@ a:hover {
     text-decoration: none;
 }
 
+.btn-retour {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    border: solid #011627 2px;
+    font-family: Arial;
+    background: #e71d36 !important;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    margin: 0px 3px;
+}
+
+.btn-retour:hover {
+    background-color: #ffffff !important;
+    color: #011627 !important;
+    text-decoration: none;
+}
+
 .btn-supprimer {
     -webkit-border-radius: 6;
     -moz-border-radius: 6;
@@ -129,7 +149,8 @@ a:hover {
 }
 
 .form-w {
-    width: 600px !important;
+    /* width: 600px !important; */
+    min-width: 412px;
 }
 
 .grille-h {
@@ -253,7 +274,7 @@ td:hover{
 /* Formulaire responsive */
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+input[type=text], input[type=file], input[type=password], select, textarea{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;

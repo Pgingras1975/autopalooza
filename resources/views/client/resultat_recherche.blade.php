@@ -29,6 +29,8 @@
                             <input type="text" name="search" size="16">
                             <input class="btn btn-danger" type="submit" value="🔍">
                         </form> --}}
+                        <a class="btn-retour" href="{{ route('admin') }}">Retour</a>
+
                     </div>
 
                     <div class="panel-body">
