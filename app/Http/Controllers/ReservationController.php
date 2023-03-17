@@ -31,11 +31,8 @@ class ReservationController extends Controller
             // "reservation" => Reservation::findOrFail($id),
             "reservation" => Reservation::join('users', 'reservations.user_id', '=', 'users.id')
             ->join('forfaits','reservations.forfait_id', 'forfaits.id')
-            ->select('users.nom AS nom_de_famille', 'reservations.*', 'forfaits.nom AS nom_du_forfait')
+            ->select('users.nom AS nom_de_famille', 'users.prenom', 'reservations.*', 'forfaits.nom AS nom_du_forfait')
             ->findOrFail($id),
-
-
-            "id" => auth()->user()->id,
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);
