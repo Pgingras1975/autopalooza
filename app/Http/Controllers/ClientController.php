@@ -75,22 +75,6 @@ class ClientController extends Controller
 
     }
 
-        /**
-     * Supprime un forfait selon son id
-     *
-     * @param int $id id du forfait
-     */
-    public function destroy($id){
-
-        $user = User::findOrFail($id);
-
-        $user->delete();
-
-        return redirect()
-                ->route('admin')
-                ->with('suppression-client', "L\'employé a été supprimée!");
-    }
-
     /**
      * affiche une liste de client dont le nom correspond au mot recherché
      *

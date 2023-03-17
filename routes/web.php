@@ -36,14 +36,14 @@ Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middle
 Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
 Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
 
-Route::get('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
+Route::delete('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('employe.delete')->middleware('auth');
 
 Route::get('/client/modifier/{id}', [ClientController::class, 'edit'])->name('modifier-client')->middleware('auth');
 Route::post('/client/modifier/{id}', [ClientController::class, 'update'])->middleware('auth');
 
 Route::get('/client/rechercher', [ClientController::class, 'rechercherClient'])->middleware('auth');
 
-Route::get('/client/supprimer/{id}', [ClientController::class, 'destroy'])->middleware('auth');
+// Route::delete('/client/supprimer/{id}', [ClientController::class, 'destroy'])->middleware('auth');
 
 
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
@@ -65,7 +65,7 @@ Route::post('/actualite/sauvegarder', [ActualiteController::class, 'store']);
 Route::get('/actualite/modifier/{id}', [ActualiteController::class, 'edit'])->name('modifier-actualite');
 Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
 
-Route::get('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
+Route::delete('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
 
 // Route activité
 Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite');
