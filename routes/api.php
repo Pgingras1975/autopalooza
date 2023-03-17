@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ApiEnregistrementController;
+use App\Http\Controllers\ApiRecuperationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::get('/recuperation', [ApiRecuperationController::class, 'index']);
+Route::post('/enregistrement', [ApiEnregistrementController::class, 'index']);
+

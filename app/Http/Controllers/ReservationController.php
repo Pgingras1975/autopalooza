@@ -18,7 +18,7 @@ class ReservationController extends Controller
      */
     public function reserver() {
         return view('reservation', [
-
+            "forfaits" => Forfait::all()
         ]);
     }
 
