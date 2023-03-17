@@ -13,7 +13,10 @@ class ActualiteController extends Controller
      *
      */
     public function create() {
-        return view('actualite.ajouter');
+        return view('actualite.ajouter', [
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
+        ]);
     }
 
     /**

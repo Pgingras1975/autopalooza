@@ -14,12 +14,15 @@ class ForfaitController extends Controller
         ]);
     }
 
-                /**
+    /**
      * Affiche la page d'ajout d'un nouveau orfait
      *
      */
     public function create() {
-        return view('forfait.ajouter');
+        return view('forfait.ajouter', [
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
+        ]);
     }
 
     /**

@@ -1,53 +1,113 @@
-<x-layout>
+<x-dashboard-layout>
 
-    <main class="w-50 m-auto mt-5">
+    <div id="wrapper" onload="opacityFadeOut()">
 
-        <div class="container py-5">
-            <h1 class="text-center m-0 fs-1">Ajouter un nouvel employé</h1>
-            {{-- <h4 class="text-center fs-5">ou <a href="{{ url('/connexion') }}">connectez-vous</a></h4> --}}
-            <form action="{{ url('/employe/sauvegarder') }}" method="post" enctype="multipart/form-data" class="mt-4">
-                @csrf
+        <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
-                <div class="w-75 m-auto">
-                    <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="prenom" name="prenom" value="{{ old('prenom') }}"
-                            placeholder="Votre prénom" autofocus>
-                        <label class="form" for="prenom">Prénom</label>
-                        <x-form-message champ="prenom" />
-                    </div>
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
 
-                    <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="nom" placeholder="Votre nom" name="nom" value="{{ old('nom') }}">
-                        <label class="form" for="nom">Nom</label>
-                        <x-form-message champ="nom" />
-                    </div>
-
-                    <div class="form-floating mb-2">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Courriel" value="{{ old('email') }}">
-                        <label class="form" for="email">Courriel</label>
-                        <x-form-message champ="email" />
-                    </div>
-
-                    <div class="form-floating mb-2">
-                        <input type="password" class="form-control" id="password" name="password"
-                            placeholder="Mot de passe" autocomplete="off">
-                        <label class="form" for="password">Mot de passe</label>
-                        <x-form-message champ="password" />
-                    </div>
-
-                    <div class="form-floating mb-2">
-                        <input type="password" class="form-control" id="password-confirm" name="password-confirm"
-                            placeholder="Confirmez le mot de passe" autocomplete="off">
-                        <label class="form" for="password-confirm">Confirmez le mot de passe</label>
-                        <x-form-message champ="password-confirm" />
-                    </div>
-
-                    <p class="d-flex justify-content-center my-5">
-                        <input type="submit" class="btn btn-dark me-2" value="Ajouter">
-                    </p>
+            <div class="row">
+                <!-- Page Header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header font-36">Dashboard</h1>
                 </div>
-            </form>
-        </div>
-    </main>
+                <!--End Page Header -->
+            </div>
 
-</x-layout>
+            <div class="row">
+                <div class="col-lg-3">
+
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading entete header-h" style="background-color:#e71d36">
+                            <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Ajouter un nouvel employé</p>
+                        </div>
+
+                        <div class="panel-body form-h">
+                            <div class="container">
+
+                                <form form action="{{ url('/employe/sauvegarder/') }}" method="post" enctype="multipart/form-data">
+                                    @csrf
+
+                                    @error('texte')
+                                        <p class="alert alert-danger">{{ $message }}</p>
+                                    @enderror
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label class="form" for="prenom">Prénom</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="prenom" name="prenom" placeholder="Prénom" autofocus value="{{ old('prenom') }}">
+                                            <x-form-message champ="prenom" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label class="form" for="nom">Nom</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="nom" name="nom" placeholder="Nom" value="{{ old('nom') }}">
+                                            <x-form-message champ="nom" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label class="form" for="email">E-mail</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="email" name="email" placeholder="E-mail" value="{{ old('email') }}">
+                                            <x-form-message champ="email" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label class="form" for="password">Mot de passe</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="password" id="password" name="password" placeholder="Mot de passe" autocomplete="off">
+                                            <x-form-message champ="password"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label class="form" for="password-confirm">Confirmez le mot de passe</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="password" id="password-confirm" name="password-confirm" placeholder="Confirmez le mot de passe" autocomplete="off">
+                                            <x-form-message champ="password-confirm"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="btn-position">
+                                            <input class="btn-modifier" type="submit" value="Ajouter">
+                                            <a class="btn-annuler" href="{{ route('admin') }}">Annuler</a>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    <div>
+                <div>
+
+                <div class="col-lg-3">
+
+                </div>
+
+            <div>
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+</x-dashboard-layout>

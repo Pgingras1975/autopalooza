@@ -19,7 +19,10 @@ class ActiviteController extends Controller
      *
      */
     public function create() {
-        return view('activite.ajouter');
+        return view('activite.ajouter', [
+            "authuser" => auth()->user()->nom_complet,
+            "authuserid" => auth()->user()->id,
+        ]);
     }
 
     /**
@@ -34,7 +37,7 @@ class ActiviteController extends Controller
             "description" => 'required',
             "image" => "mimes:png,jpg,jpeg,webp",
         ],[
-            'nom.required' => 'Le champs Titre est requis',
+            'nom.required' => 'Le champs Nom est requis',
             'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"

@@ -45,14 +45,13 @@
                         <div class="btn-position">
                             <input class="btn-modifier" type="submit" value="Ajouter">
                             <button type="button" class="btn-annuler" onclick="closeForm()">Annuler</button>
-                            {{-- <a class="btn-annuler" href="{{ route('admin') }}">Annuler</a> --}}
                         </div>
                     </div>
                 </form>
 
             </div>
         </div>
-    <!-- /.panel-primary -->
+
     <div>
 
 </div>
