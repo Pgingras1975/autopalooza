@@ -19,6 +19,8 @@ class CreateForfaitsTable extends Migration
             $table->text('description');
             $table->string('prix');
             $table->string('image');
+            $table->date('date_arrivee');
+            $table->date('date_depart');
             $table->timestamps();
         });
     }

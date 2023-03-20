@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ForfaitFactory extends Factory
@@ -18,6 +19,8 @@ class ForfaitFactory extends Factory
             "description" => $this->faker->paragraphs(3, true),
             "prix" => "299.99$",
             "image" => "https://i.pravatar.cc/100?img=" . rand(1, 50),
+            'date_arrivee' => Carbon::now(),
+            'date_depart' => Carbon::now(),
         ];
     }
 }

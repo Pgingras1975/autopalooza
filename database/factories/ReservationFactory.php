@@ -18,8 +18,6 @@ class ReservationFactory extends Factory
     public function definition()
     {
         return [
-            'date_arrivee' => Carbon::now(),
-            'date_depart' => Carbon::now(),
             'qty' => rand(1,4),
             'user_id'=> User::inRandomOrder()->first()->id,
             'forfait_id' => Forfait::inRandomOrder()->first()->id,

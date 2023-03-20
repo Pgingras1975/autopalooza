@@ -39,12 +39,13 @@
                 <div class="items">
                     <div class="item" @click="enleverProduit(getProduit(id))" v-for="(qty, id) in panier">
                         <div class="remove">x</div>
-                        <div class="name" name="nom">@{{ getProduit(id).nom }}</div>
-                        <div class="name" name="prix">@{{ getProduit(id).prix }}</div>
-                        <div class="name" name="prix">Du @{{ getProduit(id).date_arrivee }}</div>
-                        <div class="name" name="prix">Au @{{ getProduit(id).date_depart }}</div>
-                        <div class="quantity ms-5">x@{{qty}}</div>
-                        <div class="price ">@{{ (parseFloat(getProduit(id).prix)*qty).toFixed(2) }}$</div>
+                            <div class="name" name="nom">@{{ getProduit(id).nom }}</div>
+                            <div class="name" name="prix">@{{ getProduit(id).prix }}</div>
+                            <div class="name" name="date_arrivee">Du @{{ getProduit(id).date_arrivee }}</div>
+                            <div class="name" name="date_depart">Au @{{ getProduit(id).date_depart }}</div>
+                            <div class="quantity ms-5" name="qty">x@{{qty}}</div>
+                            <div class="price me-2">@{{ (parseFloat(getProduit(id).prix)*qty).toFixed(2) }}$</div>
+                            <input type="submit">
                     </div>
                 </div>
                 <div class="name price1">Total : @{{ (getPanierTotal()).toFixed(2) }} $</div>
