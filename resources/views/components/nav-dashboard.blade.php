@@ -74,6 +74,27 @@
                 <li class="selected">
                     <a href="{{ route('accueil') }}"><i class="fa fa-map-marker fa-fw"></i>Accueil</a>
                 </li>
+                @if ($authuserid == 1)
+                    <li class="selected">
+                        <a href="{{ route('accueil') }}"><i class="fa fa-map-marker fa-fw"></i>Administrateur<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{ url('/employe/modifier/pwd/' . $authuserid) }}">Modifier mot de passe</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                @else
+                <li class="selected">
+                    <a href="{{ route('accueil') }}"><i class="fa fa-map-marker fa-fw"></i>Employés<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="{{ url('/employe/modifier/pwd/' . $authuserid) }}">Modifier mot de passe</a>
+                        </li>
+
+                    </ul>
+                </li>
+                @endif
                 <li style="background-color:#2ec4b6">
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Ajout<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
