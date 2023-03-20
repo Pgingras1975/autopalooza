@@ -4,7 +4,7 @@ const DOMAIN = "http://127.0.0.1:8000/"
 // API Récupération des forfaits
 const FORFAITS_URL = DOMAIN + "api/recuperation"
 // API Enregistrement de la réservation
-const RESEVATION_URL = DOMAIN + "api/enregistrement"
+// const RESEVATION_URL = DOMAIN + "api/enregistrement"
 
 const selected = ref(null)
 
@@ -86,9 +86,27 @@ createApp({
                 },
                 // Finalize the transaction after payer approval
                 onApprove: (data, actions) => {
+
                   return actions.order.capture().then(function(orderData) {
                     viderPanier()
                     message()
+
+                    function ajouterReservation(){
+                        const url = DOMAIN + "api/enregistrement"
+
+                        const post = new FormData()
+                        params_post.set("nom", produits.nom),
+                        params_post.set("prix", produits.prix),
+                        params_post.set("prix", produits.date_arrivee),
+                        params_post.set("prix", produits.date_depart),
+                        params_post.set("qty", qty)
+
+                        const options = {
+                            method: "post",
+                            body: post
+                        }
+                        fetch(url, options)
+                     }
 
                   });
                 }
@@ -108,6 +126,7 @@ createApp({
             viderPanier,
             getProduit,
             getPanierTotal,
+            // ajouterReservation
         }
     }
 }).mount("#app")
