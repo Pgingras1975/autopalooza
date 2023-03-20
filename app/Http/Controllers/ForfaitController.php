@@ -10,7 +10,7 @@ class ForfaitController extends Controller
 {
         public function afficherForfait() {
         return view('forfaits', [
-            "forfaits" => Forfait::all()
+            "forfaits" => Forfait::all()->unique('nom')
         ]);
     }
 

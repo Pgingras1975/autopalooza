@@ -6,7 +6,7 @@
         <img src="images/pneus.png" alt="" class="image-tire1">
         <img src="images/pneus.png" alt="" class="image-tire2">
         {{-- Formulaire de réservation --}}
-            <main class="pb-3 ps-4 mx-auto mt-4">
+            <main class="pb-3 ps-4 mx-auto mt-4" id="reservation">
                 <h1>Forfaits:</h1>
                 <div class="products">
                     <!-- Répétition -->
@@ -15,14 +15,19 @@
                     @click="ajouterProduit(produit)"
                     :class="{actif: false}">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-reservation">@{{ produit.nom }} @{{produit.prix}} +</li>
+                        <li class="list-group-item list-reservation">
+                            @{{ produit.nom }} @{{produit.prix}}
+                            <p class="btn btn-dark" style="float: right; margin-top: 2%">+</p>
+                            <p>Du @{{ produit.date_arrivee }} Au @{{ produit.date_depart }}</p>
+                        </li>
                     </ul>
-                        <!-- "remove" est visible juste si le produit est dans le panier -->
+                    <!-- "remove" est visible juste si le produit est dans le panier -->
                         <div
                             class="remove"
                             v-show="panier[produit.id]"
-                            @click.stop="enleverProduit(produit)"></div>
+                            @click.stop="enleverProduit(produit)">
                         </div>
+                    </div>
                 </div>
                 <div class="ms-2 btn btn-outline-light" @click="panier_est_ouvert = true">Voir mon panier 🛒</div>
             </main>
@@ -34,18 +39,16 @@
                 <div class="items">
                     <div class="item" @click="enleverProduit(getProduit(id))" v-for="(qty, id) in panier">
                         <div class="remove">x</div>
-                        <div class="name">@{{ getProduit(id).nom }} @{{ getProduit(id).prix }}</div>
-                        <div class="quantity"><input type="number" min="1" v-model="panier[id]"></div>
-                        <div class="price me-5">@{{ parseFloat(getProduit(id).prix)*qty.toFixed(2) }}$</div>
+                        <div class="name" name="nom">@{{ getProduit(id).nom }}</div>
+                        <div class="name" name="prix">@{{ getProduit(id).prix }}</div>
+                        <div class="name" name="prix">Du @{{ getProduit(id).date_arrivee }}</div>
+                        <div class="name" name="prix">Au @{{ getProduit(id).date_depart }}</div>
+                        <div class="quantity ms-5">x@{{qty}}</div>
+                        <div class="price ">@{{ (parseFloat(getProduit(id).prix)*qty).toFixed(2) }}$</div>
                     </div>
                 </div>
-                <div class="item total"><br>
-                    <div class="name">Total : </div>
-                    <div class="price">@{{ (getPanierTotal()).toFixed(2) }}</div>
-                    <div>Total avec taxes :</div>
-                    <div class="price">@{{ (getPanierTotal()* 1.149) .toFixed(2) }}</div>
-                </div>
-                <!-- Replace "test" with your own sandbox Business account app client ID -->
+                <div class="name price1">Total : @{{ (getPanierTotal()).toFixed(2) }} $</div>
+                <div class="price2">Total avec taxes : @{{ (getPanierTotal()* 1.149).toFixed(2) }} $</div>
 
                 <!-- Set up a container element for the button -->
                 <div id="paypal-button-container"></div>

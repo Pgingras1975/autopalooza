@@ -21,8 +21,5 @@ class ApiRecuperationController extends Controller
         });
 
         return $forfait_possible;
-        // return Mot::all()->filter(
-        //     fn($word) => Str::contains($word->furigana, $request->caractere)
-        // );
     }
 }

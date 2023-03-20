@@ -48,6 +48,7 @@ function viderPanier(){
 
 
 function getProduit(id){
+    panier_est_ouvert.value = true
     for(let produit of produits.value){
         if(produit.id == id){
             return produit
@@ -57,7 +58,6 @@ function getProduit(id){
 
 function getPanierTotal(){
     let somme = 0
-    // panier_est_ouvert.value = true
     for(let id in panier.value){
         let price = getProduit(id).prix
         let qty = panier.value[id]
@@ -101,6 +101,7 @@ createApp({
             panier,
             message_final,
             selected,
+
 
             ajouterProduit,
             enleverProduit,
