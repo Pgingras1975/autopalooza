@@ -35,6 +35,10 @@ Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middle
 
 Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
 Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
+Route::get('/employe/modifier/pwd/{id}', [EmployeController::class, 'editPwd'])->name('modifier-employe-pwd')->middleware('auth');
+Route::post('/employe/modifier/pwd/{id}', [EmployeController::class, 'updatePwd'])->middleware('auth');
+
+
 
 Route::delete('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('employe.delete')->middleware('auth');
 

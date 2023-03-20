@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actualite;
+use App\Models\Thematique;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -15,10 +17,17 @@ class EmployeController extends Controller
      *
      */
     public function create() {
-        return view('employe.ajouter', [
-            "authuser" => auth()->user()->nom_complet,
-            "authuserid" => auth()->user()->id,
-        ]);
+        if (auth()->user()->id === 1){
+            return view('employe.ajouter', [
+                "authuser" => auth()->user()->nom_complet,
+                "authuserid" => auth()->user()->id,
+            ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
     /**
@@ -67,12 +76,21 @@ class EmployeController extends Controller
      *
      */
     public function edit($id) {
-        return view('employe.modifier', [
-            "employe" => User::findOrFail($id),
-            "id" => auth()->user()->id,
-            "authuser" => auth()->user()->nom_complet,
-            "authuserid" => auth()->user()->id,
-        ]);
+
+        if (auth()->user()->id === 1){
+            return view('employe.modifier', [
+                "employe" => User::findOrFail($id),
+                "id" => auth()->user()->id,
+                "authuser" => auth()->user()->nom_complet,
+                "authuserid" => auth()->user()->id,
+            ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
+
     }
 
 
@@ -87,20 +105,11 @@ class EmployeController extends Controller
         $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
-            // 'email' => 'required|email|unique:users,email',
-            'email' => 'required|email',
-            'password' => 'nullable',
-            // 'password-confirm' => 'required|same:password',
-
+            'email' => 'email',
         ], [
             'nom.required' => 'Le nom est requis',
             'prenom.required' => 'Le prénom est requis',
-            'email.required' => 'Le courriel est requis',
             'email.email' => 'Le courriel doit être valide',
-            // 'email.unique' => 'Ce courriel existe déjà',
-            // 'password.required' => 'Le mot de passe est requis',
-            // 'password-confirm.required' => 'La confirmation du mot de passe est requise',
-            // 'password-confirm.same' => 'La confirmation du mot de passe ne correspond pas au mot de passe entré',
         ]);
 
         //envoyer les infos au modèle
@@ -110,23 +119,75 @@ class EmployeController extends Controller
         $user->nom = $request->nom;
         $user->prenom = $request->prenom;
         $user->email = $request->email;
-        // $user->password = Hash::make($request->password);
-        // $user->utype_id = 1;
+        $user->password = $request->password;
+        $user->utype_id = 1;
 
         $user->save();
 
-        // connexion de l'utilisateur ou Auth::login($user)
-        // auth()->login($user);
 
         // Redirection
         return redirect()->route('admin')->with('modification-Employe', 'Modification réussi!');
 
     }
 
-        /**
-     * Supprime un forfait selon son id
+    /**
+     * Affiche le formulaire d'enregistrement (création de compte)
      *
-     * @param int $id id du forfait
+     */
+    public function editPwd($id) {
+        if (auth()->user()->id === 1 || auth()->user()->id == $id){
+            return view('employe.modifier_pwd', [
+                "employe" => User::findOrFail($id),
+                "authuser" => auth()->user()->nom_complet,
+                "authuserid" => auth()->user()->id,
+            ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
+    }
+
+
+    /**
+     * Traite les données d'un nouvel enregistrement
+     *
+     * @param Request $request Données reçues
+     */
+    public function updatePwd(Request $request, $id) {
+
+        // valider
+        $request->validate([
+            'password' => 'required',
+            'password-confirm' => 'required|same:password',
+
+        ], [
+            'password.required' => 'Le mot de passe est requis',
+            'password-confirm.required' => 'La confirmation du mot de passe est requise',
+            'password-confirm.same' => 'La confirmation du mot de passe ne correspond pas au mot de passe entré',
+        ]);
+
+        //envoyer les infos au modèle
+        $user = User::findorfail($id);
+
+        $user->id = $request->id;
+        $user->nom = $request->nom;
+        $user->prenom = $request->prenom;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->utype_id = 1;
+
+        $user->save();
+
+        // Redirection
+        return redirect()->route('admin')->with('modification-Employe', 'Modification réussi!');
+
+    }
+        /**
+     * Supprime un employé selon son id
+     *
+     * @param int $id id du employé
      */
     public function destroy($id){
 

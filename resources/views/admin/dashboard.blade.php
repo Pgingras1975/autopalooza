@@ -1,7 +1,5 @@
 <x-dashboard-layout>
 
-<div id="opacityOpenForm">
-
 <div id="wrapper">
 
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
@@ -250,22 +248,14 @@
 
         </div>
 
-        {{-- <div class="row">
-            <div class="col-lg-2">
-                <x-form-dashboard/>
-            </div>
-            <div class="col-lg-8">
-                <x-form-dashboard/>
-            </div>
-        <div> --}}
-
     </div>
     <!-- end page-wrapper -->
 
 </div>
 <!-- end wrapper -->
 
-</div>
+
+
 {{-- <div class="form-popup" id="myForm">
 <form action="/action_page.php" class="form-container">
     <h1>Login</h1>
