@@ -23,8 +23,6 @@ function recupererProduits(){
 }
 recupererProduits()
 
-
-
 /***************************** */
 
 function ajouterProduit(produit){
@@ -34,7 +32,6 @@ function ajouterProduit(produit){
     }else{
      panier.value[produit.id] += 1
     }
-    console.log(panier.value)
 }
 
 function enleverProduit(produit){
@@ -56,6 +53,7 @@ function getProduit(id){
     }
 }
 
+const qty = ref(null)
 function getPanierTotal(){
     let somme = 0
     for(let id in panier.value){
@@ -69,6 +67,20 @@ function getPanierTotal(){
 function message(){
     message_final.value = true
 }
+
+function ajouterReservation(){
+    const url = DOMAIN + "api/enregistrement"
+
+    const post = new FormData()
+    post.set("panier", JSON.stringify(panier.value))
+
+    const options = {
+        method: "post",
+        body: post
+    }
+    fetch(url, options)
+    console.log(options);
+ }
 
 createApp({
     setup() {
@@ -90,23 +102,7 @@ createApp({
                   return actions.order.capture().then(function(orderData) {
                     viderPanier()
                     message()
-
-                    function ajouterReservation(){
-                        const url = DOMAIN + "api/enregistrement"
-
-                        const post = new FormData()
-                        params_post.set("nom", produits.nom),
-                        params_post.set("prix", produits.prix),
-                        params_post.set("prix", produits.date_arrivee),
-                        params_post.set("prix", produits.date_depart),
-                        params_post.set("qty", qty)
-
-                        const options = {
-                            method: "post",
-                            body: post
-                        }
-                        fetch(url, options)
-                     }
+                    ajouterReservation()
 
                   });
                 }
@@ -119,6 +115,7 @@ createApp({
             panier,
             message_final,
             selected,
+
 
 
             ajouterProduit,

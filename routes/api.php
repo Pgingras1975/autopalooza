@@ -21,5 +21,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/recuperation', [ApiRecuperationController::class, 'index']);
-Route::post('/enregistrement', [ApiEnregistrementController::class, 'index']);
+Route::post('/enregistrement', [ApiEnregistrementController::class, 'store']);
 

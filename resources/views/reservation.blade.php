@@ -60,15 +60,10 @@
                 <div class="empty-bt btn btn-outline-secondary btn-sm me-1" @click="viderPanier()">Vider mon panier</div>
                 <div class="bt-close btn btn-dark btn-sm ms-1" @click="panier_est_ouvert = false">Fermer mon panier</div>
             </div>
-        </div>
-           <!-- Visible s'il n'y a aucun produits -->
-           <div class="vide">
-               <h3 v-if="message_final == true">Merci d'avoir magasiné chez nous !</h3>
-           </div>
-       </div>
    </div>
 </div>
     </div>
     <script src="https://www.paypal.com/sdk/js?client-id=AekvYHTjYcP0vlJMAdJCTy2j5eZ_aWMb6xBtq083jFMRmE6KdEpi7FvIPrff_m5gbKmgN3-gzg4OGk1z&currency=CAD"></script>
     <script src="js/main.js" type="module"></script>
+    <x-footer/>
 </x-layout>

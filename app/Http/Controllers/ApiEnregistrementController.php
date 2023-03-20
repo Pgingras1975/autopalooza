@@ -10,22 +10,28 @@ class ApiEnregistrementController extends Controller
 
 
      /**
-    * Traitements des questions et des éponses avec la BDD
+    * Traitements des réservations à la bdd
     *
     * @param Request $request Données reçues
     */
-    public function store() {
+    public function store(Request $request) {
         // Vérifie l'utilisateur connecté
         $user = auth()->user();
 
        // Valider
+       $request->validate([
+        'panier' => 'required',
+    ], [
+        'panier.required' => 'Il doit y avoir quelques choses au panier',
+    ]);
 
+        $panier = json_decode($request->panier);
+         dd($panier);
         // Création d'un nouvel utilisateur
         $reservation = new Reservation();
-        $reservation->user_id;
-        $reservation->forfait_id;
-        $reservation->qty;
-
+        $reservation->qty = $request->qty;
+        $reservation->forfait_id = $request->forfait_id;
+        $reservation->user_id = $user->id;
 
 
         // Sauvegarde des données
