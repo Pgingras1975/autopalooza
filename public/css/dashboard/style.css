@@ -107,6 +107,20 @@ a:hover {
     text-decoration: none;
 }
 
+.btn-search {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    border: solid #011627 2px;
+    font-family: Arial;
+    color: #ffffff !important;
+    font-size: 14px;
+    background: #e71d36;
+    padding: 2px 5px 2px 5px;
+    text-decoration: none;
+    /* margin: 0px 3px; */
+}
+
 .btn-supprimer {
     -webkit-border-radius: 6;
     -moz-border-radius: 6;
@@ -177,7 +191,7 @@ a:hover {
 }
 
 .grille-h {
-    height: 170px;
+    height: 285px;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -204,10 +218,18 @@ a:hover {
 }
 
 .header-h {
+    height: 40px;
+}
+
+.header-form-h {
     height: 75px;
 }
 
 .header-fs {
+    font-size: 20px;
+}
+
+.header-form-fs {
     font-size: 36px;
 }
 
@@ -255,12 +277,12 @@ label, input {
 }
 
 .input-search-client {
-    height:35px !important;
+    height:15px !important;
     width: 250px !important;
 }
 
 .input-search-reservation {
-    height:35px !important;
+    height:15px !important;
     width: 200px !important;
 }
 
@@ -270,6 +292,10 @@ label, input {
 }
 
 /* Style des tableaux du dashboard */
+
+table {
+    font-size: 12px;
+}
 table thead{
     position: sticky !important;
 }
@@ -282,10 +308,10 @@ table {
     border-collapse: collapse !important;
 }
 
-th,
+/* th,
 td {
     padding: 1rem !important;
-}
+} */
 
 thead {
     position: sticky !important;
@@ -294,9 +320,10 @@ thead {
     background: #eee !important;
 }
 
-td {
+/* td {
     font-weight: bold;
-}
+} */
+
 td:hover{
     background-color: #c5cbfa !important;
     color: aliceblue !important;
@@ -316,8 +343,8 @@ input[type=text], input[type=file], input[type=password], input[type=email], sel
 
 /* Style the label to display next to the inputs */
 label {
-padding: 12px 12px 12px 0;
-display: inline-block;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
 
 /* Style the submit button */
@@ -398,6 +425,13 @@ clear: both;
         border: 3px solid #f1f1f1;
         z-index: 9;
         height: 500px !important;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .input-search-client, .input-search-reservation  {
+        height:15px !important;
+        width: 100px !important;
     }
 }
 

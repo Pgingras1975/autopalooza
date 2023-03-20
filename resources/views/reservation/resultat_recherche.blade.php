@@ -23,8 +23,8 @@
 
             <div class="col-lg-8">
                 <div class="panel panel-primary">
-                    <div class="panel-heading entete header-h" style="background-color:#e71d36">
-                        <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Résulat recherche réservations</p>
+                    <div class="panel-heading entete header-form-h" style="background-color:#e71d36">
+                        <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Résulat recherche réservations</p>
                         {{-- <form action="/client/rechercher" method="get">
                             <input type="text" name="search" size="16">
                             <input class="btn btn-danger" type="submit" value="🔍">

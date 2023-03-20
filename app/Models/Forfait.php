@@ -23,6 +23,6 @@ class Forfait extends Model
      * retourne un string de 60 caractères
      */
     public function getDescriptionLimiterAttribute(){
-        return Str::limit($this->description, 50);
+        return Str::limit($this->description, 30);
     }
 }

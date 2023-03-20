@@ -22,8 +22,8 @@
 
                 <div class="col-lg-6">
                     <div class="panel panel-primary">
-                        <div class="panel-heading entete header-h" style="background-color:#e71d36">
-                            <p class="header-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Ajouter une nouvelle activité</p>
+                        <div class="panel-heading entete header-form-h" style="background-color:#e71d36">
+                            <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Ajouter une nouvelle activité</p>
                         </div>
 
                         <div class="panel-body form-h">
