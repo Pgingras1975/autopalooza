@@ -89,10 +89,10 @@ h2#alex {
 .note-forfaits {
   text-align: center;
   color: black;
-  margin-top: 20%;
-  background-color: #FF9F1C;
+  margin-top: 5%;
   padding: 1% 0;
   font-size: 18px;
+  padding-bottom: 3%;
 }
 
 .include {
@@ -377,24 +377,24 @@ footer .contenu-footer .reseaux-sociaux a img {
   transform: rotate(180deg);
 }
 
-main {
+main#reservation {
   position: relative;
   background-color: #1f1e1e;
   color: white;
   width: 50vw;
   max-height: 560px;
-  overflow-y: scroll;
+  overflow-y: auto;
   text-align: center;
   z-index: 550;
 }
-main .list-reservation {
+main#reservation .list-reservation {
   border: #000 solid 1px;
   width: 95%;
   margin: 1% auto;
   border-radius: 25px !important;
   cursor: pointer;
 }
-main .list-reservation:hover {
+main#reservation .list-reservation:hover {
   background-color: #2EC4B6;
   margin: 1% auto;
   zoom: 1.5;
@@ -490,13 +490,25 @@ main .list-reservation:hover {
   width: 150px;
 }
 #cart-panel .items .item .quantity input {
-  width: 30px;
+  width: 50px;
   text-align: center;
-  margin: 0px 5px;
+  margin: 0px 0px 0px 20px;
+  border: solid black 1px;
 }
 #cart-panel .items .item .price {
   width: 50px;
   font-weight: bold;
+  margin-left: 25%;
+}
+#cart-panel .price1 {
+  border: #000 1px solid;
+  margin: auto;
+  width: 50%;
+}
+#cart-panel .price2 {
+  border: #000 1px solid;
+  margin: auto;
+  width: 50%;
 }
 
 /*************************************** PAGE ACTIVITÉS - ALESSIA ***************************************/

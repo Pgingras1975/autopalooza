@@ -1,10 +1,10 @@
 $('.show_confirm').click(function(event) {
-    var form =  $(this).closest("form");
-    var name = $(this).data("name");
+    let form =  $(this).closest("form");
+    let name = $(this).data("name");
     event.preventDefault();
     swal({
-        title: `Are you sure you want to delete this record?`,
-        text: "If you delete this, it will be gone forever.",
+        title: `Voulez-vous vraiment supprimer cette entrée?`,
+        text: "Si vous la supprimer elle sera perdue èa jamais.",
         icon: "warning",
         buttons: true,
         dangerMode: true,

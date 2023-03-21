@@ -8,5 +8,5 @@
         <td><a href="{{ url('reservation/modifier/' . $reservation->id)}}" class="">{{ $reservation->date_arrivee }}</a></td>
     </tr>
 @empty
-    <p class="empty">Aucune réservation à afficher</p>
+    <p class="empty">Aucune réservation au nom de "{{$search}}"</p>
 @endforelse

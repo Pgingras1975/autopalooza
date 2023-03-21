@@ -48,7 +48,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <x-liste-reservations :reservations="$reservations"/>
+                                            <x-liste-reservations :reservations="$reservations" :search="$search"/>
                                         </tbody>
                                     </table>
                                 </div>

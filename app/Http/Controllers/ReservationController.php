@@ -73,6 +73,7 @@ class ReservationController extends Controller
             // "forfaits" => Forfait::all(),
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
+            "search" => $request->search,
         ]);
     }
 }

@@ -87,7 +87,7 @@ Route::post('/forfait/sauvegarder', [ForfaitController::class, 'store']);
 Route::get('/forfait/modifier/{id}', [ForfaitController::class, 'edit'])->name('modifier-forfait');
 Route::post('/forfait/modifier/{id}', [ForfaitController::class, 'update']);
 
-Route::get('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy'])->name('forfait.delete')->middleware('auth');
+Route::delete('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy'])->name('forfait.delete')->middleware('auth');
 
 
 //Accueil

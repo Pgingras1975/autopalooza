@@ -128,10 +128,20 @@ class ForfaitController extends Controller
 
         $forfait = forfait::findOrFail($id);
 
-        $forfait->delete();
+        try {
+            $forfait->delete();
+        }
+        catch (\Illuminate\Database\QueryException $e) {
+
+            if($e->getCode() == "23000"){ //23000 is sql code for integrity constraint violation
+                return redirect()
+                ->route('admin')
+                ->with('suppression-erreur', "Le forfait n'a pu etre supprimé, une réservation contient deja ce forfait.... !");
+            }
+        }
 
         return redirect()
                 ->route('admin')
-                ->with('suppression-Forfait', "Le forfait a été supprimée!");
+                ->with('suppression-Forfait', "Le forfait a été supprimé!");
     }
 }

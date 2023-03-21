@@ -76,7 +76,7 @@
                 </li>
                 @if ($authuserid == 1)
                     <li class="selected">
-                        <a href="{{ route('accueil') }}"><i class="fa fa-map-marker fa-fw"></i>Administrateur<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-map-marker fa-fw"></i>Administrateur<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="{{ url('/employe/modifier/pwd/' . $authuserid) }}">Modifier mot de passe</a>

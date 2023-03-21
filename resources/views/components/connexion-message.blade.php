@@ -42,6 +42,10 @@
 <p class="alert alert-danger text-center m-auto">{{ session('suppression-Forfait') }}</p>
 @endif
 
+@if(session('suppression-erreur'))
+<p class="alert alert-danger text-center m-auto">{{ session('suppression-erreur') }}</p>
+@endif
+
 @if(session('ajout-Forfait'))
 <p class="alert alert-success text-center m-auto">{{ session('ajout-Forfait') }}</p>
 @endif
