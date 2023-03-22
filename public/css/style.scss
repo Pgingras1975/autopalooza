@@ -432,7 +432,7 @@ main#reservation{
     background-color: #1f1e1e;
     color: white;
     width: 50vw;
-    max-height: 560px;
+    // max-height: 560px;
     overflow-y: auto;
     text-align: center;
     z-index: 550;
@@ -582,6 +582,10 @@ main#reservation{
         border: #000 1px solid;
         margin: auto;
         width: 50%;
+    }
+
+    nav#reservation {
+        margin-top: 5%;
     }
 }
 

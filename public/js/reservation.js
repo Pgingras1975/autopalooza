@@ -3,8 +3,6 @@ import { createApp, ref, onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-
 const DOMAIN = "http://127.0.0.1:8000/"
 // API Récupération des forfaits
 const FORFAITS_URL = DOMAIN + "api/recuperation"
-// API Enregistrement de la réservation
-// const RESEVATION_URL = DOMAIN + "api/enregistrement"
 
 const selected = ref(null)
 
@@ -12,8 +10,6 @@ const produits = ref([])
 const panier_est_ouvert = ref(false)
 const panier = ref({})
 let message_final = ref(false)
-
-
 
 // Récupérer les forfaits
 function recupererProduits(){
@@ -23,7 +19,6 @@ function recupererProduits(){
 }
 recupererProduits()
 
-/***************************** */
 
 function ajouterProduit(produit){
     // Changer panier
@@ -42,8 +37,6 @@ function viderPanier(){
     panier.value = {}
 }
 
-
-
 function getProduit(id){
     panier_est_ouvert.value = true
     for(let produit of produits.value){
@@ -51,9 +44,9 @@ function getProduit(id){
             return produit
         }
     }
+
 }
 
-const qty = ref(null)
 function getPanierTotal(){
     let somme = 0
     for(let id in panier.value){
@@ -67,19 +60,21 @@ function getPanierTotal(){
 function message(){
     message_final.value = true
 }
+console.log(panier.value);
 
 function ajouterReservation(){
     const url = DOMAIN + "api/enregistrement"
 
     const post = new FormData()
     post.set("panier", JSON.stringify(panier.value))
+    console.log(panier.value);
 
     const options = {
         method: "post",
-        body: post
+        body: post,
+        Credential: "same-origin",
     }
     fetch(url, options)
-    console.log(options);
  }
 
 createApp({
@@ -98,12 +93,10 @@ createApp({
                 },
                 // Finalize the transaction after payer approval
                 onApprove: (data, actions) => {
-
                   return actions.order.capture().then(function(orderData) {
-                    viderPanier()
                     message()
                     ajouterReservation()
-
+                    viderPanier()
                   });
                 }
               }).render('#paypal-button-container');

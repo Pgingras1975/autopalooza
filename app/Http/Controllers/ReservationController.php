@@ -11,14 +11,16 @@ use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
+
     /**
      * Affiche la vue de réservation
      *
      *
      */
     public function reserver() {
+
         return view('reservation', [
-            "forfaits" => Forfait::all()
+            "reservations" => Reservation::where('user_id', auth()->user()->id)->get(),
         ]);
     }
 
@@ -36,7 +38,9 @@ class ReservationController extends Controller
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);
+
     }
+
     /**
      * Supprime un réservation selon son id
      *

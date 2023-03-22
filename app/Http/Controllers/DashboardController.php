@@ -6,6 +6,7 @@ use App\Models\Activite;
 use App\Models\Actualite;
 use App\Models\Forfait;
 use App\Models\Reservation;
+use App\Models\Thematique;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -38,7 +39,10 @@ class DashboardController extends Controller
                 // "utype" => auth()->user()->utype_id
             ]);
         } else {
-            return view('accueil');
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
         }
     }
 }
