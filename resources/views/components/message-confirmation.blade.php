@@ -55,6 +55,10 @@
 <p class="alert alert-success text-center m-auto">{{ session('suppression-Employe') }}</p>
 @endif
 
+@if(session('ajout-Employe'))
+<p class="alert alert-success text-center m-auto">{{ session('ajout-Employe') }}</p>
+@endif
+
 {{-- Client --}}
 @if(session('modification-Client'))
 <p class="alert alert-success text-center m-auto">{{ session('modification-Client') }}</p>

@@ -14,8 +14,8 @@ class ActiviteController extends Controller
         ]);
     }
 
-            /**
-     * Affiche la page d'ajout d'un nouveau Activite
+    /**
+     * Affiche la page d'ajout d'une nouvelle Activite
      *
      */
     public function create() {
@@ -26,7 +26,7 @@ class ActiviteController extends Controller
     }
 
     /**
-     * Ajoute un nouveau Activite dans la table
+     * Ajoute une nouvelle Activite dans la table
      *
      * @param Request $request champs à ajouter
      */
@@ -59,7 +59,7 @@ class ActiviteController extends Controller
 
         $activite->save();
 
-        return redirect()->route('admin')->with('ajout-Activite', 'Nouvelle Activité ajoutée!');
+        return redirect()->route('admin')->with('ajout-Activite', 'Nouvelle activité ajoutée!');
     }
 
     /**
@@ -80,7 +80,7 @@ class ActiviteController extends Controller
      * Modifie un Activite selon son id
      *
      * @param Request $request champs à modifier
-     * @param int $id id du Activite
+     * @param int $id id de l'Activite
      */
     public function update(Request $request, $id) {
 
@@ -92,7 +92,7 @@ class ActiviteController extends Controller
             'nom.required' => 'Le champs Activite est requis',
             'nom.max' => 'Le Activite doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
-            // "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
+            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 
 
@@ -116,13 +116,13 @@ class ActiviteController extends Controller
     /**
      * Supprime un Activite selon son id
      *
-     * @param int $id id du Activite
+     * @param int $id id de l'Activite
      */
     public function destroy($id){
 
-        $Activite = Activite::findOrFail($id);
+        $activite = Activite::findOrFail($id);
 
-        $Activite->delete();
+        $activite->delete();
 
         return redirect()
                 ->route('admin')

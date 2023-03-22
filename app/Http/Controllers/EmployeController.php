@@ -7,13 +7,12 @@ use App\Models\Thematique;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 
 class EmployeController extends Controller
 {
 
-        /**
-     * Affiche le formulaire d'enregistrement (création de compte)
+    /**
+     * Affiche le formulaire de création d'un employé
      *
      */
     public function create() {
@@ -37,7 +36,6 @@ class EmployeController extends Controller
      */
     public function store(Request $request) {
 
-        // valider
         $request->validate([
             'prenom' => 'required',
             'nom' => 'required',
@@ -67,12 +65,12 @@ class EmployeController extends Controller
         $user->save();
 
         // Redirection
-        return redirect()->route('admin')->with('success-creation', 'Création d\'un nouvel employé réussi!');
+        return redirect()->route('admin')->with('ajout-Employe', 'Création d\'un nouvel employé réussi!');
 
     }
 
-            /**
-     * Affiche le formulaire d'enregistrement (création de compte)
+    /**
+     * Affiche le formulaire de modification d'un client
      *
      */
     public function edit($id) {
@@ -131,7 +129,7 @@ class EmployeController extends Controller
     }
 
     /**
-     * Affiche le formulaire d'enregistrement (création de compte)
+     * Affiche le formulaire de modification du mot de passe
      *
      */
     public function editPwd($id) {
