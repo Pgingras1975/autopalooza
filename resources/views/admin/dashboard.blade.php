@@ -15,12 +15,11 @@
             <!--End Page Header -->
         </div>
 
-        <x-connexion-message />
+        <x-message-confirmation />
 
         <div class="row">
 
             <div class="col-lg-4">
-                {{-- @if ($authuserid == 1) --}}
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading entete header-h" style="background-color:#e71d36">
@@ -41,7 +40,6 @@
                                                 <th>Nom</th>
                                                 <th>Prénom</th>
                                                 <th>Courriel</th>
-                                                <!-- <th>Amount</th> -->
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -56,7 +54,6 @@
                     <!-- /.panel-body -->
                 </div>
                 <!--End simple table example -->
-                {{-- @endif --}}
             </div>
 
             <div class="col-lg-4">
@@ -204,7 +201,6 @@
                 <!--End simple table example -->
             </div>
 
-            @if ($authuserid == 1 )
             <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
@@ -226,7 +222,7 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <x-liste-employes :employes="$employes" />
+                                                <x-liste-employes :employes="$employes" :authuserid="$authuserid" />
                                             </tr>
                                         </tbody>
                                     </table>
@@ -239,7 +235,6 @@
                 </div>
                 <!--End simple table example -->
             </div>
-            @endif
 
         </div>
 
@@ -248,24 +243,5 @@
 
 </div>
 <!-- end wrapper -->
-
-
-
-{{-- <div class="form-popup" id="myForm">
-<form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-</form>
-</div> --}}
-
-<x-ajout-activite />
 
 </x-dashboard-layout>

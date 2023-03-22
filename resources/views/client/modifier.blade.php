@@ -24,6 +24,11 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading entete header-form-h" style="background-color:#e71d36">
                             <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Clients</p>
+                            <form method="POST" action="{{ route('client.delete', $usager->id) }}">
+                                @csrf
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button type="submit" class="btn-supprimer show_confirm" data-toggle="tooltip" title='Delete'>Supprimer</button>
+                            </form>
                         </div>
 
                         <div class="panel-body form-h">

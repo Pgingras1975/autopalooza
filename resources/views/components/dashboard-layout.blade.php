@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $titre ?? "Festival AutoPalooza 2023" }}</title>
     <link rel="icon" type="image/png" href="/storage/logo.png"/>
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> --}}
     <link href="{{ asset('css/dashboard/assets/plugins/bootstrap/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/dashboard/assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/dashboard/assets/plugins/pace/pace-theme-big-counter.css') }}" rel="stylesheet" />
@@ -16,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard/style.css') }}">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body id="dashboard" onload="bodyOpacityFade()">
+<body>
 
     {{ $slot }}
 

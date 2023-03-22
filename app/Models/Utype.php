@@ -9,7 +9,7 @@ class Utype extends Model
 {
     use HasFactory;
 
-                    /**
+    /**
      * Relation avec le modèle User (plusieurs-à-un)
      */
     public function user(){

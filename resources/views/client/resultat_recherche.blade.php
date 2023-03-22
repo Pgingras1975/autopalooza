@@ -1,10 +1,9 @@
 <x-dashboard-layout>
 
-{{-- <x-connexion-message /> --}}
-
 <div id="wrapper">
 
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
+
     <!--  page-wrapper -->
     <div id="page-wrapper">
 
@@ -47,7 +46,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <x-liste-clients :clients="$clients"/>
+                                            <x-liste-clients :clients="$clients" :search="$search"/>
                                         </tbody>
                                     </table>
                                 </div>

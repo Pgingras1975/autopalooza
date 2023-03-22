@@ -6,5 +6,5 @@
         {{-- <td><a href="{{ url('client/modifier/' . $client->id)}}" class="">✎</a></td> --}}
     </tr>
 @empty
-    <p class="empty">Aucun client à afficher</p>
+    <p class="empty">Aucun client trouvé au nom de "{{$search}}"</p>
 @endforelse

@@ -103,22 +103,32 @@ h2#alex {
 /*************************************** NAV - ALESSIA ***************************************/
 nav.menu {
   background-color: #011627 !important;
-  height: 120px;
-  border-bottom: 10px solid #2EC4B6;
+  height: 105px;
+  border-bottom: 8px solid #2EC4B6;
 }
 nav.menu .container-fluid {
   align-items: unset;
   max-width: 1640px;
 }
 nav.menu .container-fluid a.navbar-brand img {
-  width: 190px;
-  margin-top: 10px;
+  min-width: 100px;
+  margin-top: 130px;
 }
-nav.menu .container-fluid ul.navbar-nav {
+nav.menu .container-fluid button {
+  margin-top: 30px;
+  margin-right: 30px;
+}
+nav.menu .container-fluid .collapsing {
+  transition: 0.2s;
+}
+nav.menu .container-fluid .navbar-collapse {
+  flex-grow: unset;
+}
+nav.menu .container-fluid .navbar-collapse ul.navbar-nav {
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 15px;
 }
-nav.menu .container-fluid ul.navbar-nav li.nav-item a {
+nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a {
   color: #fff;
   font-size: 26px;
   margin-right: 55px;
@@ -126,22 +136,60 @@ nav.menu .container-fluid ul.navbar-nav li.nav-item a {
   font-style: normal;
   font-weight: 500;
 }
-nav.menu .container-fluid ul.navbar-nav li.nav-item a:hover {
+nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a:hover {
   color: #2EC4B6;
 }
-nav.menu .container-fluid ul.navbar-nav li.nav-item a.connexion {
-  background-color: #2EC4B6 !important;
-  border: 5px solid #2EC4B6;
-  padding: 3px 16px;
+nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a.connexion {
+  border: 3px solid #2EC4B6;
+  padding: 3px 15px;
   border-radius: 30px;
   margin-left: 75px;
 }
-nav.menu .container-fluid ul.navbar-nav li.nav-item a.connexion:hover {
-  background-color: #fff !important;
-  border: 5px solid #2EC4B6;
-  color: #2EC4B6;
+nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a.connexion:hover {
+  background-color: rgba(46, 196, 182, 0.5);
+  border: 3px solid #2EC4B6;
+  color: #fff;
 }
 
+@media screen and (max-width: 992px) {
+  button.navbar-toggler {
+    height: 60px;
+  }
+  nav.menu {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  nav.menu .container-fluid a.navbar-brand img {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  nav.menu .container-fluid .collapse ul.navbar-nav {
+    flex-direction: column;
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item {
+    color: #2EC4B6;
+  }
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a {
+    margin: 8px 0;
+  }
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a.connexion {
+    background-color: #011627;
+    border: none;
+    padding: unset;
+    margin: 25px 0;
+    color: #2EC4B6;
+  }
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a.connexion:hover {
+    background-color: #011627;
+    border: none;
+    color: #2EC4B6;
+  }
+}
 /*************************************** PAGE ACCUEIL - ALESSIA ***************************************/
 body#accueil {
   background-image: linear-gradient(#011627 40%, #12585D, #239993);
@@ -162,18 +210,17 @@ body#accueil header .video-container h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 100px;
+  font-size: 11vh;
   color: #fff;
   border-bottom: 6px solid #2EC4B6;
   padding: 0 30px;
 }
 body#accueil header .video-container h2 {
   position: absolute;
-  top: 59%;
+  top: 60%;
   left: 65%;
   font-family: protipo, sans-serif;
   font-style: normal;
@@ -215,6 +262,36 @@ body#accueil header .fleche-defilement img {
   margin-left: 50%;
   margin-top: 60px;
   transform: translate(-50%, -50%);
+  -webkit-animation-name: flotter;
+          animation-name: flotter;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes flotter {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -90%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes flotter {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -90%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 body#accueil main#accueil h2 {
   font-family: boucherie-sans-inline, sans-serif;
@@ -527,7 +604,7 @@ main#activites h1.activites-h1 {
   margin-bottom: 115px;
 }
 main#activites .row {
-  height: 500px;
+  height: 550px;
 }
 main#activites .row .col-10 .scrollspy-example {
   position: relative;
@@ -536,7 +613,7 @@ main#activites .row .col-10 .scrollspy-example {
   scroll-behavior: smooth;
 }
 main#activites .row .col-10 .scrollspy-example .activite {
-  margin-bottom: 165px;
+  padding: 20px;
 }
 main#activites .row .col-10 .scrollspy-example .activite img {
   height: 280px;
@@ -553,7 +630,6 @@ main#activites .row .col-10 .scrollspy-example .activite p {
   font-size: 20px;
   padding: 20px;
 }
-
 /*********************************** PAGE CONTACT - ALESSIA ***********************************/
 main#contact {
   max-width: 80%;

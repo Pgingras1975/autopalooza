@@ -192,14 +192,14 @@ a:hover {
 
 .grille-h {
     height: 285px;
-    overflow-y: scroll;
+    overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
 
-.grille-h::-webkit-scrollbar {
+/* .grille-h::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .h-200 {
     height: 200px;
@@ -308,11 +308,6 @@ table {
     border-collapse: collapse !important;
 }
 
-/* th,
-td {
-    padding: 1rem !important;
-} */
-
 thead {
     position: sticky !important;
     top: 0 !important;
@@ -320,9 +315,9 @@ thead {
     background: #eee !important;
 }
 
-/* td {
+td {
     font-weight: bold;
-} */
+}
 
 td:hover{
     background-color: #c5cbfa !important;
@@ -395,22 +390,17 @@ clear: both;
         margin-top: 0;
     }
 
-    /* input[type=submit] {
-        height:30px;
-        width: 30px;
-    } */
-
     .input-search-client, .input-search-reservation  {
         height:15px !important;
         width: 150px !important;
     }
 
-    .header-fs {
+    .header-fs, .header-form-fs {
         font-size: 20px;
     }
 
-    .header-h {
-        height: 50px;
+    .header-h, .header-form-h {
+        height: 40px;
     }
 
     .form-popup {
@@ -428,7 +418,7 @@ clear: both;
     }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1620px) {
     .input-search-client, .input-search-reservation  {
         height:15px !important;
         width: 100px !important;
