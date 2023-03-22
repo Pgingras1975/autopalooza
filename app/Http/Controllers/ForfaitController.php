@@ -136,7 +136,7 @@ class ForfaitController extends Controller
             if($e->getCode() == "23000"){ //23000 is sql code for integrity constraint violation
                 return redirect()
                 ->route('admin')
-                ->with('suppression-erreur', "Le forfait n'a pu etre supprimé, une réservation contient deja ce forfait.... !");
+                ->with('suppression-Forfait-Erreur', "Ce forfait ne peut etre supprimé car il appartient déjà à une réservation. Veuillez supprimer toutes réservations contenant ce forfait avant d'effectuer cette action.");
             }
         }
 

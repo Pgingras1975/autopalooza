@@ -30,32 +30,33 @@ Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->midd
 Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
 Route::post('/enregistrement', [EnregistrementController::class, 'store']);
 
+
+// Route formulaires admin Employés
 Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe')->middleware('auth');
 Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middleware('auth');
 
 Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
 Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
+
 Route::get('/employe/modifier/pwd/{id}', [EmployeController::class, 'editPwd'])->name('modifier-employe-pwd')->middleware('auth');
 Route::post('/employe/modifier/pwd/{id}', [EmployeController::class, 'updatePwd'])->middleware('auth');
 
-
-
 Route::delete('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('employe.delete')->middleware('auth');
 
+// Route formulaires admin Clinets
 Route::get('/client/modifier/{id}', [ClientController::class, 'edit'])->name('modifier-client')->middleware('auth');
 Route::post('/client/modifier/{id}', [ClientController::class, 'update'])->middleware('auth');
 
 Route::get('/client/rechercher', [ClientController::class, 'rechercherClient'])->middleware('auth');
 
-// Route::delete('/client/supprimer/{id}', [ClientController::class, 'destroy'])->middleware('auth');
+Route::delete('/client/supprimer/{id}', [ClientController::class, 'destroy'])->name('client.delete')->middleware('auth');
 
-
+// Route connexion
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('login');
 Route::post('/connexion', [ConnexionController::class, 'authentifier']);
 
 Route::get('/deconnexion', [ConnexionController::class, 'deconnecter'])->name('deconnexion');
 
-// Route::get('/reservation/supprimer/{id}', [ReservationController::class, 'destroy'])->middleware('auth');
 Route::get('/reservation/rechercher', [ReservationController::class, 'rechercherReservation'])->middleware('auth');
 Route::get('/reservation/modifier/{id}', [ReservationController::class, 'edit'])->name('modifier-reservation')->middleware('auth');
 

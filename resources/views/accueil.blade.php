@@ -1,6 +1,6 @@
 <x-layout-accueil>
 
-    <x-connexion-message />
+    <x-message-confirmation />
 
     <x-nav />
 

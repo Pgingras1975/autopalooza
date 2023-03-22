@@ -93,8 +93,37 @@ class ClientController extends Controller
             // "forfaits" => Forfait::all(),
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
+            "search" => $request->search,
         ]);
     }
+
+    /**
+     * Supprime un client selon son id
+     *
+     * @param int $id id du client
+     */
+    public function destroy($id){
+
+        $user = User::findOrFail($id);
+
+        try {
+            $user->delete();
+        }
+        catch (\Illuminate\Database\QueryException $e) {
+
+            if($e->getCode() == "23000"){ //23000 is sql code for integrity constraint violation
+                return redirect()
+                ->route('admin')
+                ->with('suppression-Client-Erreur', "Ce client ne peut etre supprimé car il est déjà associé à une réservation. Veuillez supprimer cette réservation avant d'effectuer cette action.");
+            }
+        }
+
+
+        return redirect()
+                ->route('admin')
+                ->with('suppression-Client', "Le client a été supprimé!");
+    }
+
 
         /**
      * Display a listing of the resource.
