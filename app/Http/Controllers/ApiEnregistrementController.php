@@ -18,23 +18,31 @@ class ApiEnregistrementController extends Controller
         // Vérifie l'utilisateur connecté
         $user = auth()->user();
 
-       // Valider
+       // Validation  de l'information reçu
        $request->validate([
         'panier' => 'required',
-    ], [
+        ], [
         'panier.required' => 'Il doit y avoir quelques choses au panier',
-    ]);
+        ]);
 
-        $panier = json_decode($request->panier);
-         dd($panier);
-        // Création d'un nouvel utilisateur
-        $reservation = new Reservation();
-        $reservation->qty = $request->qty;
-        $reservation->forfait_id = $request->forfait_id;
-        $reservation->user_id = $user->id;
+        $panier = json_decode($request->panier, true);
+
+        var_dump($panier);
+        var_dump($user);
+        // exit();
 
 
-        // Sauvegarde des données
-        $reservation->save();
-    }
+        foreach($panier as $achat=>$quantite) {
+            $reserver = new Reservation();
+            $reserver->qty = $quantite;
+            $reserver->forfait_id = $achat;
+            $reserver->user_id = $user->id;
+            $reserver->save();
+        }
+
+        return response()->json([
+            'message' => "Réservation réussie"
+        ]);
+
+}
 }

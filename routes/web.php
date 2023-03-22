@@ -9,6 +9,7 @@ use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\ApiEnregistrementController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ForfaitController;
 use Illuminate\Support\Facades\Route;
@@ -107,3 +108,6 @@ Route::get('/reservation', [ReservationController::class, 'reserver'])->name('re
 
 Route::get('users', [ClientController::class, 'index'])->name('users.index');
 Route::delete('users/{id}', [ClientController::class, 'delete'])->name('users.delete');
+
+// API Réservation
+Route::post('api/enregistrement', [ApiEnregistrementController::class, 'store'])->middleware('auth');
