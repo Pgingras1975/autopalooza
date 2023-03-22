@@ -5,25 +5,27 @@
         <h1 class="activites-h1">Activités</h1>
 
         <div class="row w-75 m-auto">
-            <div class="col-2 position-sticky">
-              <div id="list-example" class="list-group">
+            <div class="col-2">
+              <div id="list" class="list-group">
                 @foreach ($activites as $activite)
-                <a class="list-group-item list-group-item-action" href="#{{ $activite->id }}">{{ $activite->nom }}</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-{{ $activite->id }}">
+                        {{ $activite->nom }}
+                    </a>
                 @endforeach
               </div>
             </div>
             <div class="col-10">
-              <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+              <div data-bs-spy="scroll" data-bs-target="#list" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
                 @foreach ($activites as $activite)
-                <div class="activite">
-                    <h4 id="{{ $activite->id }}">{{ $activite->nom }}</h4>
-                    <img src="{{ $activite->image }}" alt="">
-                    <p>{{ $activite->description }}</p>
-                </div>
+                    <div class="activite">
+                        <img src="{{ $activite->image }}" alt="">
+                        <h4 id="list-item-{{ $activite->id }}">{{ $activite->nom }}</h4>
+                        <p>{{ $activite->description }}</p>
+                    </div>
                 @endforeach
               </div>
             </div>
-          </div>
+        </div>
         {{-- <div class="row w-75 m-auto">
             <div class="col-2">
               <div id="list-example" class="list-group">
@@ -58,7 +60,26 @@
               </div>
             </div>
           </div> --}}
+
+
+          <div class="activity">
+              <div class="container">
+                  {{-- <div class="row"> --}}
+                    <div class="col">
+                      @foreach ($activites as $activite)
+                          <div class="item">
+                              <h4>{{ $activite->nom }}</h4>
+                              <img src="{{ $activite->image }}" alt="">
+                              <p>{{ $activite->description }}</p>
+                          </div>
+                      @endforeach
+                    {{-- </div> --}}
+                  </div>
+                </div>
+          </div>
+
     </main>
+
 
     <x-footer/>
 

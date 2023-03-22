@@ -94,8 +94,8 @@ h2#alex {
 /*************************************** NAV - ALESSIA ***************************************/
 nav.menu {
     background-color: #011627 !important;
-    height: 120px;
-    border-bottom: 10px solid #2EC4B6;
+    height: 105px;
+    border-bottom: 8px solid #2EC4B6;
 
     .container-fluid {
         align-items: unset;
@@ -103,40 +103,109 @@ nav.menu {
 
         a.navbar-brand {
             img {
-                width: 190px;
-                margin-top: 10px;
+                min-width: 100px;
+                margin-top: 130px;
             }
         }
 
-        ul.navbar-nav {
-            flex-direction: row;
-            margin-top: 20px;
+        button {
+            margin-top: 30px;
+            margin-right: 30px;
+        }
 
-            li.nav-item {
-                a {
-                    color: #fff;
-                    font-size: 26px;
-                    margin-right: 55px;
-                    font-family: protipo, sans-serif;
-                    font-style: normal;
-                    font-weight: 500;
+        .collapsing {
+            transition: 0.2s;
+        }
 
-                    &:hover {
-                        color: #2EC4B6;
+        .navbar-collapse {
+            flex-grow: unset;
+
+            ul.navbar-nav {
+                flex-direction: row;
+                margin-top: 15px;
+
+                li.nav-item {
+                    a {
+                        color: #fff;
+                        font-size: 26px;
+                        margin-right: 55px;
+                        font-family: protipo, sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: #2EC4B6;
+                        }
+                    }
+
+                    a.connexion {
+                        // background-color: #2EC4B6;
+                        border: 3px solid #2EC4B6;
+                        padding: 3px 15px;
+                        border-radius: 30px;
+                        margin-left: 75px;
+
+                        &:hover {
+                            background-color: rgba(46, 196, 182, 0.5);
+                            border: 3px solid #2EC4B6;
+                            color: #fff;
+                        }
                     }
                 }
+            }
+        }
+    }
+}
 
-                a.connexion {
-                    background-color: #2EC4B6 !important;
-                    border: 5px solid #2EC4B6;
-                    padding: 3px 16px;
-                    border-radius: 30px;
-                    margin-left: 75px;
+@media screen and (max-width: 992px) {
+    button.navbar-toggler {
+        height: 60px;
 
-                    &:hover {
-                        background-color: #fff !important;
-                        border: 5px solid #2EC4B6;
+        .navbar-toggler-icon{
+
+        }
+    }
+
+    nav.menu {
+        height: fit-content;
+
+        .container-fluid {
+            a.navbar-brand {
+                img {
+                    width: 100px;
+                    margin-top: 10px;
+                    margin-left: 10px;
+                }
+            }
+
+            .collapse {
+                ul.navbar-nav {
+                    flex-direction: column;
+                    display: flex;
+                    margin-left: 30px;
+                    margin-bottom: 20px;
+
+                    li.nav-item {
                         color: #2EC4B6;
+
+                        a {
+                            margin: 8px 0;
+                        }
+
+                        a.connexion {
+                            background-color: #011627;
+                            border: none;
+                            padding: unset;
+                            margin: 25px 0;
+                            color: #2EC4B6;
+
+                            &:hover {
+                                background-color: #011627;
+                                border: none;
+                                color: #2EC4B6;
+                            }
+                        }
+
                     }
                 }
             }
@@ -165,11 +234,11 @@ body#accueil {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
                 font-family: boucherie-sans-inline, sans-serif;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 100px;
+                font-size: 11vh;
+                // font-size: 100px;
                 color: #fff;
                 border-bottom: 6px solid #2EC4B6;
                 padding: 0 30px;
@@ -177,7 +246,7 @@ body#accueil {
 
             h2 {
                 position: absolute;
-                top: 59%;
+                top: 60%;
                 left: 65%;
                 font-family: protipo, sans-serif;
                 font-style: normal;
@@ -228,6 +297,24 @@ body#accueil {
             img {
                 margin-left: 50%;
                 margin-top: 60px;
+                transform: translate(-50%, -50%);
+                animation-name: flotter;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        @keyframes flotter {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+
+            50% {
+                transform: translate(-50%, -90%);
+            }
+
+            100% {
                 transform: translate(-50%, -50%);
             }
         }
@@ -427,7 +514,8 @@ footer {
     }
 
 }
-main#reservation{
+
+main#reservation {
     position: relative;
     background-color: #1f1e1e;
     color: white;
@@ -445,7 +533,8 @@ main#reservation{
         border-radius: 25px !important;
         cursor: pointer;
     }
-    .list-reservation:hover{
+
+    .list-reservation:hover {
         background-color: #2EC4B6;
         margin: 1% auto;
         zoom: 1.5;
@@ -514,7 +603,7 @@ main#reservation{
         }
     }
 
-    h2#cart-title{
+    h2#cart-title {
         margin-top: 4%;
         text-align: center;
         font-weight: normal
@@ -572,6 +661,7 @@ main#reservation{
         }
 
     }
+
     .price1 {
         border: #000 1px solid;
         margin: auto;
@@ -591,6 +681,7 @@ main#activites {
     font-family: protipo, sans-serif;
     font-style: normal;
     font-weight: 400;
+    // overflow: hidden;
 
     h1.activites-h1 {
         font-family: boucherie-sans-inline, sans-serif;
@@ -604,7 +695,7 @@ main#activites {
 
     .row {
         // overflow-y: scroll;
-        height: 500px;
+        height: 550px;
 
         .col-10 {
             .scrollspy-example {
@@ -614,7 +705,8 @@ main#activites {
                 scroll-behavior: smooth;
 
                 .activite {
-                    margin-bottom: 165px;
+                    // margin-bottom: 165px;
+                    padding: 20px;
 
                     img {
                         height: 280px;
@@ -636,6 +728,21 @@ main#activites {
 
                 }
             }
+        }
+    }
+
+    .activity {
+        .container {
+
+            // .row {
+            .col {
+                .item {
+                    // position: relative;
+                    // left: -20%;
+                }
+            }
+
+            // }
         }
     }
 }
