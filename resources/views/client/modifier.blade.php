@@ -61,6 +61,8 @@
                                         <input type="email" id="email" name="email" value="{{ $usager->email }}">
                                         <x-form-message champ="email" />
                                     </div>
+                                    <input type="hidden" name="id" value="{{ $usager->id}}">
+                                    <input type="hidden" name="password" value="{{ $usager->password}}">
                                     </div>
                                     <div class="row">
                                     <div class="btn-position">

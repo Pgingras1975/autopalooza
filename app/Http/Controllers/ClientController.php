@@ -2,20 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Activite;
-use App\Models\Actualite;
-use App\Models\Forfait;
-use App\Models\Reservation;
+
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 
 class ClientController extends Controller
 {
 
      /**
-     * Affiche le formulaire d'enregistrement (création de compte)
+     * Affiche le formulaire de modification d'un client
      *
      */
     public function edit($id) {
@@ -29,9 +24,10 @@ class ClientController extends Controller
 
 
     /**
-     * Traite les données d'un nouvel enregistrement
+     * Modifie un clinet selon son id
      *
-     * @param Request $request Données reçues
+     * @param Request $request champs à modifier
+     * @param int $id id du client
      */
     public function update(Request $request, $id) {
 
@@ -39,20 +35,13 @@ class ClientController extends Controller
         $request->validate([
             'nom' => 'required',
             'prenom' => 'required',
-            // 'email' => 'required|email|unique:users,email',
             'email' => 'required|email',
-            'password' => 'nullable',
-            // 'password-confirm' => 'required|same:password',
 
         ], [
             'nom.required' => 'Le nom est requis',
             'prenom.required' => 'Le prénom est requis',
             'email.required' => 'Le courriel est requis',
             'email.email' => 'Le courriel doit être valide',
-            // 'email.unique' => 'Ce courriel existe déjà',
-            // 'password.required' => 'Le mot de passe est requis',
-            // 'password-confirm.required' => 'La confirmation du mot de passe est requise',
-            // 'password-confirm.same' => 'La confirmation du mot de passe ne correspond pas au mot de passe entré',
         ]);
 
         //envoyer les infos au modèle
@@ -62,13 +51,10 @@ class ClientController extends Controller
         $user->nom = $request->nom;
         $user->prenom = $request->prenom;
         $user->email = $request->email;
-        // $user->password = Hash::make($request->password);
+        $user->password = $request->password;
         $user->utype_id = 2;
 
         $user->save();
-
-        // connexion de l'utilisateur ou Auth::login($user)
-        // auth()->login($user);
 
         // Redirection
         return redirect()->route('admin')->with('modification-Client', 'Modification réussi!');
@@ -83,14 +69,7 @@ class ClientController extends Controller
     public function rechercherClient(Request $request) {
 
         return view('client.resultat_recherche', [
-            // "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),
-            "clients" => User::where('nom', 'LIKE', '%' . $request->search . '%' )
-                        // ->orWhere('prenom', 'LIKE', '%' . $request->search . '%' )
-                        ->where('utype_id', '>', 1)->orderBy('nom')->get(),
-            // "reservations" => Reservation::all(),
-            // "actualites" => Actualite::all(),
-            // "activites" => Activite::all(),
-            // "forfaits" => Forfait::all(),
+            "clients" => User::where('nom', 'LIKE', '%' . $request->search . '%' )->where('utype_id', '>', 1)->orderBy('nom')->get(),
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
             "search" => $request->search,
@@ -111,41 +90,16 @@ class ClientController extends Controller
         }
         catch (\Illuminate\Database\QueryException $e) {
 
-            if($e->getCode() == "23000"){ //23000 is sql code for integrity constraint violation
+            if($e->getCode() == "23000"){
                 return redirect()
                 ->route('admin')
                 ->with('suppression-Client-Erreur', "Ce client ne peut etre supprimé car il est déjà associé à une réservation. Veuillez supprimer cette réservation avant d'effectuer cette action.");
             }
         }
 
-
         return redirect()
                 ->route('admin')
                 ->with('suppression-Client', "Le client a été supprimé!");
     }
 
-
-        /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
-    {
-        $users = User::select("*")->paginate(10);
-
-        return view('admin.user_del', compact('users'));
-    }
-
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function delete($id)
-    {
-        User::find($id)->delete();
-
-        return back();
-    }
 }

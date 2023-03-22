@@ -8,9 +8,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="index.html">
-                <img src="assets/img/logo.png" alt="" height="80"/>
-            </a> -->
         </div>
         <!-- end navbar-header -->
         <!-- navbar-top-links -->
@@ -45,7 +42,6 @@
 
     </nav>
     <!-- end navbar top -->
-
     <!-- navbar side -->
     <nav class="navbar-default navbar-static-side" style="background-color:#2ec4b6" role="navigation">
         <!-- sidebar-collapse -->

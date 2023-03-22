@@ -14,7 +14,6 @@ class ConnexionController extends Controller
         if (auth()->user()) {
             return view('accueil');
         } else {
-
             return view('auth.connexion');
         }
     }
@@ -36,14 +35,13 @@ class ConnexionController extends Controller
 
         if(auth()->attempt($infos_valides)) {
             if(auth()->user()->utype_id == 1){
-                return redirect()->route('admin')->with('success-connexion', 'Connexion réussie!');
+                return redirect()->route('admin');
             } else {
-                return redirect()->route('reservation')->with('success-connexion', 'Connexion réussie!');
+                return redirect()->route('reservation');
             }
         }
 
-        return back()->with('echec-connexion', 'Les informations soumises n\'ont pu être vérifiées');
-
+        return back()->with('echec-Connexion', 'Les informations soumises n\'ont pu être vérifiées');
     }
 
     /**
@@ -52,6 +50,6 @@ class ConnexionController extends Controller
     public function deconnecter() {
         auth()->logout();
 
-        return redirect()->route('accueil')->with('success-deconnexion', 'Déconnexion réussie!');
+        return redirect()->route('accueil')->with('success-Deconnexion', 'Déconnexion réussie!');
     }
 }

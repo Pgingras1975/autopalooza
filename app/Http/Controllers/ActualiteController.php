@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class ActualiteController extends Controller
 {
-        /**
-     * Affiche la page d'ajout d'un nouveau Actualite
+    /**
+     * Affiche la page d'ajout d'une nouvelle Actualite
      *
      */
     public function create() {
@@ -20,7 +20,7 @@ class ActualiteController extends Controller
     }
 
     /**
-     * Ajoute un nouveau Actualite dans la table
+     * Ajoute une Actualite dans la table
      *
      * @param Request $request champs à ajouter
      */
@@ -58,9 +58,9 @@ class ActualiteController extends Controller
     }
 
     /**
-     * Affiche la page de modificatiion d'un Actualite
+     * Affiche la page de modificatiion d'une Actualite
      *
-     * @param int $id id du Actualite
+     * @param int $id id de l'Actualite
      */
     public function edit($id) {
         return view('actualite.modifier', [
@@ -75,7 +75,7 @@ class ActualiteController extends Controller
      * Modifie un Actualite selon son id
      *
      * @param Request $request champs à modifier
-     * @param int $id id du Actualite
+     * @param int $id id de l'Actualite
      */
     public function update(Request $request, $id) {
 
@@ -111,7 +111,7 @@ class ActualiteController extends Controller
     /**
      * Supprime un Actualite selon son id
      *
-     * @param int $id id du Actualite
+     * @param int $id id de l'Actualite
      */
     public function destroy($id){
 
