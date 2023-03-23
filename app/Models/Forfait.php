@@ -17,10 +17,10 @@ class Forfait extends Model
         return $this->hasMany(Reservation::class);
     }
 
-        /**
+    /**
      * accesseur
      *
-     * retourne un string de 60 caractères
+     * retourne un string de 30 caractères
      */
     public function getDescriptionLimiterAttribute(){
         return Str::limit($this->description, 30);

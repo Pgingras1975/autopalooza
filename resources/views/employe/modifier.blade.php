@@ -47,7 +47,7 @@
 
                         <div class="panel-body form-h">
                             <div class="container">
-                                <form form action="{{ url('/employe/modifier/' . $employe->id ) }}" method="post">
+                                <form action="{{ url('/employe/modifier/' . $employe->id ) }}" method="post">
                                     @csrf
                                     <div class="row">
                                     <div class="col-25">

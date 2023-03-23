@@ -2,6 +2,8 @@
 
     <x-message-confirmation />
 
+    <x-connexion-message />
+
     <x-nav />
 
     <header>

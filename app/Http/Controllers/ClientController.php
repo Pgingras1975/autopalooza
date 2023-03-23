@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Actualite;
+use App\Models\Thematique;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -14,12 +15,22 @@ class ClientController extends Controller
      *
      */
     public function edit($id) {
-        return view('client.modifier', [
-            "usager" => User::findOrFail($id),
-            "id" => auth()->user()->id,
-            "authuser" => auth()->user()->nom_complet,
-            "authuserid" => auth()->user()->id,
-        ]);
+
+        // protection de la route /client/modifier/
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
+            return view('client.modifier', [
+                "usager" => User::findOrFail($id),
+                "id" => auth()->user()->id,
+                "authuser" => auth()->user()->nom_complet,
+                "authuserid" => auth()->user()->id,
+            ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
 
@@ -68,12 +79,21 @@ class ClientController extends Controller
      */
     public function rechercherClient(Request $request) {
 
+        // protection de la route client/rechercher
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
         return view('client.resultat_recherche', [
             "clients" => User::where('nom', 'LIKE', '%' . $request->search . '%' )->where('utype_id', '>', 1)->orderBy('nom')->get(),
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
             "search" => $request->search,
         ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
     /**

@@ -16,14 +16,14 @@ class Reservation extends Model
         return $this->belongsTo(User::class);
     }
 
-            /**
+    /**
      * Relation avec le modèle Forfait (plusieurs-à-un)
      */
     public function forfait(){
         return $this->belongsTo(Forfait::class);
     }
 
-            /**
+    /**
      * Accesseur pour récupérer le nom complet de l'utilisateur
      */
     public function getNomCompletAttribute(){

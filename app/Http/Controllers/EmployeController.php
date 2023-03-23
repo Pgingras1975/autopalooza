@@ -139,7 +139,7 @@ class EmployeController extends Controller
 
         // protection de la route /employe/modifier/pwd.
         // redirige à l'accueil l'utilisateur authentifié n'est pas le super Admin ou l'employé lui même
-        if (auth()->user()->id === 1 || auth()->user()->id == $id){
+        if (auth()->user()->id === 1 || auth()->user()->id == $id && auth()->user()->utype_id == 1){
             return view('employe.modifier_pwd', [
                 "employe" => User::findOrFail($id),
                 "authuser" => auth()->user()->nom_complet,

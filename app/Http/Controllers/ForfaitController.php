@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actualite;
 use App\Models\Forfait;
+use App\Models\Thematique;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
@@ -19,10 +21,20 @@ class ForfaitController extends Controller
      *
      */
     public function create() {
-        return view('forfait.ajouter', [
-            "authuser" => auth()->user()->nom_complet,
-            "authuserid" => auth()->user()->id,
-        ]);
+
+        // protection de la route forfait/creer
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
+            return view('forfait.ajouter', [
+                "authuser" => auth()->user()->nom_complet,
+                "authuserid" => auth()->user()->id,
+            ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
     /**
@@ -71,12 +83,22 @@ class ForfaitController extends Controller
      * @param int $id id du forfait
      */
     public function edit($id) {
+
+        // protection de la route forfait/modifier
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
         return view('forfait.modifier', [
             "forfait" => forfait::findOrFail($id),
             "id" => auth()->user()->id,
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
     /**

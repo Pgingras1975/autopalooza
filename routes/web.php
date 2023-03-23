@@ -34,7 +34,7 @@ Route::post('/enregistrement', [EnregistrementController::class, 'store']);
 
 // Route formulaires admin Employés
 Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe')->middleware('auth');
-Route::post('/employe/sauvegarder', [EmployeController::class, 'store'])->middleware('auth');
+Route::post('/employe/creer', [EmployeController::class, 'store'])->middleware('auth');
 
 Route::get('/employe/modifier/{id}', [EmployeController::class, 'edit'])->name('modifier-employe')->middleware('auth');
 Route::post('/employe/modifier/{id}', [EmployeController::class, 'update'])->middleware('auth');
@@ -44,7 +44,7 @@ Route::post('/employe/modifier/pwd/{id}', [EmployeController::class, 'updatePwd'
 
 Route::delete('/employe/supprimer/{id}', [EmployeController::class, 'destroy'])->name('employe.delete')->middleware('auth');
 
-// Route formulaires admin Clinets
+// Route formulaires admin Clients
 Route::get('/client/modifier/{id}', [ClientController::class, 'edit'])->name('modifier-client')->middleware('auth');
 Route::post('/client/modifier/{id}', [ClientController::class, 'update'])->middleware('auth');
 
@@ -66,7 +66,7 @@ Route::delete('/reservation/supprimer/{id}', [ReservationController::class, 'des
 
 // Route actualité
 Route::get('/actualite/creer', [ActualiteController::class, 'create'])->name('creer-actualite');
-Route::post('/actualite/sauvegarder', [ActualiteController::class, 'store']);
+Route::post('/actualite/creer', [ActualiteController::class, 'store']);
 
 Route::get('/actualite/modifier/{id}', [ActualiteController::class, 'edit'])->name('modifier-actualite');
 Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
@@ -75,7 +75,7 @@ Route::delete('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy
 
 // Route activité
 Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite')->middleware('auth');
-Route::post('/activite/sauvegarder', [ActiviteController::class, 'store']);
+Route::post('/activite/creer', [ActiviteController::class, 'store']);
 
 Route::get('/activite/modifier/{id}', [ActiviteController::class, 'edit'])->name('modifier-activite')->middleware('auth');
 Route::post('/activite/modifier/{id}', [ActiviteController::class, 'update']);
@@ -84,7 +84,7 @@ Route::delete('/activite/supprimer/{id}', [ActiviteController::class, 'destroy']
 
 // Route forfait
 Route::get('/forfait/creer', [ForfaitController::class, 'create'])->name('creer-forfait')->middleware('auth');
-Route::post('/forfait/sauvegarder', [ForfaitController::class, 'store']);
+Route::post('/forfait/creer', [ForfaitController::class, 'store']);
 
 Route::get('/forfait/modifier/{id}', [ForfaitController::class, 'edit'])->name('modifier-forfait')->middleware('auth');
 Route::post('/forfait/modifier/{id}', [ForfaitController::class, 'update']);

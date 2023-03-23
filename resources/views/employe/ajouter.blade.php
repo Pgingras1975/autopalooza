@@ -29,7 +29,7 @@
                         <div class="panel-body form-h">
                             <div class="container">
 
-                                <form form action="{{ url('/employe/sauvegarder/') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ url('/employe/creer/') }}" method="post" enctype="multipart/form-data">
                                     @csrf
 
                                     @error('texte')

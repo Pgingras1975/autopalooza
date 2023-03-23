@@ -14,7 +14,7 @@ class Actualite extends Model
             /**
      * accesseur
      *
-     * retourne un string de 255 caractères
+     * retourne un string de 50 caractères
      */
     public function getDescriptionLimiterAttribute(){
         return Str::limit($this->description, 50);

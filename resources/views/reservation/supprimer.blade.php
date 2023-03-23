@@ -62,7 +62,7 @@
 
                                 <div class="row">
                                     <div class="col-25">
-                                        <label class="label-fs"for="date_depart">Départ::</label>
+                                        <label class="label-fs"for="date_depart">Départ:</label>
                                     </div>
                                     <div class="col-75">
                                         <input type="text" id="date_depart" name="date_depart" value="{{ $reservation->date_depart }}">

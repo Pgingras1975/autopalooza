@@ -10,7 +10,7 @@ class Activite extends Model
 {
     use HasFactory;
 
-                /**
+    /**
      * accesseur
      *
      * retourne un string de 60 caractères

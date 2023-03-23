@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activite;
+use App\Models\Actualite;
+use App\Models\Thematique;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
@@ -19,10 +21,20 @@ class ActiviteController extends Controller
      *
      */
     public function create() {
-        return view('activite.ajouter', [
-            "authuser" => auth()->user()->nom_complet,
-            "authuserid" => auth()->user()->id,
-        ]);
+
+        // protection de la route /activite/creer
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
+            return view('activite.ajouter', [
+                "authuser" => auth()->user()->nom_complet,
+                "authuserid" => auth()->user()->id,
+            ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
     /**
@@ -68,12 +80,22 @@ class ActiviteController extends Controller
      * @param int $id id du Activite
      */
     public function edit($id) {
+
+        // protection de la route /activite/modifier
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
         return view('activite.modifier', [
             "activite" => Activite::findOrFail($id),
             "id" => auth()->user()->id,
             "authuser" => auth()->user()->nom_complet,
             "authuserid" => auth()->user()->id,
         ]);
+        } else {
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
+        }
     }
 
     /**
