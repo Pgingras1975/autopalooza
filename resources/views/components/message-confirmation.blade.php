@@ -59,6 +59,10 @@
 <p class="alert alert-success text-center m-auto">{{ session('ajout-Employe') }}</p>
 @endif
 
+@if(session('modification-Pwd'))
+<p class="alert alert-success text-center m-auto">{{ session('modification-Pwd') }}</p>
+@endif
+
 {{-- Client --}}
 @if(session('modification-Client'))
 <p class="alert alert-success text-center m-auto">{{ session('modification-Client') }}</p>
@@ -71,3 +75,8 @@
 @if(session('suppression-Client-Erreur'))
 <p class="alert alert-warning text-center m-auto">{{ session('suppression-Client-Erreur') }}</p>
 @endif
+
+@if(session('success-Creation'))
+<p class="alert alert-success text-center m-auto">{{ session('success-Creation') }}</p>
+@endif
+

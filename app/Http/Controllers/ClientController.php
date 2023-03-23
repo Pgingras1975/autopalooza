@@ -24,7 +24,7 @@ class ClientController extends Controller
 
 
     /**
-     * Modifie un clinet selon son id
+     * Modifie un client selon son id
      *
      * @param Request $request champs à modifier
      * @param int $id id du client
@@ -85,6 +85,7 @@ class ClientController extends Controller
 
         $user = User::findOrFail($id);
 
+        // redirige vers la route admin si erreur de suppression de clé etrangère
         try {
             $user->delete();
         }

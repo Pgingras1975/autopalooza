@@ -16,6 +16,8 @@ class EmployeController extends Controller
      *
      */
     public function create() {
+
+        // protection de la route /employe/creer. redirige à l'accueil si le type d'utilisateur est client
         if (auth()->user()->id === 1){
             return view('employe.ajouter', [
                 "authuser" => auth()->user()->nom_complet,
@@ -75,6 +77,7 @@ class EmployeController extends Controller
      */
     public function edit($id) {
 
+        // protection de la route /employe/modifier. redirige à l'accueil si le type d'utilisateur est client
         if (auth()->user()->id === 1){
             return view('employe.modifier', [
                 "employe" => User::findOrFail($id),
@@ -133,6 +136,9 @@ class EmployeController extends Controller
      *
      */
     public function editPwd($id) {
+
+        // protection de la route /employe/modifier/pwd.
+        // redirige à l'accueil l'utilisateur authentifié n'est pas le super Admin ou l'employé lui même
         if (auth()->user()->id === 1 || auth()->user()->id == $id){
             return view('employe.modifier_pwd', [
                 "employe" => User::findOrFail($id),
@@ -179,7 +185,7 @@ class EmployeController extends Controller
         $user->save();
 
         // Redirection
-        return redirect()->route('admin')->with('modification-Employe', 'Modification réussi!');
+        return redirect()->route('admin')->with('modification-Pwd', 'Votre mot de passe a été modifié!');
 
     }
         /**

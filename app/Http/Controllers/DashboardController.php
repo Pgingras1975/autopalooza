@@ -16,6 +16,7 @@ class DashboardController extends Controller
      */
     public function admin() {
 
+        // protection de la route admin. redirige à l'accueil si le type d'utilisateur est client
         if(auth()->user()->utype_id == 1) {
             return view('admin.dashboard', [
                 "employes" => User::where('id', '>', 1 )->where('utype_id', '=', 1 )->orderBy('nom')->get(),

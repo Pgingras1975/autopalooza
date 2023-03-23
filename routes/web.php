@@ -74,19 +74,19 @@ Route::post('/actualite/modifier/{id}', [ActualiteController::class, 'update']);
 Route::delete('/actualite/supprimer/{id}', [ActualiteController::class, 'destroy'])->name('actualite.delete')->middleware('auth');
 
 // Route activité
-Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite');
+Route::get('/activite/creer', [ActiviteController::class, 'create'])->name('creer-activite')->middleware('auth');
 Route::post('/activite/sauvegarder', [ActiviteController::class, 'store']);
 
-Route::get('/activite/modifier/{id}', [ActiviteController::class, 'edit'])->name('modifier-activite');
+Route::get('/activite/modifier/{id}', [ActiviteController::class, 'edit'])->name('modifier-activite')->middleware('auth');
 Route::post('/activite/modifier/{id}', [ActiviteController::class, 'update']);
 
 Route::delete('/activite/supprimer/{id}', [ActiviteController::class, 'destroy'])->name('activite.delete')->middleware('auth');
 
 // Route forfait
-Route::get('/forfait/creer', [ForfaitController::class, 'create'])->name('creer-forfait');
+Route::get('/forfait/creer', [ForfaitController::class, 'create'])->name('creer-forfait')->middleware('auth');
 Route::post('/forfait/sauvegarder', [ForfaitController::class, 'store']);
 
-Route::get('/forfait/modifier/{id}', [ForfaitController::class, 'edit'])->name('modifier-forfait');
+Route::get('/forfait/modifier/{id}', [ForfaitController::class, 'edit'])->name('modifier-forfait')->middleware('auth');
 Route::post('/forfait/modifier/{id}', [ForfaitController::class, 'update']);
 
 Route::delete('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy'])->name('forfait.delete')->middleware('auth');
@@ -106,9 +106,6 @@ Route::get('/contact', [ContactController::class, 'afficherContact'])->name('con
 
 // Réservation
 Route::get('/reservation', [ReservationController::class, 'reserver'])->name('reservation')->middleware('auth');
-
-Route::get('users', [ClientController::class, 'index'])->name('users.index');
-Route::delete('users/{id}', [ClientController::class, 'delete'])->name('users.delete');
 
 // API Réservation
 Route::post('api/enregistrement', [ApiEnregistrementController::class, 'store'])->middleware('auth');

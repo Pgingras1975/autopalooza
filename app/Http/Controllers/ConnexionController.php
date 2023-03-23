@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actualite;
+use App\Models\Thematique;
 use Illuminate\Http\Request;
 
 class ConnexionController extends Controller
@@ -11,8 +13,12 @@ class ConnexionController extends Controller
      */
     public function connexion() {
 
+        // redirection selon le type d'utilisateur
         if (auth()->user()) {
-            return view('accueil');
+            return view('accueil', [
+                "actualites" => Actualite::orderByDesc('created_at')->get(),
+                "thematiques" => Thematique::all()
+            ]);
         } else {
             return view('auth.connexion');
         }
@@ -33,6 +39,7 @@ class ConnexionController extends Controller
             'password.required' => "Toutes les informations sont requises"
         ]);
 
+        // redirection selon le type d'utilisateur
         if(auth()->attempt($infos_valides)) {
             if(auth()->user()->utype_id == 1){
                 return redirect()->route('admin');

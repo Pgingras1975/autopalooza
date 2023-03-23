@@ -54,7 +54,7 @@ class ActualiteController extends Controller
 
         $actualite->save();
 
-        return redirect()->route('admin')->with('ajout-Actualite', 'Nouvelle Actualite ajoutée!');
+        return redirect()->route('admin')->with('ajout-Actualite', 'Nouvelle actualité ajoutée!');
     }
 
     /**

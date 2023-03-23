@@ -15,7 +15,7 @@ class ForfaitController extends Controller
     }
 
     /**
-     * Affiche la page d'ajout d'un nouveau orfait
+     * Affiche la page d'ajout d'un nouveau forfait
      *
      */
     public function create() {
@@ -62,7 +62,7 @@ class ForfaitController extends Controller
 
         $forfait->save();
 
-        return redirect()->route('admin')->with('ajout-Forfait', 'Nouvelle Activité ajoutée!');
+        return redirect()->route('admin')->with('ajout-Forfait', 'Nouveau forfait ajouté!');
     }
 
     /**
