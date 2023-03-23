@@ -77,7 +77,6 @@
                             <li>
                                 <a href="{{ url('/employe/modifier/pwd/' . $authuserid) }}">Modifier mot de passe</a>
                             </li>
-
                         </ul>
                     </li>
                 @else

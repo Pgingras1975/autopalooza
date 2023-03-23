@@ -118,7 +118,7 @@ class ForfaitController extends Controller
             'nom.required' => 'Le champs forfait est requis',
             'nom.max' => 'Le forfait doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
-            'prix.required' => 'Le champs Description est requis',
+            'prix.required' => 'Le champs Prix est requis',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 

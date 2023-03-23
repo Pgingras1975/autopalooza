@@ -1,6 +1,6 @@
 <x-dashboard-layout>
 
-    <div id="wrapper" onload="opacityFadeOut()">
+    <div id="wrapper">
 
         <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
@@ -98,11 +98,6 @@
                         </div>
                     <div>
                 <div>
-
-                <div class="col-lg-3">
-
-                </div>
-
             <div>
         </div>
         <!-- end page-wrapper -->

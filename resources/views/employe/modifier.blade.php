@@ -23,26 +23,12 @@
                 <div class="col-lg-6">
                     <div class="panel panel-primary">
                         <div class="panel-heading entete header-form-h" style="background-color:#e71d36">
-                            <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Employés
-
-                            </p>
-                            {{-- <div class="d-flex">
-                                <div class="btn-group btn-menu">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Menu
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="{{ url('/employe/modifier/pwd/' . $employe->id) }}">Modifier Mot de passe</a>
-                                        </li>
-                                    </ul>
-                                </div> --}}
-                                <form method="POST" action="{{ route('employe.delete', $employe->id) }}">
-                                    @csrf
-                                    <input name="_method" type="hidden" value="DELETE">
-                                    <button type="submit" class="btn-supprimer show_confirm" data-toggle="tooltip" title='Delete'>Supprimer</button>
-                                </form>
-                            {{-- </div> --}}
+                            <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Employés</p>
+                            <form method="POST" action="{{ route('employe.delete', $employe->id) }}">
+                                @csrf
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button type="submit" class="btn-supprimer show_confirm" data-toggle="tooltip" title='Delete'>Supprimer</button>
+                            </form>
                         </div>
 
                         <div class="panel-body form-h">
@@ -91,11 +77,6 @@
                     <div>
                     <!-- /.panel-primary -->
                 <div>
-
-                <div class="col-lg-3">
-
-                </div>
-
             <div>
         </div>
         <!-- end page-wrapper -->

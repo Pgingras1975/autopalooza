@@ -69,11 +69,6 @@
                     <div>
                     <!-- /.panel-primary -->
                 <div>
-
-                <div class="col-lg-3">
-
-                </div>
-
             <div>
         </div>
         <!-- end page-wrapper -->

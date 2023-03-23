@@ -1,7 +1,5 @@
 <x-dashboard-layout>
 
-{{-- <x-connexion-message /> --}}
-
 <div id="wrapper">
 
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
