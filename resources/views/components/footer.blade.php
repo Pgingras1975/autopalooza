@@ -4,7 +4,7 @@
     <img src="/images/logo.png" alt="Logo AutoPalooza" class="logo-footer">
     <div class="contenu-footer">
         <div class="copyright">
-            <p>&copy; Copyright 2023 AutoPalooza Festival Automobile 2023. Tous droits réservés.</p>
+            <p>&copy; Copyright 2023 Festival AutoPalooza.</p>
         </div>
         <div class="reseaux-sociaux">
             <a href="https://www.facebook.com/">
