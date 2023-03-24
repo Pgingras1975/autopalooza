@@ -1,4 +1,5 @@
 <x-layout>
+    <x-message-confirmation />
     <x-nav/>
     <div id="app" v-cloak>
        <h2 id="alex">Réservation</h2>

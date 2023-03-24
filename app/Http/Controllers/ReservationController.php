@@ -59,9 +59,16 @@ class ReservationController extends Controller
 
         $reservation->delete();
 
-        return redirect()
-                ->route('admin')
-                ->with('suppression-Reservation', 'La réservation a été supprimée!');
+        // protection de la route reservation/rechercher
+        // redirige à l'accueil si l'utilisateur authentifié n'est pas un employé
+        if (auth()->user()->utype_id == 1){
+            return redirect()
+                    ->route('admin')
+                    ->with('suppression-Reservation', 'La réservation a été supprimée!');
+
+        } else {
+            return redirect()->route('reservation')->with('suppression-Reservation', 'La réservation a été supprimée!');
+        };
     }
 
     /**
