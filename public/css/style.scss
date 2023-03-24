@@ -14,6 +14,14 @@ h2#alex {
     text-align: center;
 }
 
+.route {
+    position: fixed;
+    right: 20%;
+    opacity: 0.3;
+    width: 41%;
+    height: 100vh;
+}
+
 .btn-reserver {
     background-color: #FF9F1C;
     border: none;
@@ -556,7 +564,6 @@ main#reservation {
     margin: 3px 2px 0 0;
     font-size: 22px;
     cursor: pointer;
-    // z-index: 1100;
 
     &:hover {
         background-color: #333;
@@ -584,6 +591,10 @@ main#reservation {
     transition: transform 0.5s ease;
     top: 0px;
     width: 50vw;
+
+    .button-cart {
+        z-index: 500000000;
+    }
 
     small {
         color: #1d1c1c;
@@ -660,6 +671,7 @@ main#reservation {
             }
         }
 
+        }
     }
 
     .price1 {
@@ -677,7 +689,7 @@ main#reservation {
     nav#reservation {
         margin-top: 5%;
     }
-}
+
 
 
 /*************************************** PAGE ACTIVITÉS - ALESSIA ***************************************/

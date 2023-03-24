@@ -1,5 +1,6 @@
 <x-layout>
     <x-nav/>
+    <img src="images/route.png" alt="" class="route">
         <h2 id="alex">Forfaits</h2>
         <div class="d-flex flex-wrap container-fluid row">
             @foreach ($forfaits as $forfait)
