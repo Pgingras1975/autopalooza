@@ -60,10 +60,16 @@
                                         </div>
                                     </div>
 
-                                    <label class="h4" for="image">Image : </label>
-                                    <img src="{{ $activite->image }}" alt="" width="75">
-                                    <input type="file" name="image" id="">
-                                    <x-form-message champ="image" />
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="image">Image : </label>
+                                            <img src="{{ $activite->image }}" alt="" width="75">
+                                         </div>
+                                         <div class="col-75">
+                                            <input type="file" name="image" id="">
+                                        </div>
+                                        <x-form-message champ="image" />
+                                    </div>
 
                                     <div class="row">
                                         <div class="btn-position">

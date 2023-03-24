@@ -287,7 +287,8 @@ label, input {
 }
 
 .empty {
-    font-size: 36px;
+    justify-content: center !important;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -395,11 +396,25 @@ clear: both;
         width: 150px !important;
     }
 
-    .header-fs, .header-form-fs {
+    .empty {
+        justify-content: center !important;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .header-fs {
         font-size: 20px;
     }
 
-    .header-h, .header-form-h {
+    .header-form-fs {
+        font-size: 28px;
+    }
+
+    .header-form-h {
+        height: 50px;
+    }
+
+    .header-h {
         height: 40px;
     }
 

@@ -51,7 +51,7 @@
                                             <label for="subject">Description</label>
                                         </div>
                                         <div class="col-75">
-                                            <textarea id="description" name="description" style="height:200px"></textarea>
+                                            <textarea id="description" name="description" style="height:100px"></textarea>
                                             <x-form-message champ="description" />
                                         </div>
                                     </div>
@@ -63,6 +63,26 @@
                                         <div class="col-75">
                                             <input type="text" id="prix" name="prix">
                                             <x-form-message champ="prix" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="date_arrivee">Date d'arrivée</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="date" id="date_arrivee" name="date_arrivee">
+                                            <x-form-message champ="date_arrivee" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="date_depart">Date de depart</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="date" id="date_arrivee" name="date_depart">
+                                            <x-form-message champ="date_depart" />
                                         </div>
                                     </div>
 

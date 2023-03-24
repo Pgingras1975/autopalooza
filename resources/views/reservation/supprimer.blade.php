@@ -23,8 +23,8 @@
                 <div class="col-lg-8">
                     <div class="panel panel-primary">
                         <div class="panel-heading entete header-form-h" style="background-color:#e71d36">
-                            <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Réservation de :
-                            {{ $reservation->prenom }} {{ $reservation->nom_de_famille }}
+                            <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>Réservation
+
                             </p>
                         </div>
 
@@ -32,7 +32,16 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-25">
-                                        <label class="label-fs" for="nom">Nom du forfait:</label>
+                                        <label class="label-fs" for="nom">Client</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="nom" name="nom" value="{{ $reservation->prenom }} {{ $reservation->nom_de_famille }}">
+                                        <x-form-message champ="nom" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label class="label-fs" for="nom">Forfait:</label>
                                     </div>
                                     <div class="col-75">
                                         <input type="text" id="nom" name="nom" value="{{ $reservation->nom_du_forfait }}">

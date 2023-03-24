@@ -91,6 +91,12 @@ Route::post('/forfait/modifier/{id}', [ForfaitController::class, 'update']);
 
 Route::delete('/forfait/supprimer/{id}', [ForfaitController::class, 'destroy'])->name('forfait.delete')->middleware('auth');
 
+// raccourci storage
+Route::get('/storage', function () {
+    $cible = '/home/projetweb2e7/laravel/storage/app/public';
+    $raccourci = '/home/projetweb2e7/public_html/storage';
+    symlink($cible, $raccourci);
+});
 
 //Accueil
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');

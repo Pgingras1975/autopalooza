@@ -70,10 +70,36 @@
                                         </div>
                                     </div>
 
-                                    <label class="h4" for="image">Image : </label>
-                                    <img src="{{ $forfait->image }}" alt="" width="75">
-                                    <input type="file" name="image" id="">
-                                    <x-form-message champ="image" />
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="date_arrivee">Date d'arrivée</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="date" id="date_arrivee" name="date_arrivee">
+                                            <x-form-message champ="date_arrivee" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="date_depart">Date de depart</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="date" id="date_arrivee" name="date_depart">
+                                            <x-form-message champ="date_depart" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="image">Image : </label>
+                                            <img src="{{ $forfait->image }}" alt="" width="75">
+                                         </div>
+                                         <div class="col-75">
+                                            <input type="file" name="image" id="">
+                                        </div>
+                                        <x-form-message champ="image" />
+                                    </div>
 
                                     <div class="row">
                                         <div class="btn-position">

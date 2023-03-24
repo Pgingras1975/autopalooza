@@ -69,6 +69,9 @@
                                             <input class="btn-modifier" type="submit" value="Modifier">
                                             <a class="btn-annuler" href="{{ route('admin') }}">Annuler</a>
                                         </div>
+                                        <div class="btn-position">
+                                        <a class="btn-supprimer" href="{{ url('/employe/modifier/pwd/' . $employe->id) }}"">Réinitialiser mot de passe</a>
+                                    </div>
                                     </div>
                                 </form>
                             </div>

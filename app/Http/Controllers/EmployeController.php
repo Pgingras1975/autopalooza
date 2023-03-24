@@ -201,6 +201,6 @@ class EmployeController extends Controller
 
         return redirect()
                 ->route('admin')
-                ->with('suppression-Employe', "L\'employé a été supprimée!");
+                ->with('suppression-Employe', "L\'employé a été supprimé!");
     }
 }

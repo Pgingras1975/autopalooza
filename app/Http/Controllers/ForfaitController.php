@@ -61,7 +61,8 @@ class ForfaitController extends Controller
         $forfait->nom = $request->nom;
         $forfait->description = $request->description;
         $forfait->prix = $request->prix;
-
+        $forfait->date_arrivee = $request->date_arrivee;
+        $forfait->date_depart = $request->date_depart;
 
         // traitement de l'image
         if ($request->image) {
