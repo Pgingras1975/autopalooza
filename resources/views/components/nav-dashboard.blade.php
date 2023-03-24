@@ -14,6 +14,7 @@
     <ul class="nav navbar-top-links navbar-right">
         <!-- main dropdown -->
         <li class="dropdown">
+
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="fa fa-user fa-3x"></i>
             </a>
