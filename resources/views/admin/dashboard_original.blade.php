@@ -1,15 +1,15 @@
 <x-dashboard-layout>
 
-<div id="wrapper_">
+<div id="wrapper">
 
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
     <!--  page-wrapper -->
-    <div id="page-wrapper_" class="wrapper">
+    <div id="page-wrapper">
 
         <div class="row">
             <!-- Page Header -->
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <h1 class="page-header font-36">Dashboard</h1>
             </div>
             <!--End Page Header -->
@@ -19,7 +19,7 @@
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading entete header-h" style="background-color:#e71d36">
@@ -32,7 +32,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
@@ -56,7 +56,7 @@
                 <!--End simple table example -->
             </div>
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading entete header-h" style="background-color:#e71d36">
@@ -69,7 +69,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
@@ -96,7 +96,7 @@
                 <!--End simple table example -->
             </div>
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading header-h entete" style="background-color:#e71d36">
@@ -105,7 +105,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
@@ -134,7 +134,7 @@
 
         <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading header-h  entete" style="background-color:#e71d36">
@@ -143,7 +143,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
@@ -168,7 +168,7 @@
                 <!--End simple table example -->
             </div>
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading header-h entete" style="background-color:#e71d36">
@@ -177,7 +177,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
@@ -201,7 +201,7 @@
                 <!--End simple table example -->
             </div>
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <!--Simple table example -->
                 <div class="panel panel-primary">
                     <div class="panel-heading header-h entete" style="background-color:#e71d36">
@@ -210,7 +210,7 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-lg-12">
                                 <div class="table-responsive grille-h">
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>

@@ -1,11 +1,11 @@
 <x-dashboard-layout>
 
-    <div id="wrapper">
+    <div id="wrapper_">
 
         <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
         <!--  page-wrapper -->
-        <div id="page-wrapper">
+        <div id="page-wrapper_">
 
             <div class="row">
                 <!-- Page Header -->
@@ -23,7 +23,7 @@
                 <div class="col-lg-6">
                     <div class="panel panel-primary">
                         <div class="panel-heading entete header-form-h" style="background-color:#e71d36">
-                            <p class="header-form-fs"><i class="fa fa-bar-chart-o fa-fw"></i>{{ $employe->nom_complet}} (modifier mot de passe)
+                            <p class="header-form-pwd-fs"><i class="fa fa-bar-chart-o fa-fw"></i>{{ $employe->nom_complet}} (modifier mot de passe)
 
                             </p>
                         </div>

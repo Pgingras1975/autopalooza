@@ -14,6 +14,14 @@ h2#alex {
   text-align: center;
 }
 
+.route {
+  position: fixed;
+  right: 20%;
+  opacity: 0.3;
+  width: 41%;
+  height: 100vh;
+}
+
 .btn-reserver {
   background-color: #FF9F1C;
   border: none;
@@ -412,28 +420,91 @@ footer {
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
   position: relative;
   z-index: 50;
+  margin-top: 2%;
 }
 footer img.logo-footer {
   width: 135px;
   position: relative;
   left: 50%;
+  top: 22%;
   transform: translate(-50%, -50%);
 }
-footer .contenu-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: -3% 200px;
+@media only screen and (max-width: 813.5px) {
+  footer {
+    height: 240px;
+    font-size: 12px;
+  }
+  footer .contenu-footer {
+    justify-content: center;
+    flex-flow: column wrap;
+    display: flex;
+  }
+  footer .contenu-footer .copyright {
+    text-align: center;
+    margin-top: 5%;
+  }
+  footer .contenu-footer .reseaux-sociaux a {
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  footer .contenu-footer .reseaux-sociaux a img {
+    max-width: 25px;
+    max-height: 25px;
+  }
 }
-footer .contenu-footer .reseaux-sociaux a {
-  text-decoration: none;
+@media only screen and (max-width: 991.5px) {
+  footer {
+    font-size: 16px;
+  }
+  footer .contenu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: -5% 3%;
+  }
+  footer .contenu-footer .reseaux-sociaux {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    padding-top: 3%;
+  }
+  footer .contenu-footer .reseaux-sociaux a {
+    text-decoration: none;
+  }
+  footer .contenu-footer .reseaux-sociaux a img {
+    max-width: 35px;
+    max-height: 35px;
+    margin-bottom: 35%;
+  }
 }
-footer .contenu-footer .reseaux-sociaux a img {
-  max-width: 55px;
-  max-height: 55px;
+@media only screen and (min-width: 992px) {
+  footer {
+    font-size: 18px;
+  }
+  footer .contenu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: -5% 3%;
+  }
+  footer .contenu-footer .reseaux-sociaux {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    padding-top: 3%;
+  }
+  footer .contenu-footer .reseaux-sociaux a {
+    text-decoration: none;
+  }
+  footer .contenu-footer .reseaux-sociaux a img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 15%;
+  }
 }
 
 #app {
@@ -517,6 +588,9 @@ main#reservation .list-reservation:hover {
   top: 0px;
   width: 50vw;
 }
+#cart-panel .button-cart {
+  z-index: 500000000;
+}
 #cart-panel small {
   color: #1d1c1c;
 }
@@ -576,17 +650,20 @@ main#reservation .list-reservation:hover {
   font-weight: bold;
   margin-left: 25%;
 }
-#cart-panel .price1 {
+
+.price1 {
   border: #000 1px solid;
   margin: auto;
   width: 50%;
 }
-#cart-panel .price2 {
+
+.price2 {
   border: #000 1px solid;
   margin: auto;
   width: 50%;
 }
-#cart-panel nav#reservation {
+
+nav#reservation {
   margin-top: 5%;
 }
 
