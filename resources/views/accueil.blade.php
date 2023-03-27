@@ -8,8 +8,8 @@
 
     <header>
         <div class="video-container">
-            <h1>Festival AutoPalooza</h1>
-            <h2>Du 4 au 6 août 2023</h2>
+            <h1 class="titre-accueil">Festival AutoPalooza</h1>
+            <h2 class="dates">Du 4 au 6 août 2023</h2>
             <video autoplay muted loop>
                 <source src="/video/pw2_header_video.mp4" type="video/mp4">
             </video>
