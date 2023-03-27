@@ -236,6 +236,42 @@ body#accueil {
             background: #000;
             position: relative;
             z-index: 50;
+    // Version Téléphone
+    @media only screen and (max-width: 809.5px) {
+            .titre-accueil{
+                font-size: 45px;
+            }
+            .dates {
+                font-size: 13px;
+                padding-top: 10%;
+            }
+        }
+
+    // Version Tablette
+    @media only screen and (min-width: 810px) {
+            .titre-accueil{
+                font-size: 90px;
+            }
+            .dates {
+                font-size: 25px;
+                padding-top: 10%;
+            }
+
+        }
+
+    // Version PC
+    @media only screen and (min-width: 992px) {
+            .titre-accueil{
+                font-size: 11vh;
+            }
+            .dates {
+                font-weight: 500;
+                font-size: 40px;
+            }
+
+        }
+
+
 
             h1 {
                 position: absolute;
@@ -258,8 +294,8 @@ body#accueil {
                 left: 65%;
                 font-family: protipo, sans-serif;
                 font-style: normal;
-                font-weight: 500;
-                font-size: 40px;
+                // font-weight: 500;
+                // font-size: 40px;
             }
 
             video {
@@ -480,8 +516,7 @@ footer {
     }
     // Version Téléphone
     @media only screen and (max-width: 813.5px) {
-        height: 240px;
-        font-size: 12px;
+        height: 270px;
 
         .contenu-footer {
             justify-content: center;
@@ -489,17 +524,17 @@ footer {
             display: flex;
 
             .copyright {
-                text-align: center;
-                margin-top: 5%;
+                margin: 3% auto;
+                font-size: 12px;
             }
             .reseaux-sociaux {
+                margin: auto;
                 a {
                     text-decoration: none;
-                    margin-bottom: 15px;
                     img {
                         max-width: 25px;
                         max-height: 25px;
-
+                        margin-bottom: 12%;
                     }
                 }
             }
@@ -508,27 +543,30 @@ footer {
 
     // Version Tablette
     @media only screen and (max-width: 991.5px) {
-        font-size: 16px;
         .contenu-footer {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             margin: -5% 3%;
 
+            .copyright {
+                margin: 5% auto;
+                // font-size: 16px;
+            }
+
             .reseaux-sociaux {
                 justify-content: center;
                 flex-wrap: wrap;
                 display: flex;
                 gap: 10px;
-                padding-top: 3%;
+
+                margin: auto;
                 a {
                     text-decoration: none;
 
                     img {
                         max-width: 35px;
                         max-height: 35px;
-                        margin-bottom: 35%;
-
                     }
                 }
             }
