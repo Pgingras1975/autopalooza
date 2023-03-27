@@ -5,11 +5,10 @@
         <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
         <!--  page-wrapper -->
-        <div id="page-wrapper">
-
-            <x-dashboard-header :authuser="$authuser" :authuserid="$authuserid"/>
+        <div id="page-wrapper" class="wrapper">
 
             <div class="row">
+                <div class="padding-top-form"></div>
                 <div class="col-lg-3">
 
                 </div>
