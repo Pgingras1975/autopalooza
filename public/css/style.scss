@@ -161,9 +161,7 @@ nav.menu {
     button.navbar-toggler {
         height: 60px;
 
-        .navbar-toggler-icon{
-
-        }
+        .navbar-toggler-icon {}
     }
 
     nav.menu {
@@ -237,8 +235,8 @@ body#accueil {
                 font-family: boucherie-sans-inline, sans-serif;
                 font-style: normal;
                 font-weight: 400;
-                font-size: 11vh;
-                // font-size: 100px;
+                // font-size: 11vh;
+                font-size: 100px;
                 color: #fff;
                 border-bottom: 6px solid #2EC4B6;
                 padding: 0 30px;
@@ -299,7 +297,7 @@ body#accueil {
                 margin-top: 60px;
                 transform: translate(-50%, -50%);
                 animation-name: flotter;
-                animation-duration: 2s;
+                animation-duration: 1.6s;
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
             }
@@ -380,6 +378,7 @@ body#accueil {
                                 font-family: protipo, sans-serif;
                                 font-style: normal;
                                 font-weight: 700;
+                                font-size: 23px;
                             }
 
                             p.description-actualite {
@@ -461,7 +460,6 @@ footer {
     font-size: 21px;
     position: relative;
     z-index: 50;
-
 
     img.logo-footer {
         width: 135px;
@@ -681,7 +679,6 @@ main#activites {
     font-family: protipo, sans-serif;
     font-style: normal;
     font-weight: 400;
-    // overflow: hidden;
 
     h1.activites-h1 {
         font-family: boucherie-sans-inline, sans-serif;
@@ -689,60 +686,141 @@ main#activites {
         font-weight: 400;
         font-size: 60px;
         text-align: center;
-        margin-top: 138px;
-        margin-bottom: 115px;
+        padding-top: 138px;
+        margin-bottom: 65px;
     }
 
-    .row {
-        // overflow-y: scroll;
-        height: 550px;
-
-        .col-10 {
-            .scrollspy-example {
-                position: relative;
-                height: 350px;
-                overflow: auto;
-                scroll-behavior: smooth;
-
-                .activite {
-                    // margin-bottom: 165px;
-                    padding: 20px;
-
-                    img {
-                        height: 280px;
-                        width: 430px;
-                        border: 6px solid #FF9F1C;
-                        border-radius: 24px;
-                        float: left;
-                        margin-right: 40px;
-                    }
-
-                    h4 {
-                        font-size: 28px;
-                    }
-
-                    p {
-                        font-size: 20px;
-                        padding: 20px;
-                    }
-
-                }
-            }
-        }
+    h2 {
+        font-size: 25px;
+        line-height: 40px;
     }
 
-    .activity {
-        .container {
+    .container {
+        color: #011627;
+        padding: unset;
 
-            // .row {
-            .col {
-                .item {
-                    // position: relative;
-                    // left: -20%;
+        .row {
+            height: max-content;
+            transform: translate(-62px);
+
+            .gauche {
+                padding-top: 160px;
+                padding-right: 60px;
+
+                .background-activite {
+                    background-color: #2EC4B6;
+                    border-radius: 24px;
+                    margin-bottom: 600px;
+                    width: 1000px;
+
+                    .impair {
+                        padding: 30px;
+                        display: flex;
+                        height: 550px;
+                        margin-top: 100px;
+
+                        img {
+                            border-radius: 24px;
+                        }
+
+                        div.texte {
+                            padding: 32px;
+
+                            h3 {
+                                font-size: 35px;
+                                letter-spacing: 1.4px;
+                            }
+
+                            p {
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+
+                .js-scroll {
+                    opacity: 0;
+                    transition: opacity 500ms;
+                }
+
+                .scrolled.slide-left {
+                    animation: slide-in-left 1s ease-in-out both;
                 }
             }
 
-            // }
+            @keyframes slide-in-left {
+                0% {
+                    -webkit-transform: translateX(-100px);
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+
+                100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            .droite {
+                padding-top: 710px;
+                padding-left: 60px;
+
+                .background-activite {
+                    background-color: #fff;
+                    border-radius: 24px;
+                    margin-bottom: 600px;
+                    width: 1000px;
+                    margin-left: -165px;
+
+                    .pair {
+                        padding: 30px;
+                        display: flex;
+                        height: 550px;
+                        margin-top: 125px;
+
+                        img {
+                            border-radius: 24px;
+                        }
+
+                        div.texte {
+                            padding: 32px;
+
+                            h3 {
+                                font-size: 35px;
+                                letter-spacing: 1.4px;
+                            }
+
+                            p {
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+
+                .js-scroll {
+                    opacity: 0;
+                    transition: opacity 500ms;
+                }
+
+                .scrolled.slide-right {
+                    animation: slide-in-right 1s ease-in-out both;
+                }
+
+                @keyframes slide-in-right {
+                    0% {
+                        -webkit-transform: translateX(100px);
+                        transform: translateX(100px);
+                        opacity: 0;
+                    }
+
+                    100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }

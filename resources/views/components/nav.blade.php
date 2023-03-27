@@ -24,12 +24,12 @@
                 </li>
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link connexion" href="{{ route('login')}}">Connexion</a>
+                    <a class="nav-link connexion" href="{{ route('login')}}">Se connecter</a>
                 </li>
                 @endguest
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link connexion" href="{{ route('deconnexion')}}">Déconnexion</a>
+                    <a class="nav-link connexion" href="{{ route('deconnexion')}}">Se déconnecter</a>
                 </li>
                 @endauth
                 <li>
