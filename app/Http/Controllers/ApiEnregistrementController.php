@@ -44,5 +44,5 @@ class ApiEnregistrementController extends Controller
             'message' => "Réservation réussie"
         ]);
 
-}
+    }
 }

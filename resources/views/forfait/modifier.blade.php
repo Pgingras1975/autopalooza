@@ -8,7 +8,7 @@
         <div id="page-wrapper" class="wrapper">
 
             <div class="row">
-                <div class="padding-top-form"></div>
+                <div class="padding-top-form-forfait"></div>
                 <div class="col-lg-3">
 
                 </div>
