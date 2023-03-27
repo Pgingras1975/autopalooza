@@ -8,10 +8,13 @@
     width: 33.3%;
 }
 
-.min-w {
+/* .min-w {
     min-width: 410px;
-}
+} */
 
+h1 {
+    color: white;
+}
 a {
     color: black;
     font-weight: bold;
@@ -149,7 +152,8 @@ a:hover {
 }
 
 .container-min-w {
-    min-width: 410px;
+    /* min-width: 410px; */
+    min-width: 288px;
 }
 
 .d-flex {
@@ -158,6 +162,12 @@ a:hover {
 
 .justify-content-start {
     justify-content: start !important;
+}
+
+.empty {
+    justify-content: center !important;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .entete {
@@ -243,11 +253,6 @@ label, input {
     color: black !important;
 }
 
-.auth-user {
-    font-size: 24px !important;
-    font-weight: bold;
-}
-
 .font-36 {
     font-size: 54px !important;
     font-weight: bold;
@@ -276,10 +281,8 @@ label, input {
     padding-top: 150px;
 }
 
-.empty {
-    justify-content: center !important;
-    font-size: 30px;
-    font-weight: bold;
+.wrapper {
+    margin: 0px 20px;
 }
 
 /* Style des tableaux du dashboard */
@@ -413,7 +416,7 @@ clear: both;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .padding-top-form {
         padding-top: 50px;
     }
@@ -425,10 +428,6 @@ clear: both;
         width: 200px !important;
     }
 } */
-
-.wrapper {
-    margin: 0px 20px;
-}
 
 /* NAV du dashboard */
 #menu {
