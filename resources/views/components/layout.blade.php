@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/gmb6dyo.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="https://use.typekit.net/gmb6dyo.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V918XSPQ4C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-V918XSPQ4C');
+    </script>
 </head>
 <body class="body">
 
