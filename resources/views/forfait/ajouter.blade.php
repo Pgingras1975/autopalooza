@@ -41,7 +41,7 @@
                                             <label for="nom">Nom</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="text" id="nom" name="nom" autofocus>
+                                            <input type="text" id="nom" name="nom" autofocus value="{{ old('nom') }}">
                                             <x-form-message champ="nom" />
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                             <label for="subject">Description</label>
                                         </div>
                                         <div class="col-75">
-                                            <textarea id="description" name="description" style="height:100px"></textarea>
+                                            <textarea id="description" name="description" style="height:100px">{{ old('description') }}</textarea>
                                             <x-form-message champ="description" />
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@
                                             <label for="prix">Prix</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="text" id="prix" name="prix">
+                                            <input type="text" id="prix" name="prix" value="{{ old('prix') }}">
                                             <x-form-message champ="prix" />
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                             <label for="date_arrivee">Date d'arrivée</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="date" id="date_arrivee" name="date_arrivee">
+                                            <input type="date" id="date_arrivee" name="date_arrivee" value="{{ old('date_arrivee') }}">
                                             <x-form-message champ="date_arrivee" />
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                             <label for="date_depart">Date de depart</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="date" id="date_arrivee" name="date_depart">
+                                            <input type="date" id="date_arrivee" name="date_depart" value="{{ old('date_depart') }}">
                                             <x-form-message champ="date_depart" />
                                         </div>
                                     </div>
