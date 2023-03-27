@@ -15,7 +15,7 @@ class ActiviteFactory extends Factory
     {
         return [
             "nom" => $this->faker->text(15),
-            "description" => $this->faker->paragraphs(3, true),
+            "description" => $this->faker->paragraphs(1, true),
             "image" => "https://i.pravatar.cc/100?img=" . rand(1, 50),
         ];
     }
