@@ -213,6 +213,33 @@ body#accueil header .video-container {
   position: relative;
   z-index: 50;
 }
+@media only screen and (max-width: 809.5px) {
+  body#accueil header .video-container .titre-accueil {
+    font-size: 45px;
+  }
+  body#accueil header .video-container .dates {
+    font-size: 13px;
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-width: 810px) {
+  body#accueil header .video-container .titre-accueil {
+    font-size: 90px;
+  }
+  body#accueil header .video-container .dates {
+    font-size: 25px;
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body#accueil header .video-container .titre-accueil {
+    font-size: 11vh;
+  }
+  body#accueil header .video-container .dates {
+    font-weight: 500;
+    font-size: 40px;
+  }
+}
 body#accueil header .video-container h1 {
   position: absolute;
   top: 50%;
@@ -221,7 +248,7 @@ body#accueil header .video-container h1 {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 11vh;
+  font-size: 100px;
   color: #fff;
   border-bottom: 6px solid #2EC4B6;
   padding: 0 30px;
@@ -232,8 +259,6 @@ body#accueil header .video-container h2 {
   left: 65%;
   font-family: protipo, sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
 }
 body#accueil header .video-container video {
   width: inherit;
@@ -272,8 +297,8 @@ body#accueil header .fleche-defilement img {
   transform: translate(-50%, -50%);
   -webkit-animation-name: flotter;
           animation-name: flotter;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -357,6 +382,7 @@ body#accueil main#accueil .actualites .actualite .bordure .card .card-body h3.ti
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 700;
+  font-size: 23px;
 }
 body#accueil main#accueil .actualites .actualite .bordure .card .card-body p.description-actualite {
   overflow: hidden;
@@ -433,8 +459,7 @@ footer img.logo-footer {
 }
 @media only screen and (max-width: 813.5px) {
   footer {
-    height: 240px;
-    font-size: 12px;
+    height: 270px;
   }
   footer .contenu-footer {
     justify-content: center;
@@ -442,34 +467,37 @@ footer img.logo-footer {
     display: flex;
   }
   footer .contenu-footer .copyright {
-    text-align: center;
-    margin-top: 5%;
+    margin: 3% auto;
+    font-size: 12px;
+  }
+  footer .contenu-footer .reseaux-sociaux {
+    margin: auto;
   }
   footer .contenu-footer .reseaux-sociaux a {
     text-decoration: none;
-    margin-bottom: 15px;
   }
   footer .contenu-footer .reseaux-sociaux a img {
     max-width: 25px;
     max-height: 25px;
+    margin-bottom: 12%;
   }
 }
 @media only screen and (max-width: 991.5px) {
-  footer {
-    font-size: 16px;
-  }
   footer .contenu-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin: -5% 3%;
   }
+  footer .contenu-footer .copyright {
+    margin: 5% auto;
+  }
   footer .contenu-footer .reseaux-sociaux {
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
     gap: 10px;
-    padding-top: 3%;
+    margin: auto;
   }
   footer .contenu-footer .reseaux-sociaux a {
     text-decoration: none;
@@ -477,7 +505,6 @@ footer img.logo-footer {
   footer .contenu-footer .reseaux-sociaux a img {
     max-width: 35px;
     max-height: 35px;
-    margin-bottom: 35%;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -679,36 +706,139 @@ main#activites h1.activites-h1 {
   font-weight: 400;
   font-size: 60px;
   text-align: center;
-  margin-top: 138px;
-  margin-bottom: 115px;
+  padding-top: 138px;
+  margin-bottom: 65px;
 }
-main#activites .row {
-  height: 550px;
+main#activites h2 {
+  font-size: 25px;
+  line-height: 40px;
 }
-main#activites .row .col-10 .scrollspy-example {
-  position: relative;
-  height: 350px;
-  overflow: auto;
-  scroll-behavior: smooth;
+main#activites .container {
+  color: #011627;
+  padding: unset;
 }
-main#activites .row .col-10 .scrollspy-example .activite {
-  padding: 20px;
+main#activites .container .row {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  transform: translate(-62px);
 }
-main#activites .row .col-10 .scrollspy-example .activite img {
-  height: 280px;
-  width: 430px;
-  border: 6px solid #FF9F1C;
+main#activites .container .row .gauche {
+  padding-top: 160px;
+  padding-right: 60px;
+}
+main#activites .container .row .gauche .background-activite {
+  background-color: #2EC4B6;
   border-radius: 24px;
-  float: left;
-  margin-right: 40px;
+  margin-bottom: 600px;
+  width: 1000px;
 }
-main#activites .row .col-10 .scrollspy-example .activite h4 {
-  font-size: 28px;
+main#activites .container .row .gauche .background-activite .impair {
+  padding: 30px;
+  display: flex;
+  height: 550px;
+  margin-top: 100px;
 }
-main#activites .row .col-10 .scrollspy-example .activite p {
-  font-size: 20px;
-  padding: 20px;
+main#activites .container .row .gauche .background-activite .impair img {
+  border-radius: 24px;
 }
+main#activites .container .row .gauche .background-activite .impair div.texte {
+  padding: 32px;
+}
+main#activites .container .row .gauche .background-activite .impair div.texte h3 {
+  font-size: 35px;
+  letter-spacing: 1.4px;
+}
+main#activites .container .row .gauche .background-activite .impair div.texte p {
+  font-size: 22px;
+}
+main#activites .container .row .gauche .js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+main#activites .container .row .gauche .scrolled.slide-left {
+  -webkit-animation: slide-in-left 1s ease-in-out both;
+          animation: slide-in-left 1s ease-in-out both;
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+main#activites .container .row .droite {
+  padding-top: 710px;
+  padding-left: 60px;
+}
+main#activites .container .row .droite .background-activite {
+  background-color: #fff;
+  border-radius: 24px;
+  margin-bottom: 600px;
+  width: 1000px;
+  margin-left: -165px;
+}
+main#activites .container .row .droite .background-activite .pair {
+  padding: 30px;
+  display: flex;
+  height: 550px;
+  margin-top: 125px;
+}
+main#activites .container .row .droite .background-activite .pair img {
+  border-radius: 24px;
+}
+main#activites .container .row .droite .background-activite .pair div.texte {
+  padding: 32px;
+}
+main#activites .container .row .droite .background-activite .pair div.texte h3 {
+  font-size: 35px;
+  letter-spacing: 1.4px;
+}
+main#activites .container .row .droite .background-activite .pair div.texte p {
+  font-size: 22px;
+}
+main#activites .container .row .droite .js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+main#activites .container .row .droite .scrolled.slide-right {
+  -webkit-animation: slide-in-right 1s ease-in-out both;
+          animation: slide-in-right 1s ease-in-out both;
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /*********************************** PAGE CONTACT - ALESSIA ***********************************/
 main#contact {
   max-width: 80%;

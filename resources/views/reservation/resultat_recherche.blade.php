@@ -3,18 +3,12 @@
 <div id="wrapper">
 
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
+
     <!--  page-wrapper -->
-    <div id="page-wrapper">
+    <div id="page-wrapper" class="wrapper">
 
         <div class="row">
-            <!-- Page Header -->
-            <div class="col-lg-12">
-                <h1 class="page-header font-36">Dashboard</h1>
-            </div>
-            <!--End Page Header -->
-        </div>
-
-        <div class="row">
+            <div class="padding-top-form"></div>
             <div class="col-lg-2">
 
             </div>
