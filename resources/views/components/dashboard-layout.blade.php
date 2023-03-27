@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $titre ?? "Festival AutoPalooza 2023" }}</title>
     <link rel="icon" type="image/png" href="/storage/logo.png"/>
+    <link rel="stylesheet" href="https://use.typekit.net/gmb6dyo.css">
     <link href="{{ asset('css/dashboard/assets/plugins/bootstrap/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/dashboard/assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/dashboard/assets/css/style.css') }}" rel="stylesheet" />

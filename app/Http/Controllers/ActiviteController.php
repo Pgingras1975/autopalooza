@@ -120,7 +120,7 @@ class ActiviteController extends Controller
 
         $activite = Activite::findOrFail($id);
 
-        // $activite->id = $request->id;
+        $activite->id = $request->id;
         $activite->nom = $request->nom;
         $activite->description = $request->description;
 

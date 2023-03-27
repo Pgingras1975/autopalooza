@@ -1,6 +1,6 @@
 <nav id='menu'>
     <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-    <ul>
+    <ul class="nav-display">
         <li><a href="{{ route('accueil') }}">Accueil</a></li>
         @if ($authuserid == 1)
             <li><a class='dropdown-arrow'>Administrateur</a>
@@ -21,6 +21,6 @@
           @endif
         </ul>
       </li>
-      <li><a href='{{ url('/deconnexion') }}'>Déconnexion</a></li>
+      <li class="nav-item"><a class="nav-link connexion" href='{{ url('/deconnexion') }}'>Déconnexion</a></li>
     </ul>
   </nav>

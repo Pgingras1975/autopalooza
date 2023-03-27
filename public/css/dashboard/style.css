@@ -152,6 +152,16 @@ a:hover {
     display: flex !important;
 }
 
+.dashboard {
+    font-size: 54px ;
+    font-weight: bold;
+    color: white;
+    font-family: boucherie-sans-inline, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+}
+
 .justify-content-start {
     justify-content: start !important;
 }
@@ -184,7 +194,7 @@ a:hover {
 }
 
 .grille-h {
-    height: 268px;
+    height: 265px;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -269,12 +279,6 @@ a:hover {
 
 label, input {
     color: black !important;
-}
-
-.font-36 {
-    font-size: 54px !important;
-    font-weight: bold;
-    color: white;
 }
 
 .search-field {
@@ -433,8 +437,8 @@ clear: both;
 	height: 80px;
 	padding-left: 18px;
 	border-radius: 0px;
-	border-bottom: 10px ridge #23C4B6;
-    font-family: protipo, sans-serif;
+	border-bottom: 8px solid #2ec4b6;
+    font-family: protipo, sans-serif !important;
 }
 #menu ul, #menu li {
 	margin: 0 auto;
@@ -450,20 +454,21 @@ clear: both;
 	position: relative;
 }
 #menu a {
-	display: block;
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    font-family: protipo, sans-serif;
+    font-weight: 500;
 	line-height: 70px;
 	padding: 0 14px;
 	text-decoration: none;
-	color: #FFFFFF;
-	font-size: 26px;
 }
 #menu a.dropdown-arrow:after {
 	content: "\2B9F";
 	margin-left: 5px;
 }
 #menu li a:hover {
-	color: #0099CC;
-	background: #F2F2F2;
+	color: #2EC4B6;
 }
 #menu input {
 	display: none;
@@ -532,3 +537,4 @@ clear: both;
 	#menu input:checked + label:before {content:"\00d7"}
 	#menu input:checked ~ ul {display:block}
 }
+
