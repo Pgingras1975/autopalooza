@@ -47,13 +47,14 @@ class ForfaitController extends Controller
         $request->validate([
             "nom" => 'required|max:255',
             "description" => 'required',
-            'prix' => 'required',
+            'prix' => 'required|max:8',
             "image" => "mimes:png,jpg,jpeg,webp",
         ],[
             'nom.required' => 'Le champs Titre est requis',
             'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             'prix.required' => 'Le champs Description est requis',
+            'prix.max' => 'Le champs ne peut avoir une syntaxe maximale diférente de 9999.99$',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 
@@ -113,13 +114,14 @@ class ForfaitController extends Controller
         $request->validate([
             "nom" => 'required|max:255',
             "description" => 'required',
-            'prix' => 'required',
+            'prix' => 'required|max:8',
             "image" => "mimes:png,jpg,jpeg,webp|nullable",
         ],[
             'nom.required' => 'Le champs forfait est requis',
             'nom.max' => 'Le forfait doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             'prix.required' => 'Le champs Prix est requis',
+            'prix.max' => 'Le champs ne peut avoir une syntaxe maximale diférente de 9999.99$',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
 

@@ -41,7 +41,7 @@
                                             <label for="titre">Titre</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="text" id="titre" name="titre" autofocus>
+                                            <input type="text" id="titre" name="titre" autofocus value="{{ old('titre') }}">
                                             <x-form-message champ="titre" />
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                             <label for="subject">Description</label>
                                         </div>
                                         <div class="col-75">
-                                            <textarea id="description" name="description" style="height:200px"></textarea>
+                                            <textarea id="description" name="description" style="height:200px">{{ old('description') }}</textarea>
                                             <x-form-message champ="description" />
                                         </div>
                                     </div>

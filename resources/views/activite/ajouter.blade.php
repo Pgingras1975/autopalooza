@@ -7,15 +7,10 @@
         <!--  page-wrapper -->
         <div id="page-wrapper">
 
-            <div class="row">
-                <!-- Page Header -->
-                <div class="col-lg-12">
-                    <h1 class="page-header font-36">Dashboard</h1>
-                </div>
-                <!--End Page Header -->
-            </div>
+            {{-- <x-dashboard-header :authuser="$authuser" :authuserid="$authuserid"/> --}}
 
             <div class="row">
+                <div class="padding-top-form"></div>
                 <div class="col-lg-3">
 
                 </div>
@@ -41,7 +36,7 @@
                                             <label for="nom">Nom</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="text" id="nom" name="nom" autofocus>
+                                            <input type="text" id="nom" name="nom" autofocus value="{{ old('nom') }}">
                                             <x-form-message champ="nom" />
                                         </div>
                                     </div>
@@ -51,7 +46,7 @@
                                             <label for="subject">Description</label>
                                         </div>
                                         <div class="col-75">
-                                            <textarea id="description" name="description" style="height:200px"></textarea>
+                                            <textarea id="description" name="description" style="height:200px">{{ old('description') }}</textarea>
                                             <x-form-message champ="description" />
                                         </div>
                                     </div>
