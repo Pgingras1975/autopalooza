@@ -121,9 +121,10 @@ nav.menu {
             margin-right: 30px;
         }
 
-        .collapsing {
-            transition: 0.2s;
-        }
+        // .collapsing {
+        //     // transition: 0.2s;
+        //     height: 500px !important;
+        // }
 
         .navbar-collapse {
             flex-grow: unset;
@@ -169,7 +170,7 @@ nav.menu {
     button.navbar-toggler {
         height: 60px;
 
-        .navbar-toggler-icon {}
+
     }
 
     nav.menu {
@@ -184,7 +185,7 @@ nav.menu {
                 }
             }
 
-            .collapse {
+            .collapse, .collapsing {
                 ul.navbar-nav {
                     flex-direction: column;
                     display: flex;
@@ -268,8 +269,6 @@ body#accueil {
             }
 
         }
-
-
 
             h1 {
                 position: absolute;
@@ -980,6 +979,18 @@ main#contact {
 
         .row {
             .infos-contact {
+
+            @media only screen and (max-width: 990px) {
+                .info {
+                    font-size: 15px;
+                    text-align: center;
+
+                    .image-contact {
+                        width: 40px;
+                    }
+                }
+
+            }
                 .info {
                     margin-bottom: 50px;
 
