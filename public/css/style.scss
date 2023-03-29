@@ -121,11 +121,6 @@ nav.menu {
             margin-right: 30px;
         }
 
-        // .collapsing {
-        //     // transition: 0.2s;
-        //     height: 500px !important;
-        // }
-
         .navbar-collapse {
             flex-grow: unset;
 
@@ -136,7 +131,7 @@ nav.menu {
                 li.nav-item {
                     a {
                         color: #fff;
-                        font-size: 26px;
+                        font-size: 22px;
                         margin-right: 55px;
                         font-family: protipo, sans-serif;
                         font-style: normal;
@@ -148,7 +143,6 @@ nav.menu {
                     }
 
                     a.connexion {
-                        // background-color: #2EC4B6;
                         border: 3px solid #2EC4B6;
                         padding: 3px 15px;
                         border-radius: 30px;
@@ -169,8 +163,6 @@ nav.menu {
 @media screen and (max-width: 992px) {
     button.navbar-toggler {
         height: 60px;
-
-
     }
 
     nav.menu {
@@ -185,7 +177,8 @@ nav.menu {
                 }
             }
 
-            .collapse, .collapsing {
+            .collapse,
+            .collapsing {
                 ul.navbar-nav {
                     flex-direction: column;
                     display: flex;
@@ -231,43 +224,45 @@ body#accueil {
             width: 100%;
             position: relative;
             z-index: 50;
-    // Version Téléphone
-    @media only screen and (max-width: 809.5px) {
-            .titre-accueil{
-                font-size: 45px;
-            }
-            .dates {
-                font-size: 13px;
-                padding-top: 25%;
-            }
-        }
 
-    // Version Tablette
-    @media only screen and (min-width: 810px) {
-            .titre-accueil{
-                font-size: 80px;
-            }
-            .dates {
-                font-size: 30px;
-                padding-top: 22%;
+            // Version Téléphone
+            @media only screen and (max-width: 809.5px) {
+                .titre-accueil {
+                    font-size: 45px;
+                }
+
+                .dates {
+                    font-size: 13px;
+                    padding-top: 25%;
+                }
             }
 
-        }
+            // Version Tablette
+            @media only screen and (min-width: 810px) {
+                .titre-accueil {
+                    font-size: 80px;
+                }
 
-    // Version PC
-    @media only screen and (min-width: 992px) {
-            .titre-accueil{
-                font-size: 11vh;
-            }
-            .dates {
-                font-weight: 500;
-                font-size: 40px;
-                position: absolute;
-                top: 3%;
-                left: 65%;
+                .dates {
+                    font-size: 30px;
+                    padding-top: 22%;
+                }
             }
 
-        }
+            // Version PC
+            @media only screen and (min-width: 992px) {
+                .titre-accueil {
+                    font-size: 11vh;
+                }
+
+                .dates {
+                    font-weight: 500;
+                    font-size: 40px;
+                    position: absolute;
+                    top: 3%;
+                    left: 65%;
+                }
+            }
 
             h1 {
                 position: absolute;
@@ -277,7 +272,6 @@ body#accueil {
                 font-family: boucherie-sans-inline, sans-serif;
                 font-style: normal;
                 font-weight: 400;
-                // font-size: 11vh;
                 font-size: 100px;
                 color: #fff;
                 border-bottom: 6px solid #2EC4B6;
@@ -292,7 +286,6 @@ body#accueil {
                 font-style: normal;
                 font-weight: 500;
                 font-size: 40px;
-
             }
 
             video {
@@ -300,47 +293,67 @@ body#accueil {
             }
         }
 
-        .route-vertical {
-            border-right: 15px solid #FF9F1C;
-            border-left: 15px solid #FF9F1C;
-            background-color: #000;
-            height: 2200px;
-            width: 165px;
-            position: absolute;
-            right: 250px;
-        }
-
-        .route-vertical-centre {
-            position: absolute;
-            right: 315px;
-            display: grid;
-            grid-gap: 65px;
-            width: 30px;
-            height: 2200px;
-            background-color: #000;
-
-            div {
-                background-color: #E6E5E5;
-                padding: 5px;
-            }
-        }
-
-        .voiture-rouge {
-            img {
-                width: 100px;
-                position: fixed;
-                top: 200px;
-                right: 282px;
-            }
-        }
-
-        @media screen and (max-width: 1788px) {
+        @media screen and (min-width: 1788px) {
             .route-vertical {
-                height: 2850px;
+                height: 3650px;
             }
 
             .route-vertical-centre {
-                height: 2850px;
+                height: 3650px;
+            }
+        }
+
+        @media screen and (min-width: 1201px) {
+            .route-vertical {
+                border-right: 15px solid #FF9F1C;
+                border-left: 15px solid #FF9F1C;
+                background-color: #000;
+                height: 2200px;
+                width: 165px;
+                position: absolute;
+                right: 250px;
+            }
+
+            .route-vertical-centre {
+                position: absolute;
+                right: 315px;
+                display: grid;
+                grid-gap: 65px;
+                width: 30px;
+                height: 2200px;
+                background-color: #000;
+
+                div {
+                    background-color: #E6E5E5;
+                    padding: 5px;
+                }
+            }
+
+            .voiture-rouge {
+                position: absolute;
+
+                img {
+                    width: 100px;
+                    position: fixed;
+                    top: 200px;
+                    right: 280px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .route-vertical {
+                height: 0;
+            }
+
+            .route-vertical-centre {
+                height: 0;
+            }
+
+            .voiture-rouge {
+                img {
+                    display: none;
+                }
             }
         }
 
@@ -372,15 +385,6 @@ body#accueil {
     }
 
     main#accueil {
-        .route {
-            background-image: url("../images/route.png");
-            background-size: auto;
-            background-repeat: no-repeat;
-            background-position: right;
-            opacity: initial;
-            position: absolute;
-        }
-
         h2 {
             font-family: boucherie-sans-inline, sans-serif;
             font-style: normal;
@@ -471,7 +475,7 @@ body#accueil {
                 padding: 0px;
                 border: none;
                 border-radius: 24px;
-                margin-bottom: 310px;
+                margin-bottom: 240px;
                 border: 5px solid #FF9F1C;
 
                 .overlay-dark {
@@ -508,6 +512,23 @@ body#accueil {
                 }
             }
         }
+
+        @media screen and (max-width: 768px){
+            .actualites {
+                .actualite {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            .thematiques {
+                .card {
+                    margin-bottom: 55px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
     }
 }
 
@@ -530,6 +551,7 @@ footer {
         top: 22%;
         transform: translate(-50%, -50%);
     }
+
     // Version Téléphone
     @media only screen and (max-width: 813.5px) {
         height: 270px;
@@ -543,10 +565,13 @@ footer {
                 margin: 3% auto;
                 font-size: 12px;
             }
+
             .reseaux-sociaux {
                 margin: auto;
+
                 a {
                     text-decoration: none;
+
                     img {
                         max-width: 25px;
                         max-height: 25px;
@@ -555,7 +580,7 @@ footer {
                 }
             }
         }
-        }
+    }
 
     // Version Tablette
     @media only screen and (max-width: 991.5px) {
@@ -577,6 +602,7 @@ footer {
                 gap: 10px;
 
                 margin: auto;
+
                 a {
                     text-decoration: none;
 
@@ -587,36 +613,38 @@ footer {
                 }
             }
         }
-        }
+    }
 
 
 
     // Version Laptop et plus grands écrans
     @media only screen and (min-width: 992px) {
         font-size: 18px;
-            .contenu-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin: -5% 3%;
 
-        .reseaux-sociaux {
-            justify-content: center;
-            flex-wrap: wrap;
+        .contenu-footer {
             display: flex;
-            gap: 10px;
-            padding-top: 3%;
-            a {
-                text-decoration: none;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: -5% 3%;
 
-                img {
-                    max-width: 50px;
-                    max-height: 50px;
-                    margin-bottom: 15%;
+            .reseaux-sociaux {
+                justify-content: center;
+                flex-wrap: wrap;
+                display: flex;
+                gap: 10px;
+                padding-top: 3%;
+
+                a {
+                    text-decoration: none;
+
+                    img {
+                        max-width: 50px;
+                        max-height: 50px;
+                        margin-bottom: 15%;
+                    }
                 }
             }
         }
-    }
     }
 
 }
@@ -795,24 +823,24 @@ main#reservation {
             }
         }
 
-        }
     }
+}
 
-    .price1 {
-        border: #000 1px solid;
-        margin: auto;
-        width: 50%;
-    }
+.price1 {
+    border: #000 1px solid;
+    margin: auto;
+    width: 50%;
+}
 
-    .price2 {
-        border: #000 1px solid;
-        margin: auto;
-        width: 50%;
-    }
+.price2 {
+    border: #000 1px solid;
+    margin: auto;
+    width: 50%;
+}
 
-    nav#reservation {
-        margin-top: 5%;
-    }
+nav#reservation {
+    margin-top: 5%;
+}
 
 
 
@@ -1003,17 +1031,18 @@ main#contact {
         .row {
             .infos-contact {
 
-            @media only screen and (max-width: 990px) {
-                .info {
-                    font-size: 15px;
-                    text-align: center;
+                @media only screen and (max-width: 990px) {
+                    .info {
+                        font-size: 15px;
+                        text-align: center;
 
-                    .image-contact {
-                        width: 40px;
+                        .image-contact {
+                            width: 40px;
+                        }
                     }
+
                 }
 
-            }
                 .info {
                     margin-bottom: 50px;
 

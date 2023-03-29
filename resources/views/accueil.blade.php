@@ -40,7 +40,6 @@
             <img src="/images/voiture_rouge.png" alt="Voiture rouge">
         </div>
 
-
         <div class="fleche-defilement">
             <a href="#anchor">
                 <img src="/images/fleche.png" alt="Flèche pour défiler vers la section actualités" width="50">
@@ -49,7 +48,6 @@
     </header>
 
     <main id="accueil">
-        {{-- <div class="route"></div> --}}
         <h2 id="anchor">Actualités</h2>
         <div class="row actualites m-auto">
             @foreach ($actualites as $actualite)
