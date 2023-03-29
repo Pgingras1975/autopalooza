@@ -7,13 +7,14 @@
 h1 {
     color: white;
 }
+
 a {
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
-h4 a {
+h4, h4 a {
     color: aliceblue;
     font-weight: bold;
     text-decoration: none;
