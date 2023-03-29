@@ -10,9 +10,9 @@ class Utype extends Model
     use HasFactory;
 
     /**
-     * Relation avec le modèle User (plusieurs-à-un)
+     * Relation avec le modèle User (un-à-plusieurs)
      */
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->hasMany(User::class);
     }
 }

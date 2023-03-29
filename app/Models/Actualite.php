@@ -20,6 +20,15 @@ class Actualite extends Model
         return Str::limit($this->description, 50);
     }
 
+                /**
+     * accesseur
+     *
+     * retourne un string de 50 caractères
+     */
+    public function getTitreLimiterAttribute(){
+        return Str::limit($this->titre, 20);
+    }
+
     /**
      * Accesseur pour formatter la date et la traduire en français
      *

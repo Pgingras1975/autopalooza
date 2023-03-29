@@ -432,7 +432,9 @@ clear: both;
         z-index: 9;
         height: 500px !important;
     }
+}
 
+@media screen and (max-width: 1180px) {
     .logo {
         display: none !important;
     }

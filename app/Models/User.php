@@ -49,11 +49,11 @@ class User extends Authenticatable
         return $this->hasMany(Reservation::class);
     }
 
-            /**
-     * Relation avec le modèle Utype (un-à-plusieurs)
+        /**
+     * Relation avec le modèle Utype (plusieurs-à-un)
      */
     public function uType(){
-        return $this->hasMany(Utype::class);
+        return $this->belongsTo(Utype::class);
     }
 
         /**
