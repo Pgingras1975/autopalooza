@@ -39,8 +39,9 @@ h2#alex {
   border-radius: 14px;
   color: black;
   text-align: center;
-  -webkit-animation: oppacity 2s ease-in;
-          animation: oppacity 2s ease-in;
+  -webkit-animation: oppacity 1.2s ease-in;
+          animation: oppacity 1.2s ease-in;
+  width: 22rem;
 }
 
 @-webkit-keyframes oppacity {
@@ -135,7 +136,7 @@ nav.menu .container-fluid .navbar-collapse ul.navbar-nav {
 }
 nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a {
   color: #fff;
-  font-size: 26px;
+  font-size: 22px;
   margin-right: 55px;
   font-family: protipo, sans-serif;
   font-style: normal;
@@ -170,26 +171,31 @@ nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a.connexion
     margin-top: 10px;
     margin-left: 10px;
   }
-  nav.menu .container-fluid .collapse ul.navbar-nav, nav.menu .container-fluid .collapsing ul.navbar-nav {
+  nav.menu .container-fluid .collapse ul.navbar-nav,
+nav.menu .container-fluid .collapsing ul.navbar-nav {
     flex-direction: column;
     display: flex;
     margin-left: 30px;
     margin-bottom: 20px;
   }
-  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item, nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item {
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item,
+nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item {
     color: #2EC4B6;
   }
-  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a, nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a {
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a,
+nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a {
     margin: 8px 0;
   }
-  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a.connexion, nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a.connexion {
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a.connexion,
+nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a.connexion {
     background-color: #011627;
     border: none;
     padding: unset;
     margin: 25px 0;
     color: #2EC4B6;
   }
-  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a.connexion:hover, nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a.connexion:hover {
+  nav.menu .container-fluid .collapse ul.navbar-nav li.nav-item a.connexion:hover,
+nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a.connexion:hover {
     background-color: #011627;
     border: none;
     color: #2EC4B6;
@@ -251,7 +257,7 @@ body#accueil header .video-container h1 {
 }
 body#accueil header .video-container h2 {
   position: absolute;
-  top: 34%;
+  top: 60%;
   left: 65%;
   font-family: protipo, sans-serif;
   font-style: normal;
@@ -261,40 +267,56 @@ body#accueil header .video-container h2 {
 body#accueil header .video-container video {
   width: inherit;
 }
-body#accueil header .route-vertical {
-  border-right: 15px solid #FF9F1C;
-  border-left: 15px solid #FF9F1C;
-  background-color: #000;
-  height: 2200px;
-  width: 165px;
-  position: absolute;
-  right: 250px;
-}
-body#accueil header .route-vertical-centre {
-  position: absolute;
-  right: 315px;
-  display: grid;
-  grid-gap: 65px;
-  width: 30px;
-  height: 2200px;
-  background-color: #000;
-}
-body#accueil header .route-vertical-centre div {
-  background-color: #E6E5E5;
-  padding: 5px;
-}
-body#accueil header .voiture-rouge img {
-  width: 100px;
-  position: fixed;
-  top: 200px;
-  right: 282px;
-}
-@media screen and (max-width: 1788px) {
+@media screen and (min-width: 1788px) {
   body#accueil header .route-vertical {
-    height: 2850px;
+    height: 3650px;
   }
   body#accueil header .route-vertical-centre {
-    height: 2850px;
+    height: 3650px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  body#accueil header .route-vertical {
+    border-right: 15px solid #FF9F1C;
+    border-left: 15px solid #FF9F1C;
+    background-color: #000;
+    height: 2200px;
+    width: 165px;
+    position: absolute;
+    right: 250px;
+  }
+  body#accueil header .route-vertical-centre {
+    position: absolute;
+    right: 315px;
+    display: grid;
+    grid-gap: 65px;
+    width: 30px;
+    height: 2200px;
+    background-color: #000;
+  }
+  body#accueil header .route-vertical-centre div {
+    background-color: #E6E5E5;
+    padding: 5px;
+  }
+  body#accueil header .voiture-rouge {
+    position: absolute;
+  }
+  body#accueil header .voiture-rouge img {
+    width: 100px;
+    position: fixed;
+    top: 200px;
+    right: 280px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body#accueil header .route-vertical {
+    height: 0;
+  }
+  body#accueil header .route-vertical-centre {
+    height: 0;
+  }
+  body#accueil header .voiture-rouge img {
+    display: none;
   }
 }
 body#accueil header .fleche-defilement img {
@@ -331,14 +353,6 @@ body#accueil header .fleche-defilement img {
   100% {
     transform: translate(-50%, -50%);
   }
-}
-body#accueil main#accueil .route {
-  background-image: url("../images/route.png");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: right;
-  opacity: initial;
-  position: absolute;
 }
 body#accueil main#accueil h2 {
   font-family: boucherie-sans-inline, sans-serif;
@@ -419,7 +433,7 @@ body#accueil main#accueil .thematiques .card {
   padding: 0px;
   border: none;
   border-radius: 24px;
-  margin-bottom: 310px;
+  margin-bottom: 240px;
   border: 5px solid #FF9F1C;
 }
 body#accueil main#accueil .thematiques .card .overlay-dark {
@@ -450,6 +464,17 @@ body#accueil main#accueil .thematiques .card .overlay-dark a:hover {
   background-color: #fff;
   border: 3px solid #FF9F1C;
   color: #FF9F1C;
+}
+@media screen and (max-width: 768px) {
+  body#accueil main#accueil .actualites .actualite {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body#accueil main#accueil .thematiques .card {
+    margin-bottom: 55px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /********************************************* FOOTER - ALESSIA *********************************************/
