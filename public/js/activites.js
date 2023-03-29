@@ -1,40 +1,18 @@
-const scrollElements = document.querySelectorAll(".js-scroll")
+// Sélectionne toutes les balises avec la class background-activite
+const activites = document.querySelectorAll(".background-activite")
 
-const elementInView = (el, dividend = 1) => {
-  const elementTop = el.getBoundingClientRect().top
-
-  return (
-    elementTop <=
-    (window.innerHeight || document.documentElement.clientHeight) / dividend
-  )
-}
-
-const elementOutofView = (el) => {
-  const elementTop = el.getBoundingClientRect().top
-
-  return (
-    elementTop > (window.innerHeight || document.documentElement.clientHeight)
-  )
-}
-
-const displayScrollElement = (element) => {
-  element.classList.add("scrolled")
-}
-
-const hideScrollElement = (element) => {
-  element.classList.remove("scrolled")
-}
-
-const handleScrollAnimation = () => {
-  scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
-      displayScrollElement(el);
-    } else if (elementOutofView(el)) {
-      hideScrollElement(el)
+// Fonction encapsulée dans une variable qui ajoute la classe defiler si l'activité est visible à l'écran selon le viewport
+const ScrollAnimation = () => {
+  activites.forEach((activite) => {
+    // Si l'activité est visible, ajoute la classe defiler
+    if (activite.getBoundingClientRect().top <= window.innerHeight * 0.8) {
+      activite.classList.add("defiler")
+    } else {
+        // Si non, enlève la classe défiler
+      activite.classList.remove("defiler")
     }
   })
 }
 
-window.addEventListener("scroll", () => {
-  handleScrollAnimation()
-})
+// Appelle la fonction ScrollAnimation lorsqu'il y a un scroll déclencher par l'utilisateur
+window.addEventListener("scroll", ScrollAnimation)

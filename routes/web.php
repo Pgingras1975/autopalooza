@@ -12,6 +12,7 @@ use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\ApiEnregistrementController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ForfaitController;
+use App\Http\Controllers\ProgrammationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -115,3 +116,6 @@ Route::get('/reservation', [ReservationController::class, 'reserver'])->name('re
 
 // API Réservation
 Route::post('api/enregistrement', [ApiEnregistrementController::class, 'store'])->middleware('auth');
+
+// Programmation
+Route::get('/programmation', [ProgrammationController::class, 'afficherProgrammation'])->name('programmation');

@@ -223,16 +223,12 @@ nav.menu {
 /*************************************** PAGE ACCUEIL - ALESSIA ***************************************/
 body#accueil {
     background-image: linear-gradient(#011627 40%, #12585D, #239993);
-    min-height: 100vh;
-    color: #fff;
-    overflow-x: hidden;
 
     header {
         .video-container {
             overflow: hidden;
             max-height: 75vh;
             width: 100%;
-            background: #000;
             position: relative;
             z-index: 50;
     // Version Téléphone
@@ -338,6 +334,16 @@ body#accueil {
             }
         }
 
+        @media screen and (max-width: 1788px) {
+            .route-vertical {
+                height: 2850px;
+            }
+
+            .route-vertical-centre {
+                height: 2850px;
+            }
+        }
+
         .fleche-defilement {
             img {
                 margin-left: 50%;
@@ -366,6 +372,15 @@ body#accueil {
     }
 
     main#accueil {
+        .route {
+            background-image: url("../images/route.png");
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: right;
+            opacity: initial;
+            position: absolute;
+        }
+
         h2 {
             font-family: boucherie-sans-inline, sans-serif;
             font-style: normal;
@@ -823,8 +838,7 @@ main#activites {
     }
 
     .container {
-        color: #011627;
-        padding: unset;
+        padding: 0;
 
         .row {
             height: max-content;
@@ -833,21 +847,29 @@ main#activites {
             .gauche {
                 padding-top: 160px;
                 padding-right: 60px;
+                color: #011627;
 
                 .background-activite {
                     background-color: #2EC4B6;
                     border-radius: 24px;
                     margin-bottom: 600px;
-                    width: 1000px;
+                    width: 1300px;
+                    opacity: 0;
+                    transition: opacity 500ms;
 
                     .impair {
                         padding: 30px;
                         display: flex;
                         height: 550px;
                         margin-top: 100px;
+                        border: 7px solid #011627;
+                        border-radius: 24px;
 
                         img {
                             border-radius: 24px;
+                            object-fit: cover;
+                            height: auto;
+                            width: 600px;
                         }
 
                         div.texte {
@@ -865,17 +887,12 @@ main#activites {
                     }
                 }
 
-                .js-scroll {
-                    opacity: 0;
-                    transition: opacity 500ms;
-                }
-
-                .scrolled.slide-left {
-                    animation: slide-in-left 1s ease-in-out both;
+                .defiler.slide-gauche {
+                    animation: animation-gauche 1s ease-in-out both;
                 }
             }
 
-            @keyframes slide-in-left {
+            @keyframes animation-gauche {
                 0% {
                     -webkit-transform: translateX(-100px);
                     transform: translateX(-100px);
@@ -892,22 +909,30 @@ main#activites {
             .droite {
                 padding-top: 710px;
                 padding-left: 60px;
+                color: #fff;
 
                 .background-activite {
-                    background-color: #fff;
+                    background-color: #011627;
                     border-radius: 24px;
                     margin-bottom: 600px;
-                    width: 1000px;
-                    margin-left: -165px;
+                    width: 1300px;
+                    margin-left: -470px;
+                    opacity: 0;
+                    transition: opacity 500ms;
 
                     .pair {
                         padding: 30px;
                         display: flex;
                         height: 550px;
                         margin-top: 125px;
+                        border: 7px solid #2EC4B6;
+                        border-radius: 24px;
 
                         img {
                             border-radius: 24px;
+                            object-fit: cover;
+                            height: auto;
+                            width: 600px;
                         }
 
                         div.texte {
@@ -925,16 +950,11 @@ main#activites {
                     }
                 }
 
-                .js-scroll {
-                    opacity: 0;
-                    transition: opacity 500ms;
+                .defiler.slide-droite {
+                    animation: animation-droite 1s ease-in-out both;
                 }
 
-                .scrolled.slide-right {
-                    animation: slide-in-right 1s ease-in-out both;
-                }
-
-                @keyframes slide-in-right {
+                @keyframes animation-droite {
                     0% {
                         -webkit-transform: translateX(100px);
                         transform: translateX(100px);
@@ -1021,5 +1041,16 @@ main#contact {
                 border-radius: 24px;
             }
         }
+    }
+}
+
+/************************************* PAGE PROGRAMMATION - ALESSIA *************************************/
+main#programmation {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        border-radius: 12px;
     }
 }
