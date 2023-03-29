@@ -40,7 +40,8 @@ h2#alex {
     border-radius: 14px;
     color: black;
     text-align: center;
-    animation: oppacity 2s ease-in;
+    animation: oppacity 1.2s ease-in;
+    width: 22rem;
 }
 
 @keyframes oppacity {
@@ -169,8 +170,6 @@ nav.menu {
 @media screen and (max-width: 992px) {
     button.navbar-toggler {
         height: 60px;
-
-
     }
 
     nav.menu {
@@ -242,18 +241,18 @@ body#accueil {
             }
             .dates {
                 font-size: 13px;
-                padding-top: 25%;
+                padding-top: 10%;
             }
         }
 
     // Version Tablette
     @media only screen and (min-width: 810px) {
             .titre-accueil{
-                font-size: 80px;
+                font-size: 90px;
             }
             .dates {
-                font-size: 30px;
-                padding-top: 22%;
+                font-size: 25px;
+                padding-top: 10%;
             }
 
         }
@@ -266,9 +265,6 @@ body#accueil {
             .dates {
                 font-weight: 500;
                 font-size: 40px;
-                position: absolute;
-                top: 3%;
-                left: 65%;
             }
 
         }
@@ -290,7 +286,7 @@ body#accueil {
 
             h2 {
                 position: absolute;
-                top: 34%;
+                top: 60%;
                 left: 65%;
                 font-family: protipo, sans-serif;
                 font-style: normal;
@@ -641,6 +637,9 @@ main#reservation {
     overflow-y: auto;
     text-align: center;
     z-index: 550;
+    @media only screen and (max-width: 813.5px) {
+
+    }
 
     .list-reservation {
         // background-color: #555555;

@@ -5,7 +5,7 @@
         <div class="d-flex flex-wrap container-fluid row">
             @foreach ($forfaits as $forfait)
             <div class="col-12 col-md-6 col-lg-4 cards">
-                <div class="card card-forfait mx-auto d-flex mt-5 p-0" style="width: 22rem;">
+                <div class="card card-forfait mx-auto d-flex mt-5 p-0">
                     <img class="card-img-top" src={{ $forfait->image }} alt="Image pour forfait {{ $forfait->nom }}" style="max-width: 100vw">
                     <div class="card-body">
                     <h4 class="card-title name-forfait">{{ $forfait->nom }}</h4>
