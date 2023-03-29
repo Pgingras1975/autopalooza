@@ -448,6 +448,9 @@ clear: both;
 #menu ul {
 	width: 100%;
 }
+#menu li ul li a{
+	font-size: 18px !important;
+}
 #menu li {
 	float: left;
 	display: inline;
@@ -494,7 +497,7 @@ clear: both;
 #menu ul.sub-menus{
 	height: auto;
 	overflow: hidden;
-	width: 350px;
+	width: 250px;
 	background: #2EC4B6;
 	position: absolute;
 	z-index: 99;

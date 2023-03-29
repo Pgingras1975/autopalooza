@@ -49,13 +49,17 @@ class ForfaitController extends Controller
             "description" => 'required',
             'prix' => 'required|max:8',
             "image" => "mimes:png,jpg,jpeg,webp",
+            'date_arrivee' => 'required',
+            'date_depart' => 'required',
         ],[
             'nom.required' => 'Le champs Titre est requis',
             'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             'prix.required' => 'Le champs Description est requis',
             'prix.max' => 'Le champs ne peut avoir une syntaxe maximale diférente de 9999.99$',
-            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
+            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp",
+            'date_arrivee.required' => 'Le champs Date d\'arrivée est requis',
+            'date_depart.required' => 'Le champs Date de départ est requis',
         ]);
 
         $forfait = new Forfait();
@@ -116,13 +120,17 @@ class ForfaitController extends Controller
             "description" => 'required',
             'prix' => 'required|max:8',
             "image" => "mimes:png,jpg,jpeg,webp|nullable",
+            'date_arrivee' => 'required',
+            'date_depart' => 'required',
         ],[
             'nom.required' => 'Le champs forfait est requis',
             'nom.max' => 'Le forfait doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             'prix.required' => 'Le champs Prix est requis',
             'prix.max' => 'Le champs ne peut avoir une syntaxe maximale diférente de 9999.99$',
-            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
+            "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp",
+            'date_arrivee.required' => 'Le champs Date d\'arrivée est requis',
+            'date_depart.required' => 'Le champs Date de départ est requis',
         ]);
 
 
@@ -132,6 +140,8 @@ class ForfaitController extends Controller
         $forfait->nom = $request->nom;
         $forfait->description = $request->description;
         $forfait->prix = $request->prix;
+        $forfait->date_arrivee = $request->date_arrivee;
+        $forfait->date_depart = $request->date_depart;
 
         // traitement de l'image
         if ($request->image) {

@@ -68,7 +68,7 @@
                                             <label for="date_arrivee">Date d'arrivée</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="date" id="date_arrivee" name="date_arrivee">
+                                            <input type="date" id="date_arrivee" name="date_arrivee" value="{{ $forfait->date_arrivee }}">
                                             <x-form-message champ="date_arrivee" />
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@
                                             <label for="date_depart">Date de depart</label>
                                         </div>
                                         <div class="col-75">
-                                            <input type="date" id="date_arrivee" name="date_depart">
+                                            <input type="date" id="date_arrivee" name="date_depart" value="{{ $forfait->date_depart }}">
                                             <x-form-message champ="date_depart" />
                                         </div>
                                     </div>
