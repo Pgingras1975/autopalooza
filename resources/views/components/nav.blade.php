@@ -14,7 +14,10 @@
                     <a class="nav-link" href="{{ url('/') }}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('activites') }}">Activités</a>
+                    <a class="nav-link" href="{{ url('/activites') }}">Activités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/programmation') }}">Programmation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/forfaits') }}">Forfaits</a>
