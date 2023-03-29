@@ -50,7 +50,7 @@ class ActiviteController extends Controller
             "image" => "mimes:png,jpg,jpeg,webp",
         ],[
             'nom.required' => 'Le champs Nom est requis',
-            'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
+            'nom.max' => 'Le champs Nom doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
@@ -112,7 +112,7 @@ class ActiviteController extends Controller
             "image" => "mimes:png,jpg,jpeg,webp|nullable",
         ],[
             'nom.required' => 'Le champs Activite est requis',
-            'nom.max' => 'Le Activite doit avoir 255 caractères ou moins',
+            'nom.max' => 'Le champs Nom doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);

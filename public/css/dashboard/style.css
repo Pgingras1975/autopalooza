@@ -255,8 +255,9 @@ a:hover {
 }
 
 .logo {
-    border-radius: 50%;
-    border: solid 4px #ff9f1c;
+    border-radius: 50% !important;
+    border: solid 4px #ff9f1c !important;
+    margin-top: 10px;
 }
 
 .margin-top {
@@ -433,7 +434,7 @@ clear: both;
     }
 
     .logo {
-        display: none;
+        display: none !important;
     }
 }
 

@@ -44,7 +44,7 @@ class ActualiteController extends Controller
             "image" => "mimes:png,jpg,jpeg,webp",
         ],[
             'titre.required' => 'Le champs Titre est requis',
-            'titre.max' => 'Le Titre doit avoir 255 caractères ou moins',
+            'titre.max' => 'Le champs Titre doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
@@ -106,7 +106,7 @@ class ActualiteController extends Controller
             "image" => "mimes:png,jpg,jpeg,webp|nullable",
         ],[
             'titre.required' => 'Le champs Actualite est requis',
-            'titre.max' => 'Le Actualite doit avoir 255 caractères ou moins',
+            'titre.max' => 'Le champs Titre doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp"
         ]);
@@ -142,6 +142,6 @@ class ActualiteController extends Controller
 
         return redirect()
                 ->route('admin')
-                ->with('suppression-Actualite', 'Le Actualite a été supprimée!');
+                ->with('suppression-Actualite', 'L\'actualité a été supprimée!');
     }
 }

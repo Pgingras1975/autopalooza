@@ -81,7 +81,6 @@ class EmployeController extends Controller
         if (auth()->user()->id === 1){
             return view('employe.modifier', [
                 "employe" => User::findOrFail($id),
-                "id" => auth()->user()->id,
                 "authuser" => auth()->user()->nom_complet,
                 "authuserid" => auth()->user()->id,
             ]);
@@ -127,7 +126,7 @@ class EmployeController extends Controller
 
 
         // Redirection
-        return redirect()->route('admin')->with('modification-Employe', 'Modification réussi!');
+        return redirect()->route('admin')->with('modification-Employe', 'Modification réussie!');
 
     }
 

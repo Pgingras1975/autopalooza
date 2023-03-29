@@ -68,7 +68,7 @@ class ClientController extends Controller
         $user->save();
 
         // Redirection
-        return redirect()->route('admin')->with('modification-Client', 'Modification réussi!');
+        return redirect()->route('admin')->with('modification-Client', 'Modification réussie!');
 
     }
 
@@ -114,7 +114,7 @@ class ClientController extends Controller
             if($e->getCode() == "23000"){
                 return redirect()
                 ->route('admin')
-                ->with('suppression-Client-Erreur', "Ce client ne peut etre supprimé car il est déjà associé à une réservation. Veuillez supprimer cette réservation avant d'effectuer cette action.");
+                ->with('suppression-Client-Erreur', "Ce client ne peut être supprimé car il est déjà associé à une réservation. Veuillez supprimer cette réservation avant d'effectuer cette action.");
             }
         }
 

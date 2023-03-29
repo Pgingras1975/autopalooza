@@ -27,7 +27,7 @@ class DashboardController extends Controller
                     ->orderBy('nom')->get(),
                 "actualites" => Actualite::orderByDesc("created_at")->get(),
                 "activites" => Activite::orderBy('nom')->get(),
-                "forfaits" => Forfait::orderByDesc('prix')->get(),
+                "forfaits" => Forfait::orderBy('nom')->get(),
                 "authuser" => auth()->user()->nom_complet,
                 "authuserid" => auth()->user()->id,
             ]);

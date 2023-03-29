@@ -52,11 +52,11 @@ class ForfaitController extends Controller
             'date_arrivee' => 'required',
             'date_depart' => 'required',
         ],[
-            'nom.required' => 'Le champs Titre est requis',
-            'nom.max' => 'Le Titre doit avoir 255 caractères ou moins',
+            'nom.required' => 'Le champs Nom est requis',
+            'nom.max' => 'Le champs Nom doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
-            'prix.required' => 'Le champs Description est requis',
-            'prix.max' => 'Le champs ne peut avoir une syntaxe maximale diférente de 9999.99$',
+            'prix.required' => 'Le champs Prix est requis',
+            'prix.max' => 'Le champs Prix ne peut avoir une syntaxe maximale diférente de 9999.99$',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp",
             'date_arrivee.required' => 'Le champs Date d\'arrivée est requis',
             'date_depart.required' => 'Le champs Date de départ est requis',
@@ -123,11 +123,11 @@ class ForfaitController extends Controller
             'date_arrivee' => 'required',
             'date_depart' => 'required',
         ],[
-            'nom.required' => 'Le champs forfait est requis',
-            'nom.max' => 'Le forfait doit avoir 255 caractères ou moins',
+            'nom.required' => 'Le champs Nom est requis',
+            'nom.max' => 'Le champs Nom doit avoir 255 caractères ou moins',
             'description.required' => 'Le champs Description est requis',
             'prix.required' => 'Le champs Prix est requis',
-            'prix.max' => 'Le champs ne peut avoir une syntaxe maximale diférente de 9999.99$',
+            'prix.max' => 'Le champs Prix ne peut avoir une syntaxe maximale diférente de 9999.99$',
             "image.mimes" => "Le fichier doit avoir l'extension .png, .jpg, .jpeg ou .webp",
             'date_arrivee.required' => 'Le champs Date d\'arrivée est requis',
             'date_depart.required' => 'Le champs Date de départ est requis',
@@ -163,6 +163,7 @@ class ForfaitController extends Controller
 
         $forfait = forfait::findOrFail($id);
 
+        // redirige vers la route admin si erreur de suppression de clé etrangère
         try {
             $forfait->delete();
         }
@@ -171,7 +172,7 @@ class ForfaitController extends Controller
             if($e->getCode() == "23000"){
                 return redirect()
                 ->route('admin')
-                ->with('suppression-Forfait-Erreur', "Ce forfait ne peut etre supprimé car il appartient déjà à une réservation. Veuillez supprimer toutes réservations contenant ce forfait avant d'effectuer cette action.");
+                ->with('suppression-Forfait-Erreur', "Ce forfait ne peut être supprimé car il appartient déjà à une réservation. Veuillez supprimer toutes réservations contenant ce forfait avant d'effectuer cette action.");
             }
         }
 
