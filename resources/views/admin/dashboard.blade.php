@@ -1,11 +1,8 @@
 <x-dashboard-layout>
 
-<div id="wrapper">
-
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
-    <!--  page-wrapper -->
-    <div id="page-wrapper" class="wrapper">
+    <div class="wrapper">
 
         <x-dashboard-header :authuser="$authuser" :authuserid="$authuserid"/>
 
@@ -233,9 +230,5 @@
         </div>
 
     </div>
-    <!-- end page-wrapper -->
-
-</div>
-<!-- end wrapper -->
 
 </x-dashboard-layout>

@@ -1,11 +1,8 @@
 <x-dashboard-layout>
 
-<div id="wrapper">
-
     <x-nav-dashboard :authuser="$authuser" :authuserid="$authuserid"/>
 
-    <!--  page-wrapper -->
-    <div id="page-wrapper" class="wrapper">
+    <div class="wrapper">
 
         <div class="row">
             <div class="padding-top-form"></div>
@@ -48,9 +45,5 @@
             <div>
         <div>
     </div>
-    <!-- end page-wrapper -->
-
-</div>
-<!-- end wrapper -->
 
 </x-dashboard-layout>
