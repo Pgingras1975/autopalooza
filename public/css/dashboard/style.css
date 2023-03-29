@@ -156,7 +156,7 @@ a:hover {
     font-size: 54px ;
     font-weight: bold;
     color: white;
-    font-family: boucherie-sans-inline, sans-serif;
+    font-family: boucherie-sans-inline, sans-serif !important;
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
@@ -194,7 +194,7 @@ a:hover {
 }
 
 .grille-h {
-    height: 265px;
+    height: 250px;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -232,7 +232,7 @@ a:hover {
     font-size: 20px;
 }
 
-.header-form-fs, .header-form-search-fs, .header-form-pwd-fs {
+.header-form-fs, .header-form-search-fs, .header-form-pwd-fs, .header-form-ajout-fs {
     font-size: 36px;
 }
 
@@ -252,6 +252,11 @@ a:hover {
 
 .label-fs {
     font-size: 24px;
+}
+
+.logo {
+    border-radius: 50%;
+    border: solid 4px #ff9f1c;
 }
 
 .margin-top {
@@ -376,7 +381,7 @@ clear: both;
 
     .input-search-client, .input-search-reservation  {
         height:15px !important;
-        width: 150px !important;
+        width: 140px !important;
     }
 
     .empty {
@@ -391,6 +396,10 @@ clear: both;
 
     .header-form-fs {
         font-size: 24px;
+    }
+
+    .header-form-ajout-fs {
+        font-size: 20px;
     }
 
     .header-form-search-fs {
@@ -421,6 +430,10 @@ clear: both;
         border: 3px solid #f1f1f1;
         z-index: 9;
         height: 500px !important;
+    }
+
+    .logo {
+        display: none;
     }
 }
 
@@ -484,7 +497,7 @@ clear: both;
 }
 #menu label {
 	display: none;
-	line-height: 70px;
+	line-height: 60px;
 	text-align: center;
 	position: absolute;
 	left: 35px

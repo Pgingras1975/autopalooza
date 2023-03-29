@@ -1,7 +1,7 @@
 <nav id='menu'>
     <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
     <ul class="nav-display">
-        <li><img src="storage/img/logo.png" alt="Logo AutoPalooza" height="100px"></li>
+        <li><img class="logo" src="{{ asset('storage/img/logo.png') }}" alt="Logo AutoPalooza" height="100px"></li>
         <li><a href="{{ route('accueil') }}">Accueil</a></li>
         @if ($authuserid == 1)
             <li><a class='dropdown-arrow'>Administrateur</a>
