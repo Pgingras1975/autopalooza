@@ -109,7 +109,7 @@ Route::get('/forfaits', [ForfaitController::class, 'afficherForfait'])->name('fo
 Route::get('/activites', [ActiviteController::class, 'afficherActivite'])->name('activites');
 
 // Contact
-Route::get('/contact', [ContactController::class, 'afficherContact'])->name('contacts');
+Route::get('/contact', [ContactController::class, 'afficherContact'])->name('contact');
 
 // Réservation
 Route::get('/reservation', [ReservationController::class, 'reserver'])->name('reservation')->middleware('auth');
