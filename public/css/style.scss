@@ -125,14 +125,13 @@ nav.menu {
             flex-grow: unset;
 
             ul.navbar-nav {
-                flex-direction: row;
                 margin-top: 15px;
 
                 li.nav-item {
                     a {
                         color: #fff;
                         font-size: 22px;
-                        margin-right: 55px;
+                        margin-right: auto;
                         font-family: protipo, sans-serif;
                         font-style: normal;
                         font-weight: 500;
@@ -293,22 +292,12 @@ body#accueil {
             }
         }
 
-        @media screen and (min-width: 1788px) {
-            .route-vertical {
-                height: 3650px;
-            }
-
-            .route-vertical-centre {
-                height: 3650px;
-            }
-        }
-
-        @media screen and (min-width: 1201px) {
+        @media screen and (min-width: 1401px) {
             .route-vertical {
                 border-right: 15px solid #FF9F1C;
                 border-left: 15px solid #FF9F1C;
                 background-color: #000;
-                height: 2200px;
+                height: 2700px;
                 width: 165px;
                 position: absolute;
                 right: 250px;
@@ -320,7 +309,7 @@ body#accueil {
                 display: grid;
                 grid-gap: 65px;
                 width: 30px;
-                height: 2200px;
+                height: 2700px;
                 background-color: #000;
 
                 div {
@@ -341,7 +330,7 @@ body#accueil {
             }
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1400px) {
             .route-vertical {
                 height: 0;
             }
@@ -354,6 +343,16 @@ body#accueil {
                 img {
                     display: none;
                 }
+            }
+        }
+
+        @media screen and (min-width: 1788px) {
+            .route-vertical {
+                height: 2100px;
+            }
+
+            .route-vertical-centre {
+                height: 2100px;
             }
         }
 

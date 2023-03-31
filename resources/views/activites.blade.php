@@ -3,11 +3,14 @@
     <x-nav />
 
     <main id="activites">
+
         <h1 class="activites-h1">Activités</h1>
+
         <h2 class="w-50 text-center m-auto">Rejoignez-nous pour une fin de semaine inoubliable remplie d'adrénaline et de
             musique entraînante au festival d'autos et de musique - l'endroit parfait pour se divertir en famille et
             entre amis !
         </h2>
+
         <div class="container m-auto">
             <div class="row">
                 <div class="col-5 gauche">
@@ -42,6 +45,7 @@
                 </div>
             </div>
         </div>
+
     </main>
 
     <x-footer />
