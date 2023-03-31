@@ -225,7 +225,6 @@ body#accueil {
             width: 100%;
             position: relative;
             z-index: 50;
-<<<<<<< HEAD
     // Version Téléphone
     @media only screen and (max-width: 809.5px) {
             .titre-accueil{
@@ -245,7 +244,6 @@ body#accueil {
             .dates {
                 font-size: 25px;
                 padding-top: 10%;
-=======
 
             // Version Téléphone
             @media only screen and (max-width: 809.5px) {
@@ -257,7 +255,6 @@ body#accueil {
                     font-size: 13px;
                     padding-top: 25%;
                 }
->>>>>>> 8a5c91d9c483fc8025c68cdae01688d2024a854f
             }
 
             // Version Tablette
@@ -266,21 +263,10 @@ body#accueil {
                     font-size: 80px;
                 }
 
-<<<<<<< HEAD
-    // Version PC
-    @media only screen and (min-width: 992px) {
-            .titre-accueil{
-                font-size: 11vh;
-            }
-            .dates {
-                font-weight: 500;
-                font-size: 40px;
-=======
                 .dates {
                     font-size: 30px;
                     padding-top: 22%;
                 }
->>>>>>> 8a5c91d9c483fc8025c68cdae01688d2024a854f
             }
 
             // Version PC
