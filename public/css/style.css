@@ -40,8 +40,9 @@ h2#alex {
   border-radius: 14px;
   color: black;
   text-align: center;
-  -webkit-animation: oppacity 2s ease-in;
-          animation: oppacity 2s ease-in;
+  -webkit-animation: oppacity 1.2s ease-in;
+          animation: oppacity 1.2s ease-in;
+  width: 22rem;
 }
 
 @-webkit-keyframes oppacity {
