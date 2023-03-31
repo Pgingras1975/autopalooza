@@ -205,6 +205,12 @@ nav.menu .container-fluid .collapsing ul.navbar-nav li.nav-item a.connexion:hove
 body#accueil {
   background-image: linear-gradient(#011627 40%, #12585D, #239993);
 }
+body#accueil header {
+  /********************************************* FOOTER - ALESSIA *********************************************/
+  /*************************************** PAGE ACTIVITÉS - ALESSIA ***************************************/
+  /*********************************** PAGE CONTACT - ALESSIA ***********************************/
+  /************************************* PAGE PROGRAMMATION - ALESSIA *************************************/
+}
 body#accueil header .video-container {
   overflow: hidden;
   max-height: 75vh;
@@ -218,23 +224,41 @@ body#accueil header .video-container {
   }
   body#accueil header .video-container .dates {
     font-size: 13px;
-    padding-top: 25%;
+    padding-top: 10%;
   }
 }
 @media only screen and (min-width: 810px) {
   body#accueil header .video-container .titre-accueil {
-    font-size: 80px;
+    font-size: 90px;
   }
   body#accueil header .video-container .dates {
+    font-size: 25px;
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-width: 810px) and (max-width: 809.5px) {
+  body#accueil header .video-container .dates .titre-accueil {
+    font-size: 45px;
+  }
+  body#accueil header .video-container .dates .dates {
+    font-size: 13px;
+    padding-top: 25%;
+  }
+}
+@media only screen and (min-width: 810px) and (min-width: 810px) {
+  body#accueil header .video-container .dates .titre-accueil {
+    font-size: 80px;
+  }
+  body#accueil header .video-container .dates .dates {
     font-size: 30px;
     padding-top: 22%;
   }
 }
-@media only screen and (min-width: 992px) {
-  body#accueil header .video-container .titre-accueil {
+@media only screen and (min-width: 810px) and (min-width: 992px) {
+  body#accueil header .video-container .dates .titre-accueil {
     font-size: 11vh;
   }
-  body#accueil header .video-container .dates {
+  body#accueil header .video-container .dates .dates {
     font-weight: 500;
     font-size: 40px;
     position: absolute;
@@ -242,41 +266,47 @@ body#accueil header .video-container {
     left: 65%;
   }
 }
-body#accueil header .video-container h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: boucherie-sans-inline, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 100px;
-  color: #fff;
-  border-bottom: 6px solid #2EC4B6;
-  padding: 0 30px;
-}
-body#accueil header .video-container h2 {
-  position: absolute;
-  top: 60%;
-  left: 65%;
-  font-family: protipo, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-}
-body#accueil header .video-container video {
-  width: inherit;
-}
-@media screen and (min-width: 1788px) {
-  body#accueil header .route-vertical {
-    height: 3650px;
-  }
-  body#accueil header .route-vertical-centre {
-    height: 3650px;
+@media only screen and (min-width: 810px) {
+  body#accueil header .video-container .dates h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: boucherie-sans-inline, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    color: #fff;
+    border-bottom: 6px solid #2EC4B6;
+    padding: 0 30px;
   }
 }
-@media screen and (min-width: 1201px) {
-  body#accueil header .route-vertical {
+@media only screen and (min-width: 810px) {
+  body#accueil header .video-container .dates h2 {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    font-family: protipo, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 810px) {
+  body#accueil header .video-container .dates video {
+    width: inherit;
+  }
+}
+@media only screen and (min-width: 810px) and (min-width: 1788px) {
+  body#accueil header .video-container .route-vertical {
+    height: 3650px;
+  }
+  body#accueil header .video-container .route-vertical-centre {
+    height: 3650px;
+  }
+}
+@media only screen and (min-width: 810px) and (min-width: 1201px) {
+  body#accueil header .video-container .route-vertical {
     border-right: 15px solid #FF9F1C;
     border-left: 15px solid #FF9F1C;
     background-color: #000;
@@ -285,7 +315,7 @@ body#accueil header .video-container video {
     position: absolute;
     right: 250px;
   }
-  body#accueil header .route-vertical-centre {
+  body#accueil header .video-container .route-vertical-centre {
     position: absolute;
     right: 315px;
     display: grid;
@@ -294,67 +324,71 @@ body#accueil header .video-container video {
     height: 2200px;
     background-color: #000;
   }
-  body#accueil header .route-vertical-centre div {
+  body#accueil header .video-container .route-vertical-centre div {
     background-color: #E6E5E5;
     padding: 5px;
   }
-  body#accueil header .voiture-rouge {
+  body#accueil header .video-container .voiture-rouge {
     position: absolute;
   }
-  body#accueil header .voiture-rouge img {
+  body#accueil header .video-container .voiture-rouge img {
     width: 100px;
     position: fixed;
     top: 200px;
     right: 280px;
   }
 }
-@media screen and (max-width: 1200px) {
-  body#accueil header .route-vertical {
+@media only screen and (min-width: 810px) and (max-width: 1200px) {
+  body#accueil header .video-container .route-vertical {
     height: 0;
   }
-  body#accueil header .route-vertical-centre {
+  body#accueil header .video-container .route-vertical-centre {
     height: 0;
   }
-  body#accueil header .voiture-rouge img {
+  body#accueil header .video-container .voiture-rouge img {
     display: none;
   }
 }
-body#accueil header .fleche-defilement img {
-  margin-left: 50%;
-  margin-top: 60px;
-  transform: translate(-50%, -50%);
-  -webkit-animation-name: flotter;
-          animation-name: flotter;
-  -webkit-animation-duration: 1.6s;
-          animation-duration: 1.6s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-@-webkit-keyframes flotter {
-  0% {
+@media only screen and (min-width: 810px) {
+  body#accueil header .video-container .fleche-defilement img {
+    margin-left: 50%;
+    margin-top: 60px;
     transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, -90%);
-  }
-  100% {
-    transform: translate(-50%, -50%);
+    -webkit-animation-name: flotter;
+            animation-name: flotter;
+    -webkit-animation-duration: 1.6s;
+            animation-duration: 1.6s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
 }
-@keyframes flotter {
-  0% {
-    transform: translate(-50%, -50%);
+@media only screen and (min-width: 810px) {
+  @-webkit-keyframes flotter {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -90%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
   }
-  50% {
-    transform: translate(-50%, -90%);
-  }
-  100% {
-    transform: translate(-50%, -50%);
+  @keyframes flotter {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -90%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
   }
 }
-body#accueil main#accueil h2 {
+body#accueil header .video-container main#accueil h2 {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -363,7 +397,7 @@ body#accueil main#accueil h2 {
   margin-bottom: 85px;
   padding-top: 200px;
 }
-body#accueil main#accueil .actualites {
+body#accueil header .video-container main#accueil .actualites {
   color: #000;
   text-align: center;
   font-family: protipo, sans-serif;
@@ -372,17 +406,17 @@ body#accueil main#accueil .actualites {
   max-width: 87%;
   justify-content: space-between;
 }
-body#accueil main#accueil .actualites .actualite {
+body#accueil header .video-container main#accueil .actualites .actualite {
   width: unset;
   position: relative;
   margin-bottom: 60px;
 }
-body#accueil main#accueil .actualites .actualite .bordure {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure {
   background-color: #2EC4B6;
   border-radius: 24px;
   width: 365px;
 }
-body#accueil main#accueil .actualites .actualite .bordure .card {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure .card {
   width: 350px;
   height: 555px;
   margin: 0 10px;
@@ -394,39 +428,39 @@ body#accueil main#accueil .actualites .actualite .bordure .card {
   bottom: 12px;
   right: 10px;
 }
-body#accueil main#accueil .actualites .actualite .bordure .card img {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure .card img {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   max-height: 240px;
 }
-body#accueil main#accueil .actualites .actualite .bordure .card .card-body {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure .card .card-body {
   padding: 22px;
 }
-body#accueil main#accueil .actualites .actualite .bordure .card .card-body p.date-actualite {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure .card .card-body p.date-actualite {
   text-align: start;
   font-size: 18px;
 }
-body#accueil main#accueil .actualites .actualite .bordure .card .card-body h3.titre-actualite {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure .card .card-body h3.titre-actualite {
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 23px;
 }
-body#accueil main#accueil .actualites .actualite .bordure .card .card-body p.description-actualite {
+body#accueil header .video-container main#accueil .actualites .actualite .bordure .card .card-body p.description-actualite {
   overflow: hidden;
 }
-body#accueil main#accueil .thematiques-h2 {
+body#accueil header .video-container main#accueil .thematiques-h2 {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 60px;
   text-align: center;
 }
-body#accueil main#accueil .thematiques {
+body#accueil header .video-container main#accueil .thematiques {
   justify-content: space-between;
   max-width: 1640px;
 }
-body#accueil main#accueil .thematiques .card {
+body#accueil header .video-container main#accueil .thematiques .card {
   max-width: 500px;
   max-height: 300px;
   overflow: hidden;
@@ -436,19 +470,19 @@ body#accueil main#accueil .thematiques .card {
   margin-bottom: 240px;
   border: 5px solid #FF9F1C;
 }
-body#accueil main#accueil .thematiques .card .overlay-dark {
+body#accueil header .video-container main#accueil .thematiques .card .overlay-dark {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 500;
   padding: 0;
 }
-body#accueil main#accueil .thematiques .card .overlay-dark h3 {
+body#accueil header .video-container main#accueil .thematiques .card .overlay-dark h3 {
   font-size: 30px;
   margin-top: 100px;
   padding-top: 25px;
 }
-body#accueil main#accueil .thematiques .card .overlay-dark a {
+body#accueil header .video-container main#accueil .thematiques .card .overlay-dark a {
   position: absolute;
   bottom: 25px;
   right: 25px;
@@ -460,25 +494,23 @@ body#accueil main#accueil .thematiques .card .overlay-dark a {
   border-radius: 24px;
   font-size: 19px;
 }
-body#accueil main#accueil .thematiques .card .overlay-dark a:hover {
+body#accueil header .video-container main#accueil .thematiques .card .overlay-dark a:hover {
   background-color: #fff;
   border: 3px solid #FF9F1C;
   color: #FF9F1C;
 }
 @media screen and (max-width: 768px) {
-  body#accueil main#accueil .actualites .actualite {
+  body#accueil header .video-container main#accueil .actualites .actualite {
     margin-left: auto;
     margin-right: auto;
   }
-  body#accueil main#accueil .thematiques .card {
+  body#accueil header .video-container main#accueil .thematiques .card {
     margin-bottom: 55px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-
-/********************************************* FOOTER - ALESSIA *********************************************/
-footer {
+body#accueil header footer {
   background-color: #FF9F1C;
   height: 180px;
   border-top: 10px solid #011627;
@@ -489,7 +521,7 @@ footer {
   z-index: 50;
   margin-top: 2%;
 }
-footer img.logo-footer {
+body#accueil header footer img.logo-footer {
   width: 135px;
   position: relative;
   left: 50%;
@@ -497,101 +529,99 @@ footer img.logo-footer {
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 813.5px) {
-  footer {
+  body#accueil header footer {
     height: 270px;
   }
-  footer .contenu-footer {
+  body#accueil header footer .contenu-footer {
     justify-content: center;
     flex-flow: column wrap;
     display: flex;
   }
-  footer .contenu-footer .copyright {
+  body#accueil header footer .contenu-footer .copyright {
     margin: 3% auto;
     font-size: 12px;
   }
-  footer .contenu-footer .reseaux-sociaux {
+  body#accueil header footer .contenu-footer .reseaux-sociaux {
     margin: auto;
   }
-  footer .contenu-footer .reseaux-sociaux a {
+  body#accueil header footer .contenu-footer .reseaux-sociaux a {
     text-decoration: none;
   }
-  footer .contenu-footer .reseaux-sociaux a img {
+  body#accueil header footer .contenu-footer .reseaux-sociaux a img {
     max-width: 25px;
     max-height: 25px;
     margin-bottom: 12%;
   }
 }
 @media only screen and (max-width: 991.5px) {
-  footer .contenu-footer {
+  body#accueil header footer .contenu-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin: -5% 3%;
   }
-  footer .contenu-footer .copyright {
+  body#accueil header footer .contenu-footer .copyright {
     margin: 5% auto;
   }
-  footer .contenu-footer .reseaux-sociaux {
+  body#accueil header footer .contenu-footer .reseaux-sociaux {
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
     gap: 10px;
     margin: auto;
   }
-  footer .contenu-footer .reseaux-sociaux a {
+  body#accueil header footer .contenu-footer .reseaux-sociaux a {
     text-decoration: none;
   }
-  footer .contenu-footer .reseaux-sociaux a img {
+  body#accueil header footer .contenu-footer .reseaux-sociaux a img {
     max-width: 35px;
     max-height: 35px;
   }
 }
 @media only screen and (min-width: 992px) {
-  footer {
+  body#accueil header footer {
     font-size: 18px;
   }
-  footer .contenu-footer {
+  body#accueil header footer .contenu-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin: -5% 3%;
   }
-  footer .contenu-footer .reseaux-sociaux {
+  body#accueil header footer .contenu-footer .reseaux-sociaux {
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
     gap: 10px;
     padding-top: 3%;
   }
-  footer .contenu-footer .reseaux-sociaux a {
+  body#accueil header footer .contenu-footer .reseaux-sociaux a {
     text-decoration: none;
   }
-  footer .contenu-footer .reseaux-sociaux a img {
+  body#accueil header footer .contenu-footer .reseaux-sociaux a img {
     max-width: 50px;
     max-height: 50px;
     margin-bottom: 15%;
   }
 }
-
-#app {
+body#accueil header #app {
   transition: opacity 0.3s ease;
 }
-#app[v-cloak] {
+body#accueil header #app[v-cloak] {
   opacity: 0;
 }
-#app .image-tire1 {
+body#accueil header #app .image-tire1 {
   position: fixed;
   top: -2%;
   left: 50%;
 }
-#app .image-tire2 {
+body#accueil header #app .image-tire2 {
   position: fixed;
   top: 2%;
   right: 50%;
   transform: rotate(180deg);
 }
-
-main#reservation {
+body#accueil header main#reservation {
   position: relative;
   background-color: #1f1e1e;
   color: white;
@@ -600,21 +630,20 @@ main#reservation {
   text-align: center;
   z-index: 550;
 }
-main#reservation .list-reservation {
+body#accueil header main#reservation .list-reservation {
   border: #000 solid 1px;
   width: 95%;
   margin: 1% auto;
   border-radius: 25px !important;
   cursor: pointer;
 }
-main#reservation .list-reservation:hover {
+body#accueil header main#reservation .list-reservation:hover {
   background-color: #2EC4B6;
   margin: 1% auto;
   zoom: 1.5;
   width: 95%;
 }
-
-#cart-toggle-bt {
+body#accueil header #cart-toggle-bt {
   width: 50px;
   height: 50px;
   display: flex;
@@ -628,15 +657,13 @@ main#reservation .list-reservation:hover {
   font-size: 22px;
   cursor: pointer;
 }
-#cart-toggle-bt:hover {
+body#accueil header #cart-toggle-bt:hover {
   background-color: #333;
 }
-
-#pannel-off {
+body#accueil header #pannel-off {
   overflow: hidden;
 }
-
-#cart-panel {
+body#accueil header #cart-panel {
   background-color: #f5f5f5;
   border-left: 1px solid #DDD;
   border-top: rgba(0, 0, 0, 0.1333333333) solid;
@@ -654,92 +681,87 @@ main#reservation .list-reservation:hover {
   top: 0px;
   width: 50vw;
 }
-#cart-panel .button-cart {
+body#accueil header #cart-panel .button-cart {
   z-index: 500000000;
 }
-#cart-panel small {
+body#accueil header #cart-panel small {
   color: #1d1c1c;
 }
-#cart-panel.open {
+body#accueil header #cart-panel.open {
   transform: translateY(-4%);
 }
-#cart-panel .bt-close {
+body#accueil header #cart-panel .bt-close {
   top: 10px;
   left: 10px;
   cursor: pointer;
 }
-#cart-panel .bt-close:hover {
+body#accueil header #cart-panel .bt-close:hover {
   color: #666;
 }
-#cart-panel h2#cart-title {
+body#accueil header #cart-panel h2#cart-title {
   margin-top: 4%;
   text-align: center;
   font-weight: normal;
 }
-#cart-panel .items .item {
+body#accueil header #cart-panel .items .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
   border-bottom: 1px solid #CCC;
 }
-#cart-panel .items .item:first-child {
+body#accueil header #cart-panel .items .item:first-child {
   border-top: 1px solid #CCC;
 }
-#cart-panel .items .item.total {
+body#accueil header #cart-panel .items .item.total {
   font-weight: bold;
   border: none;
 }
-#cart-panel .items .item .remove {
+body#accueil header #cart-panel .items .item .remove {
   cursor: pointer;
   padding: 3px 8px;
   border-radius: 3px;
   border: 1px solid #c2c2c2;
 }
-#cart-panel .items .item .remove:hover {
+body#accueil header #cart-panel .items .item .remove:hover {
   border-color: #333;
   color: #333;
   font-weight: bold;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
-#cart-panel .items .item .name {
+body#accueil header #cart-panel .items .item .name {
   width: 150px;
 }
-#cart-panel .items .item .quantity input {
+body#accueil header #cart-panel .items .item .quantity input {
   width: 50px;
   text-align: center;
   margin: 0px 0px 0px 20px;
   border: solid black 1px;
 }
-#cart-panel .items .item .price {
+body#accueil header #cart-panel .items .item .price {
   width: 50px;
   font-weight: bold;
   margin-left: 25%;
 }
-
-.price1 {
+body#accueil header .price1 {
   border: #000 1px solid;
   margin: auto;
   width: 50%;
 }
-
-.price2 {
+body#accueil header .price2 {
   border: #000 1px solid;
   margin: auto;
   width: 50%;
 }
-
-nav#reservation {
+body#accueil header nav#reservation {
   margin-top: 5%;
 }
-
-/*************************************** PAGE ACTIVITÉS - ALESSIA ***************************************/
-main#activites {
+body#accueil header main#activites {
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
-main#activites h1.activites-h1 {
+body#accueil header main#activites h1.activites-h1 {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -748,25 +770,25 @@ main#activites h1.activites-h1 {
   padding-top: 138px;
   margin-bottom: 65px;
 }
-main#activites h2 {
+body#accueil header main#activites h2 {
   font-size: 25px;
   line-height: 40px;
 }
-main#activites .container {
+body#accueil header main#activites .container {
   padding: 0;
 }
-main#activites .container .row {
+body#accueil header main#activites .container .row {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   transform: translate(-62px);
 }
-main#activites .container .row .gauche {
+body#accueil header main#activites .container .row .gauche {
   padding-top: 160px;
   padding-right: 60px;
   color: #011627;
 }
-main#activites .container .row .gauche .background-activite {
+body#accueil header main#activites .container .row .gauche .background-activite {
   background-color: #2EC4B6;
   border-radius: 24px;
   margin-bottom: 600px;
@@ -774,7 +796,7 @@ main#activites .container .row .gauche .background-activite {
   opacity: 0;
   transition: opacity 500ms;
 }
-main#activites .container .row .gauche .background-activite .impair {
+body#accueil header main#activites .container .row .gauche .background-activite .impair {
   padding: 30px;
   display: flex;
   height: 550px;
@@ -782,24 +804,24 @@ main#activites .container .row .gauche .background-activite .impair {
   border: 7px solid #011627;
   border-radius: 24px;
 }
-main#activites .container .row .gauche .background-activite .impair img {
+body#accueil header main#activites .container .row .gauche .background-activite .impair img {
   border-radius: 24px;
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
   width: 600px;
 }
-main#activites .container .row .gauche .background-activite .impair div.texte {
+body#accueil header main#activites .container .row .gauche .background-activite .impair div.texte {
   padding: 32px;
 }
-main#activites .container .row .gauche .background-activite .impair div.texte h3 {
+body#accueil header main#activites .container .row .gauche .background-activite .impair div.texte h3 {
   font-size: 35px;
   letter-spacing: 1.4px;
 }
-main#activites .container .row .gauche .background-activite .impair div.texte p {
+body#accueil header main#activites .container .row .gauche .background-activite .impair div.texte p {
   font-size: 22px;
 }
-main#activites .container .row .gauche .defiler.slide-gauche {
+body#accueil header main#activites .container .row .gauche .defiler.slide-gauche {
   -webkit-animation: animation-gauche 1s ease-in-out both;
           animation: animation-gauche 1s ease-in-out both;
 }
@@ -823,12 +845,12 @@ main#activites .container .row .gauche .defiler.slide-gauche {
     opacity: 1;
   }
 }
-main#activites .container .row .droite {
+body#accueil header main#activites .container .row .droite {
   padding-top: 710px;
   padding-left: 60px;
   color: #fff;
 }
-main#activites .container .row .droite .background-activite {
+body#accueil header main#activites .container .row .droite .background-activite {
   background-color: #011627;
   border-radius: 24px;
   margin-bottom: 600px;
@@ -837,7 +859,7 @@ main#activites .container .row .droite .background-activite {
   opacity: 0;
   transition: opacity 500ms;
 }
-main#activites .container .row .droite .background-activite .pair {
+body#accueil header main#activites .container .row .droite .background-activite .pair {
   padding: 30px;
   display: flex;
   height: 550px;
@@ -845,24 +867,24 @@ main#activites .container .row .droite .background-activite .pair {
   border: 7px solid #2EC4B6;
   border-radius: 24px;
 }
-main#activites .container .row .droite .background-activite .pair img {
+body#accueil header main#activites .container .row .droite .background-activite .pair img {
   border-radius: 24px;
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
   width: 600px;
 }
-main#activites .container .row .droite .background-activite .pair div.texte {
+body#accueil header main#activites .container .row .droite .background-activite .pair div.texte {
   padding: 32px;
 }
-main#activites .container .row .droite .background-activite .pair div.texte h3 {
+body#accueil header main#activites .container .row .droite .background-activite .pair div.texte h3 {
   font-size: 35px;
   letter-spacing: 1.4px;
 }
-main#activites .container .row .droite .background-activite .pair div.texte p {
+body#accueil header main#activites .container .row .droite .background-activite .pair div.texte p {
   font-size: 22px;
 }
-main#activites .container .row .droite .defiler.slide-droite {
+body#accueil header main#activites .container .row .droite .defiler.slide-droite {
   -webkit-animation: animation-droite 1s ease-in-out both;
           animation: animation-droite 1s ease-in-out both;
 }
@@ -886,16 +908,14 @@ main#activites .container .row .droite .defiler.slide-droite {
     opacity: 1;
   }
 }
-
-/*********************************** PAGE CONTACT - ALESSIA ***********************************/
-main#contact {
+body#accueil header main#contact {
   max-width: 80%;
   margin: 0 auto;
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 400;
 }
-main#contact h1 {
+body#accueil header main#contact h1 {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -904,44 +924,42 @@ main#contact h1 {
   margin-top: 118px;
   margin-bottom: 40px;
 }
-main#contact p {
+body#accueil header main#contact p {
   text-align: center;
   font-size: 25px;
   margin-bottom: 80px;
 }
-main#contact .contact {
+body#accueil header main#contact .contact {
   font-size: 27px;
   margin-bottom: 150px;
 }
 @media only screen and (max-width: 990px) {
-  main#contact .contact .row .infos-contact .info {
+  body#accueil header main#contact .contact .row .infos-contact .info {
     font-size: 15px;
     text-align: center;
   }
-  main#contact .contact .row .infos-contact .info .image-contact {
+  body#accueil header main#contact .contact .row .infos-contact .info .image-contact {
     width: 40px;
   }
 }
-main#contact .contact .row .infos-contact .info {
+body#accueil header main#contact .contact .row .infos-contact .info {
   margin-bottom: 50px;
 }
-main#contact .contact .row .infos-contact .info img {
+body#accueil header main#contact .contact .row .infos-contact .info img {
   width: 70px;
   margin-right: 15px;
 }
-main#contact .contact .row .infos-contact .info a {
+body#accueil header main#contact .contact .row .infos-contact .info a {
   text-decoration: none;
   color: #fff;
 }
-main#contact .contact .row .infos-contact .info a:hover {
+body#accueil header main#contact .contact .row .infos-contact .info a:hover {
   color: #FF9F1C;
 }
-main#contact .contact .carte-virtuelle iframe {
+body#accueil header main#contact .contact .carte-virtuelle iframe {
   border-radius: 24px;
 }
-
-/************************************* PAGE PROGRAMMATION - ALESSIA *************************************/
-main#programmation img {
+body#accueil header main#programmation img {
   display: block;
   margin-left: auto;
   margin-right: auto;
