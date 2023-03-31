@@ -375,25 +375,30 @@ clear: both;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 412px) {
+    .auth-user {
+        font-size: 16px;
+    }
+
+    .dashboard {
+        font-size: 26px;
+    }
+
+    .input-search-client, .input-search-reservation, .btn-search  {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .col-25, .col-75 {
         width: 100%;
         margin-top: 0;
     }
 
-    /* .input-search-client, .input-search-reservation  {
-        height:15px !important;
-        width: 140px !important;
-    } */
-
     .empty {
         justify-content: center !important;
         font-size: 24px;
         font-weight: bold;
-    }
-
-    .header-fs {
-        font-size: 20px;
     }
 
     .header-form-fs {
