@@ -48,13 +48,15 @@
     </header>
 
     <main id="accueil">
+
         <h2 id="anchor">Actualités</h2>
+
         <div class="row actualites m-auto">
             @foreach ($actualites as $actualite)
                 <div class="actualite">
                     <div class="bordure">
                         <div class="card">
-                            <img class="card-img-top" src="{{ $actualite->image }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ $actualite->image }}" alt="{{ $actualite->titre }}">
                             <div class="card-body">
                                 <p class="card-text date-actualite">{{ $actualite->date_formatte }}</p>
                                 <h3 class="titre-actualite">{{ $actualite->titre }}</h3>
@@ -67,19 +69,21 @@
         </div>
 
         <h2 class="thematiques-h2">Nos thématiques</h2>
+
         <div class="row thematiques mx-auto">
             @foreach ($thematiques as $thematique)
                 <div class="col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
-                        <img src="{{ $thematique->image }}" class="card-img" alt="...">
+                        <img src="{{ $thematique->image }}" class="card-img" alt="{{ $thematique->titre }}">
                         <div class="card-img-overlay text-white overlay-dark">
                             <h3 class="d-flex justify-content-center align-items-center">{{ mb_strtoupper($thematique->titre) }}</h3>
-                            <a href="{{ url('/activites') }}">En savoir plus</a>
+                            <a href="{{ route('activites') }}">En savoir plus</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
+
     </main>
 
     <x-footer />
