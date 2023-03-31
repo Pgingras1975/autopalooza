@@ -381,10 +381,10 @@ clear: both;
         margin-top: 0;
     }
 
-    .input-search-client, .input-search-reservation  {
+    /* .input-search-client, .input-search-reservation  {
         height:15px !important;
         width: 140px !important;
-    }
+    } */
 
     .empty {
         justify-content: center !important;
@@ -432,6 +432,13 @@ clear: both;
         border: 3px solid #f1f1f1;
         z-index: 9;
         height: 500px !important;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .input-search-client, .input-search-reservation  {
+        height:15px !important;
+        width: 140px !important;
     }
 }
 
