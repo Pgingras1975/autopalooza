@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot name="titre">Activités Autopalooza</x-slot>
 
     <x-nav />
 

@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot name="titre">Réservation Autopalooza</x-slot>
     <x-message-confirmation />
     <x-nav/>
     <div id="app" v-cloak>

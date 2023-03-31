@@ -1,4 +1,6 @@
 <x-layout>
+    <x-slot name="titre">Contact Autopalooza</x-slot>
+
     <x-nav />
 
     <main id="contact">

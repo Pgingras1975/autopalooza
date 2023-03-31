@@ -1,5 +1,5 @@
 <x-layout-accueil>
-
+    <x-slot name="titre">Accueil Autopalooza</x-slot>
     <x-message-confirmation />
 
     <x-connexion-message />

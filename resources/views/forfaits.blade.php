@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot name="titre">Forfaits Autopalooza</x-slot>
     <x-nav/>
     <img src="images/route_background.png" alt="" class="route">
         <h2 id="alex">Forfaits</h2>
