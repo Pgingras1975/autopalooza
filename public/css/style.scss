@@ -4,7 +4,7 @@ body {
     color: white;
 }
 
-//***************** Page FORFAITS - ALEX **************************
+/***************** Page FORFAITS - ALEX **************************/
 h2#alex {
     font-family: boucherie-sans-inline, sans-serif;
     font-style: normal;
@@ -89,7 +89,6 @@ h2#alex {
     text-align: center;
     color: black;
     margin-top: 5%;
-    // background-color: black;
     padding: 1% 0;
     font-size: 18px;
     padding-bottom: 3%;
@@ -119,7 +118,7 @@ nav.menu {
 
         button {
             margin-top: 30px;
-            margin-right: 30px;
+            margin-right: 40px;
         }
 
         .navbar-collapse {
@@ -131,8 +130,8 @@ nav.menu {
                 li.nav-item {
                     a {
                         color: #fff;
-                        font-size: 22px;
-                        margin-right: auto;
+                        font-size: 23px;
+                        margin-right: 30px;
                         font-family: protipo, sans-serif;
                         font-style: normal;
                         font-weight: 500;
@@ -147,6 +146,7 @@ nav.menu {
                         padding: 3px 15px;
                         border-radius: 30px;
                         margin-left: 75px;
+                        margin-right: 20px;
 
                         &:hover {
                             background-color: rgba(46, 196, 182, 0.5);
@@ -205,7 +205,6 @@ nav.menu {
                                 color: #2EC4B6;
                             }
                         }
-
                     }
                 }
             }
@@ -611,7 +610,6 @@ footer {
 
             .copyright {
                 margin: 5% auto;
-                // font-size: 16px;
             }
 
             .reseaux-sociaux {
@@ -633,8 +631,6 @@ footer {
             }
         }
     }
-
-
 
     // Version Laptop et plus grands écrans
     @media only screen and (min-width: 992px) {
@@ -665,11 +661,9 @@ footer {
             }
         }
     }
-
 }
 
 //***************** Page Réservation - ALEX **************************
-
 #app {
     transition: opacity 0.3s ease;
 
@@ -681,7 +675,6 @@ footer {
         position: fixed;
         top: -2%;
         left: 50%;
-
     }
 
     .image-tire2 {
@@ -689,9 +682,7 @@ footer {
         top: 2%;
         right: 50%;
         transform: rotate(180deg);
-
     }
-
 }
 
 main#reservation {
@@ -699,7 +690,6 @@ main#reservation {
     background-color: #1f1e1e;
     color: white;
     width: 50vw;
-    // max-height: 560px;
     overflow-y: auto;
     text-align: center;
     z-index: 550;
@@ -708,7 +698,6 @@ main#reservation {
     }
 
     .list-reservation {
-        // background-color: #555555;
         border: #000 solid 1px;
         width: 95%;
         margin: 1% auto;
@@ -724,7 +713,6 @@ main#reservation {
     }
 }
 
-
 #cart-toggle-bt {
     width: 50px;
     height: 50px;
@@ -735,7 +723,7 @@ main#reservation {
     border: solid 1px #ffffff;
     border-radius: 100%;
     color: #111010;
-    margin: 3px 2px 0 0;
+    margin: 0px 2px 0 0;
     font-size: 22px;
     cursor: pointer;
 
@@ -844,7 +832,6 @@ main#reservation {
                 margin-left: 25%;
             }
         }
-
     }
 }
 
@@ -863,7 +850,6 @@ main#reservation {
 nav#reservation {
     margin-top: 5%;
 }
-
 
 
 /*************************************** PAGE ACTIVITÉS - ALESSIA ***************************************/
@@ -1062,7 +1048,6 @@ main#contact {
                             width: 40px;
                         }
                     }
-
                 }
 
                 .info {
@@ -1087,8 +1072,6 @@ main#contact {
 
         .carte-virtuelle {
             iframe {
-                // display: flex;
-                // margin-right: 100px;
                 border-radius: 24px;
             }
         }
@@ -1099,9 +1082,7 @@ main#contact {
 main#programmation {
     img {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
+        margin: 80px auto;
         border-radius: 12px;
     }
     }
