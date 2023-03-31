@@ -3,7 +3,7 @@
     <x-nav />
 
     <main id="programmation">
-        <img src="/images/programmation.jpg" alt="">
+        <img src="/images/programmation.jpg" alt="Programmation des artistes">
     </main>
 
     <x-footer />

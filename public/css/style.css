@@ -5,6 +5,7 @@ body {
   color: white;
 }
 
+/***************** Page FORFAITS - ALEX **************************/
 h2#alex {
   font-family: boucherie-sans-inline, sans-serif;
   font-style: normal;
@@ -124,7 +125,7 @@ nav.menu .container-fluid a.navbar-brand img {
 }
 nav.menu .container-fluid button {
   margin-top: 30px;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 nav.menu .container-fluid .navbar-collapse {
   flex-grow: unset;
@@ -134,8 +135,8 @@ nav.menu .container-fluid .navbar-collapse ul.navbar-nav {
 }
 nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a {
   color: #fff;
-  font-size: 22px;
-  margin-right: auto;
+  font-size: 23px;
+  margin-right: 30px;
   font-family: protipo, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -148,6 +149,7 @@ nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a.connexion
   padding: 3px 15px;
   border-radius: 30px;
   margin-left: 75px;
+  margin-right: 20px;
 }
 nav.menu .container-fluid .navbar-collapse ul.navbar-nav li.nav-item a.connexion:hover {
   background-color: rgba(46, 196, 182, 0.5);
@@ -622,7 +624,7 @@ main#reservation .list-reservation:hover {
   border: solid 1px #ffffff;
   border-radius: 100%;
   color: #111010;
-  margin: 3px 2px 0 0;
+  margin: 0px 2px 0 0;
   font-size: 22px;
   cursor: pointer;
 }
@@ -941,8 +943,6 @@ main#contact .contact .carte-virtuelle iframe {
 /************************************* PAGE PROGRAMMATION - ALESSIA *************************************/
 main#programmation img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+  margin: 80px auto;
   border-radius: 12px;
 }/*# sourceMappingURL=style.css.map */
