@@ -5,7 +5,7 @@
 
     <main id="activites">
 
-        <h1 class="activites-h1">Activités</h1>
+        <h1 class="activites-h1">Nos activités</h1>
 
         <h2 class="w-50 text-center m-auto">Rejoignez-nous pour une fin de semaine inoubliable remplie d'adrénaline et de
             musique entraînante au festival d'autos et de musique - l'endroit parfait pour se divertir en famille et
