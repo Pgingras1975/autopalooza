@@ -32,7 +32,6 @@ Route::get('/admin', [DashboardController::class, 'admin'])->name('admin')->midd
 Route::get('/enregistrement', [EnregistrementController ::class, 'create'])->name('enregistrement');
 Route::post('/enregistrement', [EnregistrementController::class, 'store']);
 
-
 // Route formulaires admin Employés
 Route::get('/employe/creer', [EmployeController ::class, 'create'])->name('creer-employe')->middleware('auth');
 Route::post('/employe/creer', [EmployeController::class, 'store'])->middleware('auth');
@@ -59,11 +58,10 @@ Route::post('/connexion', [ConnexionController::class, 'authentifier']);
 
 Route::get('/deconnexion', [ConnexionController::class, 'deconnecter'])->name('deconnexion');
 
+// Route réservation
 Route::get('/reservation/rechercher', [ReservationController::class, 'rechercherReservation'])->middleware('auth');
-Route::get('/reservation/modifier/{id}', [ReservationController::class, 'edit'])->name('modifier-reservation')->middleware('auth');
 
 Route::delete('/reservation/supprimer/{id}', [ReservationController::class, 'destroy'])->name('reservation.delete')->middleware('auth');
-
 
 // Route actualité
 Route::get('/actualite/creer', [ActualiteController::class, 'create'])->name('creer-actualite');
